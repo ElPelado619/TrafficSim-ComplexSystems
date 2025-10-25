@@ -1,0 +1,251 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d15" for="edge" attr.name="geometry" attr.type="string" />
+  <key id="d14" for="edge" attr.name="length" attr.type="string" />
+  <key id="d13" for="edge" attr.name="reversed" attr.type="string" />
+  <key id="d12" for="edge" attr.name="oneway" attr.type="string" />
+  <key id="d11" for="edge" attr.name="name" attr.type="string" />
+  <key id="d10" for="edge" attr.name="maxspeed" attr.type="string" />
+  <key id="d9" for="edge" attr.name="lanes" attr.type="string" />
+  <key id="d8" for="edge" attr.name="highway" attr.type="string" />
+  <key id="d7" for="edge" attr.name="osmid" attr.type="string" />
+  <key id="d6" for="node" attr.name="highway" attr.type="string" />
+  <key id="d5" for="node" attr.name="x" attr.type="string" />
+  <key id="d4" for="node" attr.name="y" attr.type="string" />
+  <key id="d3" for="graph" attr.name="simplified" attr.type="string" />
+  <key id="d2" for="graph" attr.name="crs" attr.type="string" />
+  <key id="d1" for="graph" attr.name="created_with" attr.type="string" />
+  <key id="d0" for="graph" attr.name="created_date" attr.type="string" />
+  <graph edgedefault="directed">
+    <node id="480890153">
+      <data key="d4">-32.8879793</data>
+      <data key="d5">-68.8537926</data>
+      <data key="d6">traffic_signals</data>
+    </node>
+    <node id="676748124">
+      <data key="d4">-32.8919993</data>
+      <data key="d5">-68.8566436</data>
+      <data key="d6">traffic_signals</data>
+    </node>
+    <node id="1085863467">
+      <data key="d4">-32.9020976</data>
+      <data key="d5">-68.8558768</data>
+    </node>
+    <node id="1086123027">
+      <data key="d4">-32.8957419</data>
+      <data key="d5">-68.8575071</data>
+    </node>
+    <node id="1086779838">
+      <data key="d4">-32.8932053</data>
+      <data key="d5">-68.8625281</data>
+    </node>
+    <node id="1086779916">
+      <data key="d4">-32.8934406</data>
+      <data key="d5">-68.8550238</data>
+    </node>
+    <node id="1086779948">
+      <data key="d4">-32.8937511</data>
+      <data key="d5">-68.8532461</data>
+    </node>
+    <node id="1086779974">
+      <data key="d4">-32.8930931</data>
+      <data key="d5">-68.8569247</data>
+    </node>
+    <node id="1086780032">
+      <data key="d4">-32.894495</data>
+      <data key="d5">-68.8552946</data>
+    </node>
+    <node id="1086780140">
+      <data key="d4">-32.8927373</data>
+      <data key="d5">-68.8589242</data>
+    </node>
+    <node id="1086780176">
+      <data key="d4">-32.8941619</data>
+      <data key="d5">-68.8571961</data>
+    </node>
+    <node id="4595363146">
+      <data key="d4">-32.8736018</data>
+      <data key="d5">-68.8517529</data>
+    </node>
+    <node id="10775560194">
+      <data key="d4">-32.9020154</data>
+      <data key="d5">-68.8571379</data>
+    </node>
+    <node id="13117131741">
+      <data key="d4">-32.8941728</data>
+      <data key="d5">-68.8571338</data>
+    </node>
+    <node id="13117131742">
+      <data key="d4">-32.8931039</data>
+      <data key="d5">-68.8568658</data>
+    </node>
+    <edge source="676748124" target="1086779974" id="0">
+      <data key="d7">1304794574</data>
+      <data key="d8">tertiary</data>
+      <data key="d9">2</data>
+      <data key="d10">50</data>
+      <data key="d11">Martínez de Rozas</data>
+      <data key="d12">True</data>
+      <data key="d13">False</data>
+      <data key="d14">124.42485952229937</data>
+    </edge>
+    <edge source="1085863467" target="1086780032" id="0">
+      <data key="d7">93653363</data>
+      <data key="d8">residential</data>
+      <data key="d9">2</data>
+      <data key="d11">Manuel Olascoaga</data>
+      <data key="d12">True</data>
+      <data key="d13">False</data>
+      <data key="d14">847.320157536593</data>
+      <data key="d15">LINESTRING (-68.8558768 -32.9020976, -68.8558796 -32.9016933, -68.8557686 -32.9005196, -68.8557517 -32.9002832, -68.8557015 -32.8994361, -68.8555904 -32.8982591, -68.8555015 -32.8969738, -68.8554073 -32.8959601, -68.8553622 -32.8951249, -68.8553545 -32.8950542, -68.8552946 -32.894495)</data>
+    </edge>
+    <edge source="1086779838" target="1086780176" id="0">
+      <data key="d7">93653359</data>
+      <data key="d8">residential</data>
+      <data key="d11">Manuel Antonio Sáez</data>
+      <data key="d12">True</data>
+      <data key="d13">False</data>
+      <data key="d14">509.08171002376196</data>
+      <data key="d15">LINESTRING (-68.8625281 -32.8932053, -68.8604506 -32.893568, -68.8590719 -32.8938172, -68.8589535 -32.8938386, -68.8588334 -32.8938607, -68.8580893 -32.8939976, -68.8571961 -32.8941619)</data>
+    </edge>
+    <edge source="1086779916" target="13117131742" id="0">
+      <data key="d7">93653379</data>
+      <data key="d8">residential</data>
+      <data key="d11">Sgto. Juan Bautista Cabral</data>
+      <data key="d12">True</data>
+      <data key="d13">False</data>
+      <data key="d14">176.0130479249482</data>
+    </edge>
+    <edge source="1086779916" target="480890153" id="0">
+      <data key="d7">332272036</data>
+      <data key="d8">residential</data>
+      <data key="d9">2</data>
+      <data key="d11">Manuel Olascoaga</data>
+      <data key="d12">True</data>
+      <data key="d13">False</data>
+      <data key="d14">620.9790359720748</data>
+      <data key="d15">LINESTRING (-68.8550238 -32.8934406, -68.8547311 -32.8923525, -68.8544385 -32.8912319, -68.8543174 -32.8907719, -68.8543849 -32.8902201, -68.8543759 -32.8901425, -68.8543663 -32.8901006, -68.8541056 -32.8890941, -68.853815 -32.8880666, -68.8537926 -32.8879793)</data>
+    </edge>
+    <edge source="1086779948" target="1086779916" id="0">
+      <data key="d7">93653379</data>
+      <data key="d8">residential</data>
+      <data key="d11">Sgto. Juan Bautista Cabral</data>
+      <data key="d12">True</data>
+      <data key="d13">False</data>
+      <data key="d14">169.53381678368467</data>
+    </edge>
+    <edge source="1086779974" target="1086780140" id="0">
+      <data key="d7">93653379</data>
+      <data key="d8">residential</data>
+      <data key="d11">Sgto. Juan Bautista Cabral</data>
+      <data key="d12">True</data>
+      <data key="d13">False</data>
+      <data key="d14">190.83748672472566</data>
+    </edge>
+    <edge source="1086779974" target="1086780176" id="0">
+      <data key="d7">1304794574</data>
+      <data key="d8">tertiary</data>
+      <data key="d9">2</data>
+      <data key="d10">50</data>
+      <data key="d11">Martínez de Rozas</data>
+      <data key="d12">True</data>
+      <data key="d13">False</data>
+      <data key="d14">121.51773600631996</data>
+      <data key="d15">LINESTRING (-68.8569247 -32.8930931, -68.8571612 -32.8940174, -68.8571961 -32.8941619)</data>
+    </edge>
+    <edge source="1086780032" target="1086779916" id="0">
+      <data key="d7">332272036</data>
+      <data key="d8">residential</data>
+      <data key="d9">2</data>
+      <data key="d11">Manuel Olascoaga</data>
+      <data key="d12">True</data>
+      <data key="d13">False</data>
+      <data key="d14">119.93940538463082</data>
+    </edge>
+    <edge source="1086780176" target="13117131741" id="0">
+      <data key="d7">93653359</data>
+      <data key="d8">residential</data>
+      <data key="d11">Manuel Antonio Sáez</data>
+      <data key="d12">True</data>
+      <data key="d13">False</data>
+      <data key="d14">5.941741795918333</data>
+    </edge>
+    <edge source="1086780176" target="1086123027" id="0">
+      <data key="d7">1304794574</data>
+      <data key="d8">tertiary</data>
+      <data key="d9">2</data>
+      <data key="d10">50</data>
+      <data key="d11">Martínez de Rozas</data>
+      <data key="d12">True</data>
+      <data key="d13">False</data>
+      <data key="d14">178.16362000842483</data>
+      <data key="d15">LINESTRING (-68.8571961 -32.8941619, -68.8573977 -32.8950492, -68.8574182 -32.895139, -68.8574253 -32.8951925, -68.8574965 -32.8956671, -68.8574976 -32.8956795, -68.8575071 -32.8957419)</data>
+    </edge>
+    <edge source="4595363146" target="13117131742" id="0">
+      <data key="d7">1426937345</data>
+      <data key="d8">cycleway</data>
+      <data key="d12">False</data>
+      <data key="d13">True</data>
+      <data key="d14">2220.5197763449582</data>
+      <data key="d15">LINESTRING (-68.8517529 -32.8736018, -68.8520185 -32.8746562, -68.8522832 -32.87568, -68.8525739 -32.8767461, -68.8528508 -32.8778021, -68.8531287 -32.8788437, -68.853409 -32.8798959, -68.8537397 -32.8811901, -68.8540358 -32.8822724, -68.854452 -32.8837938, -68.8548194 -32.8851808, -68.854828 -32.885219, -68.8549061 -32.8855484, -68.8551747 -32.8865947, -68.8554438 -32.8876741, -68.8557287 -32.8887927, -68.8560092 -32.8898429, -68.8562832 -32.890898, -68.8565784 -32.8920113, -68.8568658 -32.8931039)</data>
+    </edge>
+    <edge source="10775560194" target="13117131741" id="0">
+      <data key="d7">1426937345</data>
+      <data key="d8">cycleway</data>
+      <data key="d12">False</data>
+      <data key="d13">False</data>
+      <data key="d14">911.5216791519811</data>
+      <data key="d15">LINESTRING (-68.8571379 -32.9020154, -68.8571321 -32.9019566, -68.8571113 -32.9016717, -68.8570326 -32.9005, -68.856952 -32.8994205, -68.8568248 -32.8982184, -68.856722 -32.8969551, -68.8566998 -32.8967599, -68.8566905 -32.8966755, -68.8566905 -32.8965932, -68.8566987 -32.8965403, -68.8567197 -32.8964795, -68.8567734 -32.8963805, -68.8569182 -32.8962521, -68.8570349 -32.8961629, -68.857112 -32.8961266, -68.8572334 -32.8960982, -68.857321 -32.8960746, -68.8573922 -32.8960472, -68.8574167 -32.8960168, -68.8574272 -32.8959756, -68.8574424 -32.8958943, -68.8574398 -32.8957467, -68.8573406 -32.8951358, -68.8571338 -32.8941728)</data>
+    </edge>
+    <edge source="13117131741" target="1086780032" id="0">
+      <data key="d7">93653359</data>
+      <data key="d8">residential</data>
+      <data key="d11">Manuel Antonio Sáez</data>
+      <data key="d12">True</data>
+      <data key="d13">False</data>
+      <data key="d14">175.41921231357767</data>
+    </edge>
+    <edge source="13117131741" target="13117131742" id="0">
+      <data key="d7">1426937345</data>
+      <data key="d8">cycleway</data>
+      <data key="d12">False</data>
+      <data key="d13">False</data>
+      <data key="d14">121.46186886105296</data>
+    </edge>
+    <edge source="13117131741" target="10775560194" id="0">
+      <data key="d7">1426937345</data>
+      <data key="d8">cycleway</data>
+      <data key="d12">False</data>
+      <data key="d13">True</data>
+      <data key="d14">911.5216791519811</data>
+      <data key="d15">LINESTRING (-68.8571338 -32.8941728, -68.8573406 -32.8951358, -68.8574398 -32.8957467, -68.8574424 -32.8958943, -68.8574272 -32.8959756, -68.8574167 -32.8960168, -68.8573922 -32.8960472, -68.857321 -32.8960746, -68.8572334 -32.8960982, -68.857112 -32.8961266, -68.8570349 -32.8961629, -68.8569182 -32.8962521, -68.8567734 -32.8963805, -68.8567197 -32.8964795, -68.8566987 -32.8965403, -68.8566905 -32.8965932, -68.8566905 -32.8966755, -68.8566998 -32.8967599, -68.856722 -32.8969551, -68.8568248 -32.8982184, -68.856952 -32.8994205, -68.8570326 -32.9005, -68.8571113 -32.9016717, -68.8571321 -32.9019566, -68.8571379 -32.9020154)</data>
+    </edge>
+    <edge source="13117131742" target="1086779974" id="0">
+      <data key="d7">93653379</data>
+      <data key="d8">residential</data>
+      <data key="d11">Sgto. Juan Bautista Cabral</data>
+      <data key="d12">True</data>
+      <data key="d13">False</data>
+      <data key="d14">5.629020541855047</data>
+    </edge>
+    <edge source="13117131742" target="13117131741" id="0">
+      <data key="d7">1426937345</data>
+      <data key="d8">cycleway</data>
+      <data key="d12">False</data>
+      <data key="d13">True</data>
+      <data key="d14">121.46186886105296</data>
+    </edge>
+    <edge source="13117131742" target="4595363146" id="0">
+      <data key="d7">1426937345</data>
+      <data key="d8">cycleway</data>
+      <data key="d12">False</data>
+      <data key="d13">False</data>
+      <data key="d14">2220.5197763449587</data>
+      <data key="d15">LINESTRING (-68.8568658 -32.8931039, -68.8565784 -32.8920113, -68.8562832 -32.890898, -68.8560092 -32.8898429, -68.8557287 -32.8887927, -68.8554438 -32.8876741, -68.8551747 -32.8865947, -68.8549061 -32.8855484, -68.854828 -32.885219, -68.8548194 -32.8851808, -68.854452 -32.8837938, -68.8540358 -32.8822724, -68.8537397 -32.8811901, -68.853409 -32.8798959, -68.8531287 -32.8788437, -68.8528508 -32.8778021, -68.8525739 -32.8767461, -68.8522832 -32.87568, -68.8520185 -32.8746562, -68.8517529 -32.8736018)</data>
+    </edge>
+    <data key="d0">2025-10-15 17:08:45</data>
+    <data key="d1">OSMnx 2.0.6</data>
+    <data key="d2">epsg:4326</data>
+    <data key="d3">True</data>
+  </graph>
+</graphml>

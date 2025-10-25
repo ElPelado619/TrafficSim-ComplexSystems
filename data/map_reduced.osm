@@ -1,0 +1,760 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (3893132 spike-07.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+ <bounds minlat="-32.8947370" minlon="-68.8576700" maxlat="-32.8927820" maxlon="-68.8545690"/>
+ <node id="480124259" visible="true" version="3" changeset="8802053" timestamp="2011-07-22T22:26:30Z" user="Fede Borgnia" uid="392023" lat="-32.8951390" lon="-68.8574182"/>
+ <node id="480890151" visible="true" version="8" changeset="151459687" timestamp="2024-05-17T15:15:47Z" user="Pich14" uid="20877334" lat="-32.8890941" lon="-68.8541056"/>
+ <node id="480890153" visible="true" version="11" changeset="151459687" timestamp="2024-05-17T15:15:47Z" user="Pich14" uid="20877334" lat="-32.8879793" lon="-68.8537926">
+  <tag k="highway" v="traffic_signals"/>
+ </node>
+ <node id="676748124" visible="true" version="12" changeset="170502661" timestamp="2025-08-15T23:38:02Z" user="Pich14" uid="20877334" lat="-32.8919993" lon="-68.8566436">
+  <tag k="highway" v="traffic_signals"/>
+ </node>
+ <node id="676748125" visible="true" version="5" changeset="151459219" timestamp="2024-05-17T15:03:57Z" user="Pich14" uid="20877334" lat="-32.8901425" lon="-68.8543759"/>
+ <node id="1085863467" visible="true" version="7" changeset="171885232" timestamp="2025-09-13T16:57:51Z" user="Pich14" uid="20877334" lat="-32.9020976" lon="-68.8558768"/>
+ <node id="1086123027" visible="true" version="6" changeset="155172094" timestamp="2024-08-12T23:59:08Z" user="Sefer" uid="657892" lat="-32.8957419" lon="-68.8575071"/>
+ <node id="1086123054" visible="true" version="6" changeset="56764647" timestamp="2018-02-28T18:41:58Z" user="berms" uid="7526992" lat="-32.8959601" lon="-68.8554073">
+  <tag k="highway" v="traffic_signals"/>
+ </node>
+ <node id="1086232657" visible="true" version="7" changeset="167596540" timestamp="2025-06-14T01:36:37Z" user="Pich14" uid="20877334" lat="-32.8994361" lon="-68.8557015">
+  <tag k="highway" v="traffic_signals"/>
+ </node>
+ <node id="1086265174" visible="true" version="5" changeset="167596540" timestamp="2025-06-14T01:36:37Z" user="Pich14" uid="20877334" lat="-32.9016933" lon="-68.8558796"/>
+ <node id="1086779838" visible="true" version="2" changeset="8802053" timestamp="2011-07-22T22:09:58Z" user="Fede Borgnia" uid="392023" lat="-32.8932053" lon="-68.8625281"/>
+ <node id="1086779899" visible="true" version="2" changeset="8802053" timestamp="2011-07-22T22:09:59Z" user="Fede Borgnia" uid="392023" lat="-32.8935680" lon="-68.8604506"/>
+ <node id="1086779916" visible="true" version="4" changeset="170502661" timestamp="2025-08-15T23:38:02Z" user="Pich14" uid="20877334" lat="-32.8934406" lon="-68.8550238"/>
+ <node id="1086779948" visible="true" version="4" changeset="170502661" timestamp="2025-08-15T23:38:02Z" user="Pich14" uid="20877334" lat="-32.8937511" lon="-68.8532461"/>
+ <node id="1086779959" visible="true" version="4" changeset="57585945" timestamp="2018-03-28T03:07:05Z" user="UriGonzo" uid="7386925" lat="-32.8982591" lon="-68.8555904"/>
+ <node id="1086779974" visible="true" version="4" changeset="170502661" timestamp="2025-08-15T23:38:02Z" user="Pich14" uid="20877334" lat="-32.8930931" lon="-68.8569247"/>
+ <node id="1086779984" visible="true" version="6" changeset="57746468" timestamp="2018-04-02T17:27:09Z" user="pizzagal" uid="7772276" lat="-32.8938386" lon="-68.8589535">
+  <tag k="crossing" v="traffic_signals"/>
+  <tag k="highway" v="traffic_signals"/>
+ </node>
+ <node id="1086780032" visible="true" version="2" changeset="8802053" timestamp="2011-07-22T22:10:00Z" user="Fede Borgnia" uid="392023" lat="-32.8944950" lon="-68.8552946"/>
+ <node id="1086780064" visible="true" version="5" changeset="167596540" timestamp="2025-06-14T01:36:37Z" user="Pich14" uid="20877334" lat="-32.9005196" lon="-68.8557686"/>
+ <node id="1086780069" visible="true" version="2" changeset="8802053" timestamp="2011-07-22T22:10:00Z" user="Fede Borgnia" uid="392023" lat="-32.8950542" lon="-68.8553545"/>
+ <node id="1086780130" visible="true" version="4" changeset="57585945" timestamp="2018-03-28T03:07:06Z" user="UriGonzo" uid="7386925" lat="-32.8969738" lon="-68.8555015"/>
+ <node id="1086780140" visible="true" version="5" changeset="167502832" timestamp="2025-06-11T17:52:35Z" user="Pich14" uid="20877334" lat="-32.8927373" lon="-68.8589242"/>
+ <node id="1086780142" visible="true" version="8" changeset="151459219" timestamp="2024-05-17T15:03:57Z" user="Pich14" uid="20877334" lat="-32.8923525" lon="-68.8547311">
+  <tag k="highway" v="traffic_signals"/>
+ </node>
+ <node id="1086780176" visible="true" version="2" changeset="8802053" timestamp="2011-07-22T22:10:00Z" user="Fede Borgnia" uid="392023" lat="-32.8941619" lon="-68.8571961"/>
+ <node id="1115816185" visible="true" version="8" changeset="170502661" timestamp="2025-08-15T23:38:02Z" user="Pich14" uid="20877334" lat="-32.8912319" lon="-68.8544385"/>
+ <node id="1115816191" visible="true" version="6" changeset="170503004" timestamp="2025-08-16T00:05:52Z" user="Pich14" uid="20877334" lat="-32.8907719" lon="-68.8543174"/>
+ <node id="2180082423" visible="true" version="1" changeset="15212146" timestamp="2013-03-01T16:57:25Z" user="Sefer" uid="657892" lat="-32.8939976" lon="-68.8580893"/>
+ <node id="3165121665" visible="true" version="2" changeset="33727940" timestamp="2015-09-01T13:42:40Z" user="Sefer" uid="657892" lat="-32.8956671" lon="-68.8574965">
+  <tag k="highway" v="stop"/>
+ </node>
+ <node id="3584053086" visible="true" version="2" changeset="77323926" timestamp="2019-11-20T12:44:35Z" user="Sefer" uid="657892" lat="-32.8940484" lon="-68.8572908">
+  <tag k="name" v="Don Humberto"/>
+  <tag k="shop" v="greengrocer"/>
+ </node>
+ <node id="3584053087" visible="true" version="1" changeset="31852719" timestamp="2015-06-09T18:58:34Z" user="Sefer" uid="657892" lat="-32.8943854" lon="-68.8571570">
+  <tag k="name" v="Marcos"/>
+  <tag k="shop" v="frame"/>
+ </node>
+ <node id="3639401235" visible="true" version="2" changeset="57613261" timestamp="2018-03-28T20:39:42Z" user="pizzagal" uid="7772276" lat="-32.8902201" lon="-68.8543849">
+  <tag k="crossing" v="traffic_signals"/>
+  <tag k="crossing_ref" v="zebra"/>
+  <tag k="highway" v="traffic_signals"/>
+ </node>
+ <node id="3958241852" visible="true" version="1" changeset="36721918" timestamp="2016-01-21T15:01:53Z" user="Sefer" uid="657892" lat="-32.9002832" lon="-68.8557517"/>
+ <node id="4184621998" visible="true" version="1" changeset="39303739" timestamp="2016-05-14T02:26:00Z" user="Sefer" uid="657892" lat="-32.8940174" lon="-68.8571612">
+  <tag k="addr:city" v="Mendoza"/>
+  <tag k="addr:street" v="Martínez de Rozas"/>
+  <tag k="description:es" v="cuneta peligrosa"/>
+  <tag k="traffic_calming" v="bump"/>
+ </node>
+ <node id="4595363146" visible="true" version="2" changeset="155172094" timestamp="2024-08-12T23:59:08Z" user="Sefer" uid="657892" lat="-32.8736018" lon="-68.8517529"/>
+ <node id="4872684310" visible="true" version="1" changeset="48925268" timestamp="2017-05-23T18:44:36Z" user="Sefer" uid="657892" lat="-32.8951249" lon="-68.8553622">
+  <tag k="highway" v="stop"/>
+ </node>
+ <node id="4872684314" visible="true" version="5" changeset="161009019" timestamp="2025-01-05T04:20:36Z" user="Pich14" uid="20877334" lat="-32.8946072" lon="-68.8554230">
+  <tag k="addr:city" v="Mendoza"/>
+  <tag k="addr:housenumber" v="524"/>
+  <tag k="addr:postcode" v="5500"/>
+  <tag k="addr:street" v="Manuel Olascoaga"/>
+ </node>
+ <node id="4872684315" visible="true" version="5" changeset="161009019" timestamp="2025-01-05T04:20:36Z" user="Pich14" uid="20877334" lat="-32.8949082" lon="-68.8554538">
+  <tag k="addr:city" v="Mendoza"/>
+  <tag k="addr:housenumber" v="500"/>
+  <tag k="addr:postcode" v="5500"/>
+  <tag k="addr:street" v="Manuel Olascoaga"/>
+ </node>
+ <node id="4872684316" visible="true" version="4" changeset="161009019" timestamp="2025-01-05T04:20:36Z" user="Pich14" uid="20877334" lat="-32.8935559" lon="-68.8551726">
+  <tag k="addr:city" v="Mendoza"/>
+  <tag k="addr:housenumber" v="598"/>
+  <tag k="addr:postcode" v="5500"/>
+  <tag k="addr:street" v="Manuel Olascoaga"/>
+ </node>
+ <node id="4872684317" visible="true" version="5" changeset="161009019" timestamp="2025-01-05T04:20:36Z" user="Pich14" uid="20877334" lat="-32.8943329" lon="-68.8553712">
+  <tag k="addr:city" v="Mendoza"/>
+  <tag k="addr:housenumber" v="526"/>
+  <tag k="addr:postcode" v="5500"/>
+  <tag k="addr:street" v="Manuel Olascoaga"/>
+ </node>
+ <node id="4872684318" visible="true" version="2" changeset="161009019" timestamp="2025-01-05T04:20:36Z" user="Pich14" uid="20877334" lat="-32.8940861" lon="-68.8579367">
+  <tag k="addr:city" v="Mendoza"/>
+  <tag k="addr:housenumber" v="448"/>
+  <tag k="addr:postcode" v="5500"/>
+  <tag k="addr:street" v="Manuel Antonio Sáez"/>
+ </node>
+ <node id="4872684319" visible="true" version="2" changeset="161009019" timestamp="2025-01-05T04:20:36Z" user="Pich14" uid="20877334" lat="-32.8941863" lon="-68.8573917">
+  <tag k="addr:city" v="Mendoza"/>
+  <tag k="addr:housenumber" v="400"/>
+  <tag k="addr:postcode" v="5500"/>
+  <tag k="addr:street" v="Manuel Antonio Sáez"/>
+ </node>
+ <node id="4872684320" visible="true" version="3" changeset="161009019" timestamp="2025-01-05T04:20:36Z" user="Pich14" uid="20877334" lat="-32.8942658" lon="-68.8570276">
+  <tag k="addr:city" v="Mendoza"/>
+  <tag k="addr:housenumber" v="398"/>
+  <tag k="addr:postcode" v="5500"/>
+  <tag k="addr:street" v="Manuel Antonio Sáez"/>
+ </node>
+ <node id="4872686021" visible="true" version="3" changeset="161009019" timestamp="2025-01-05T04:20:36Z" user="Pich14" uid="20877334" lat="-32.8945266" lon="-68.8555141">
+  <tag k="addr:city" v="Mendoza"/>
+  <tag k="addr:housenumber" v="300"/>
+  <tag k="addr:postcode" v="5500"/>
+  <tag k="addr:street" v="Manuel Antonio Sáez"/>
+ </node>
+ <node id="4872686024" visible="true" version="2" changeset="77323926" timestamp="2019-11-20T12:44:35Z" user="Sefer" uid="657892" lat="-32.8943760" lon="-68.8554685">
+  <tag k="addr:housenumber" v="301"/>
+  <tag k="addr:street" v="Manuel Antonio Sáez"/>
+  <tag k="name" v="La Parra"/>
+  <tag k="shop" v="bakery"/>
+ </node>
+ <node id="4873043809" visible="true" version="3" changeset="161009019" timestamp="2025-01-05T04:20:36Z" user="Pich14" uid="20877334" lat="-32.8943286" lon="-68.8571287">
+  <tag k="addr:city" v="Mendoza"/>
+  <tag k="addr:housenumber" v="499"/>
+  <tag k="addr:postcode" v="5500"/>
+  <tag k="addr:street" v="Martínez de Rozas"/>
+ </node>
+ <node id="4873043810" visible="true" version="3" changeset="171941131" timestamp="2025-09-15T00:52:35Z" user="Pich14" uid="20877334" lat="-32.8949727" lon="-68.8572664">
+  <tag k="addr:city" v="Mendoza"/>
+  <tag k="addr:housenumber" v="437"/>
+  <tag k="addr:postcode" v="5500"/>
+  <tag k="addr:street" v="Martínez de Rozas"/>
+ </node>
+ <node id="4873043811" visible="true" version="2" changeset="161009019" timestamp="2025-01-05T04:20:36Z" user="Pich14" uid="20877334" lat="-32.8942950" lon="-68.8573344">
+  <tag k="addr:city" v="Mendoza"/>
+  <tag k="addr:housenumber" v="498"/>
+  <tag k="addr:postcode" v="5500"/>
+  <tag k="addr:street" v="Martínez de Rozas"/>
+ </node>
+ <node id="4873043812" visible="true" version="3" changeset="171941131" timestamp="2025-09-15T00:52:35Z" user="Pich14" uid="20877334" lat="-32.8949591" lon="-68.8574865">
+  <tag k="addr:city" v="Mendoza"/>
+  <tag k="addr:housenumber" v="446"/>
+  <tag k="addr:postcode" v="5500"/>
+  <tag k="addr:street" v="Martínez de Rozas"/>
+ </node>
+ <node id="4873043827" visible="true" version="4" changeset="167114045" timestamp="2025-06-03T02:09:45Z" user="Pich14" uid="20877334" lat="-32.8925162" lon="-68.8548776">
+  <tag k="addr:city" v="Mendoza"/>
+  <tag k="addr:housenumber" v="698"/>
+  <tag k="addr:postcode" v="5500"/>
+  <tag k="addr:street" v="Manuel Olascoaga"/>
+ </node>
+ <node id="4873043828" visible="true" version="3" changeset="161009019" timestamp="2025-01-05T04:20:36Z" user="Pich14" uid="20877334" lat="-32.8932677" lon="-68.8550739">
+  <tag k="addr:city" v="Mendoza"/>
+  <tag k="addr:housenumber" v="600"/>
+  <tag k="addr:postcode" v="5500"/>
+  <tag k="addr:street" v="Manuel Olascoaga"/>
+ </node>
+ <node id="5509782799" visible="true" version="2" changeset="57752209" timestamp="2018-04-02T20:54:15Z" user="pizzagal" uid="7772276" lat="-32.8956795" lon="-68.8574976">
+  <tag k="crossing" v="uncontrolled"/>
+  <tag k="highway" v="crossing"/>
+ </node>
+ <node id="5509782800" visible="true" version="3" changeset="57752209" timestamp="2018-04-02T20:54:15Z" user="pizzagal" uid="7772276" lat="-32.8951925" lon="-68.8574253">
+  <tag k="crossing" v="uncontrolled"/>
+  <tag k="highway" v="crossing"/>
+ </node>
+ <node id="5509782801" visible="true" version="3" changeset="57752209" timestamp="2018-04-02T20:54:15Z" user="pizzagal" uid="7772276" lat="-32.8950492" lon="-68.8573977">
+  <tag k="crossing" v="uncontrolled"/>
+  <tag k="highway" v="crossing"/>
+ </node>
+ <node id="5512377111" visible="true" version="2" changeset="151459219" timestamp="2024-05-17T15:03:57Z" user="Pich14" uid="20877334" lat="-32.8901006" lon="-68.8543663">
+  <tag k="crossing" v="traffic_signals"/>
+  <tag k="crossing_ref" v="zebra"/>
+  <tag k="highway" v="crossing"/>
+ </node>
+ <node id="5512766907" visible="true" version="2" changeset="57650912" timestamp="2018-03-30T03:55:26Z" user="UriGonzo" uid="7386925" lat="-32.8880666" lon="-68.8538150">
+  <tag k="highway" v="crossing"/>
+ </node>
+ <node id="5523159091" visible="true" version="1" changeset="57746468" timestamp="2018-04-02T17:27:07Z" user="pizzagal" uid="7772276" lat="-32.8938172" lon="-68.8590719">
+  <tag k="highway" v="crossing"/>
+ </node>
+ <node id="5523159093" visible="true" version="1" changeset="57746468" timestamp="2018-04-02T17:27:07Z" user="pizzagal" uid="7772276" lat="-32.8938607" lon="-68.8588334">
+  <tag k="highway" v="crossing"/>
+ </node>
+ <node id="6992436323" visible="true" version="2" changeset="161009019" timestamp="2025-01-05T04:20:36Z" user="Pich14" uid="20877334" lat="-32.8931923" lon="-68.8567843">
+  <tag k="addr:city" v="Mendoza"/>
+  <tag k="addr:housenumber" v="398"/>
+  <tag k="addr:postcode" v="5500"/>
+  <tag k="addr:street" v="Sgto. Juan Bautista Cabral"/>
+ </node>
+ <node id="6992436324" visible="true" version="3" changeset="170502661" timestamp="2025-08-15T23:38:02Z" user="Pich14" uid="20877334" lat="-32.8934797" lon="-68.8552368">
+  <tag k="addr:city" v="Mendoza"/>
+  <tag k="addr:housenumber" v="300"/>
+  <tag k="addr:postcode" v="5500"/>
+  <tag k="addr:street" v="Sgto. Juan Bautista Cabral"/>
+ </node>
+ <node id="6992436325" visible="true" version="2" changeset="161009019" timestamp="2025-01-05T04:20:36Z" user="Pich14" uid="20877334" lat="-32.8930395" lon="-68.8567342">
+  <tag k="addr:city" v="Mendoza"/>
+  <tag k="addr:housenumber" v="399"/>
+  <tag k="addr:postcode" v="5500"/>
+  <tag k="addr:street" v="Sgto. Juan Bautista Cabral"/>
+ </node>
+ <node id="6992436326" visible="true" version="2" changeset="161009019" timestamp="2025-01-05T04:20:36Z" user="Pich14" uid="20877334" lat="-32.8933236" lon="-68.8551993">
+  <tag k="addr:city" v="Mendoza"/>
+  <tag k="addr:housenumber" v="301"/>
+  <tag k="addr:postcode" v="5500"/>
+  <tag k="addr:street" v="Sgto. Juan Bautista Cabral"/>
+ </node>
+ <node id="6992436327" visible="true" version="3" changeset="161009019" timestamp="2025-01-05T04:20:36Z" user="Pich14" uid="20877334" lat="-32.8935929" lon="-68.8549694">
+  <tag k="addr:city" v="Mendoza"/>
+  <tag k="addr:housenumber" v="599"/>
+  <tag k="addr:street" v="Manuel Olascoaga"/>
+ </node>
+ <node id="6992436329" visible="true" version="3" changeset="161009019" timestamp="2025-01-05T04:20:36Z" user="Pich14" uid="20877334" lat="-32.8948702" lon="-68.8552384">
+  <tag k="addr:city" v="Mendoza"/>
+  <tag k="addr:housenumber" v="501"/>
+  <tag k="addr:postcode" v="5500"/>
+  <tag k="addr:street" v="Manuel Olascoaga"/>
+ </node>
+ <node id="6992436330" visible="true" version="2" changeset="161009019" timestamp="2025-01-05T04:20:36Z" user="Pich14" uid="20877334" lat="-32.8941260" lon="-68.8569922">
+  <tag k="addr:city" v="Mendoza"/>
+  <tag k="addr:housenumber" v="399"/>
+  <tag k="addr:postcode" v="5500"/>
+  <tag k="addr:street" v="Manuel Antonio Sáez"/>
+ </node>
+ <node id="6992436331" visible="true" version="2" changeset="161009019" timestamp="2025-01-05T04:20:36Z" user="Pich14" uid="20877334" lat="-32.8943952" lon="-68.8554796">
+  <tag k="addr:city" v="Mendoza"/>
+  <tag k="addr:housenumber" v="301"/>
+  <tag k="addr:postcode" v="5500"/>
+  <tag k="addr:street" v="Manuel Antonio Sáez"/>
+ </node>
+ <node id="9985877839" visible="true" version="4" changeset="170502661" timestamp="2025-08-15T23:38:02Z" user="Pich14" uid="20877334" lat="-32.8935466" lon="-68.8548577">
+  <tag k="addr:city" v="Mendoza"/>
+  <tag k="addr:housenumber" v="298"/>
+  <tag k="addr:postcode" v="5500"/>
+  <tag k="addr:street" v="Sgto. Juan Bautista Cabral"/>
+ </node>
+ <node id="9985877840" visible="true" version="5" changeset="170502661" timestamp="2025-08-15T23:38:02Z" user="Pich14" uid="20877334" lat="-32.8937949" lon="-68.8534741">
+  <tag k="addr:city" v="Mendoza"/>
+  <tag k="addr:housenumber" v="200"/>
+  <tag k="addr:postcode" v="5500"/>
+  <tag k="addr:street" v="Sgto. Juan Bautista Cabral"/>
+ </node>
+ <node id="9985880769" visible="true" version="3" changeset="161009019" timestamp="2025-01-05T04:20:36Z" user="Pich14" uid="20877334" lat="-32.8933907" lon="-68.8548265">
+  <tag k="addr:city" v="Mendoza"/>
+  <tag k="addr:housenumber" v="299"/>
+  <tag k="addr:postcode" v="5500"/>
+  <tag k="addr:street" v="Sgto. Juan Bautista Cabral"/>
+ </node>
+ <node id="9985880770" visible="true" version="4" changeset="170502661" timestamp="2025-08-15T23:38:02Z" user="Pich14" uid="20877334" lat="-32.8936366" lon="-68.8534468">
+  <tag k="addr:city" v="Mendoza"/>
+  <tag k="addr:housenumber" v="201"/>
+  <tag k="addr:postcode" v="5500"/>
+  <tag k="addr:street" v="Sgto. Juan Bautista Cabral"/>
+ </node>
+ <node id="10775560194" visible="true" version="2" changeset="171885232" timestamp="2025-09-13T16:57:51Z" user="Pich14" uid="20877334" lat="-32.9020154" lon="-68.8571379"/>
+ <node id="12475111857" visible="true" version="1" changeset="161009019" timestamp="2025-01-05T04:20:36Z" user="Pich14" uid="20877334" lat="-32.8945599" lon="-68.8552050">
+  <tag k="addr:city" v="Mendoza"/>
+  <tag k="addr:housenumber" v="525"/>
+  <tag k="addr:postcode" v="5500"/>
+  <tag k="addr:street" v="Manuel Olascoaga"/>
+ </node>
+ <node id="12475111858" visible="true" version="1" changeset="161009019" timestamp="2025-01-05T04:20:36Z" user="Pich14" uid="20877334" lat="-32.8940480" lon="-68.8573599">
+  <tag k="addr:city" v="Mendoza"/>
+  <tag k="addr:housenumber" v="401"/>
+  <tag k="addr:postcode" v="5500"/>
+  <tag k="addr:street" v="Manuel Antonio Sáez"/>
+ </node>
+ <node id="12475111859" visible="true" version="1" changeset="161009019" timestamp="2025-01-05T04:20:36Z" user="Pich14" uid="20877334" lat="-32.8937881" lon="-68.8587659">
+  <tag k="addr:city" v="Mendoza"/>
+  <tag k="addr:housenumber" v="449"/>
+  <tag k="addr:postcode" v="5500"/>
+  <tag k="addr:street" v="Manuel Antonio Sáez"/>
+ </node>
+ <node id="12475111860" visible="true" version="1" changeset="161009019" timestamp="2025-01-05T04:20:36Z" user="Pich14" uid="20877334" lat="-32.8939342" lon="-68.8579754">
+  <tag k="addr:city" v="Mendoza"/>
+  <tag k="addr:housenumber" v="449"/>
+  <tag k="addr:postcode" v="5500"/>
+  <tag k="addr:street" v="Manuel Antonio Sáez"/>
+ </node>
+ <node id="12475111861" visible="true" version="1" changeset="161009019" timestamp="2025-01-05T04:20:36Z" user="Pich14" uid="20877334" lat="-32.8939092" lon="-68.8581106">
+  <tag k="addr:city" v="Mendoza"/>
+  <tag k="addr:housenumber" v="451"/>
+  <tag k="addr:postcode" v="5500"/>
+  <tag k="addr:street" v="Manuel Antonio Sáez"/>
+ </node>
+ <node id="12475111886" visible="true" version="1" changeset="161009019" timestamp="2025-01-05T04:20:36Z" user="Pich14" uid="20877334" lat="-32.8929742" lon="-68.8571049">
+  <tag k="addr:city" v="Mendoza"/>
+  <tag k="addr:housenumber" v="401"/>
+  <tag k="addr:postcode" v="5500"/>
+  <tag k="addr:street" v="Sgto. Juan Bautista Cabral"/>
+ </node>
+ <node id="12475111887" visible="true" version="1" changeset="161009019" timestamp="2025-01-05T04:20:36Z" user="Pich14" uid="20877334" lat="-32.8926893" lon="-68.8587314">
+  <tag k="addr:city" v="Mendoza"/>
+  <tag k="addr:housenumber" v="499"/>
+  <tag k="addr:postcode" v="5500"/>
+  <tag k="addr:street" v="Sgto. Juan Bautista Cabral"/>
+ </node>
+ <node id="12475111888" visible="true" version="2" changeset="170502661" timestamp="2025-08-15T23:38:02Z" user="Pich14" uid="20877334" lat="-32.8931344" lon="-68.8571440">
+  <tag k="addr:city" v="Mendoza"/>
+  <tag k="addr:housenumber" v="400"/>
+  <tag k="addr:postcode" v="5500"/>
+  <tag k="addr:street" v="Sgto. Juan Bautista Cabral"/>
+ </node>
+ <node id="12475111889" visible="true" version="2" changeset="170502661" timestamp="2025-08-15T23:38:02Z" user="Pich14" uid="20877334" lat="-32.8928545" lon="-68.8587318">
+  <tag k="addr:city" v="Mendoza"/>
+  <tag k="addr:housenumber" v="498"/>
+  <tag k="addr:postcode" v="5500"/>
+  <tag k="addr:street" v="Sgto. Juan Bautista Cabral"/>
+ </node>
+ <node id="12475111966" visible="true" version="2" changeset="161024166" timestamp="2025-01-05T15:06:22Z" user="Pich14" uid="20877334" lat="-32.8944177" lon="-68.8551760">
+  <tag k="addr:city" v="Mendoza"/>
+  <tag k="addr:housenumber" v="527"/>
+  <tag k="addr:postcode" v="5500"/>
+  <tag k="addr:street" v="Manuel Olascoaga"/>
+ </node>
+ <node id="12475111967" visible="true" version="1" changeset="161009019" timestamp="2025-01-05T04:20:36Z" user="Pich14" uid="20877334" lat="-32.8939644" lon="-68.8572559">
+  <tag k="addr:city" v="Mendoza"/>
+  <tag k="addr:housenumber" v="500"/>
+  <tag k="addr:postcode" v="5500"/>
+  <tag k="addr:street" v="Martínez de Rozas"/>
+ </node>
+ <node id="12475111968" visible="true" version="1" changeset="161009019" timestamp="2025-01-05T04:20:36Z" user="Pich14" uid="20877334" lat="-32.8932228" lon="-68.8570668">
+  <tag k="addr:city" v="Mendoza"/>
+  <tag k="addr:housenumber" v="598"/>
+  <tag k="addr:postcode" v="5500"/>
+  <tag k="addr:street" v="Martínez de Rozas"/>
+ </node>
+ <node id="12475111969" visible="true" version="1" changeset="161009019" timestamp="2025-01-05T04:20:36Z" user="Pich14" uid="20877334" lat="-32.8932658" lon="-68.8568735">
+  <tag k="addr:city" v="Mendoza"/>
+  <tag k="addr:housenumber" v="599"/>
+  <tag k="addr:postcode" v="5500"/>
+  <tag k="addr:street" v="Martínez de Rozas"/>
+ </node>
+ <node id="12475111970" visible="true" version="1" changeset="161009019" timestamp="2025-01-05T04:20:36Z" user="Pich14" uid="20877334" lat="-32.8940060" lon="-68.8570564">
+  <tag k="addr:city" v="Mendoza"/>
+  <tag k="addr:housenumber" v="501"/>
+  <tag k="addr:postcode" v="5500"/>
+  <tag k="addr:street" v="Martínez de Rozas"/>
+ </node>
+ <node id="12475111971" visible="true" version="1" changeset="161009019" timestamp="2025-01-05T04:20:36Z" user="Pich14" uid="20877334" lat="-32.8928994" lon="-68.8569835">
+  <tag k="addr:city" v="Mendoza"/>
+  <tag k="addr:housenumber" v="600"/>
+  <tag k="addr:postcode" v="5500"/>
+  <tag k="addr:street" v="Martínez de Rozas"/>
+ </node>
+ <node id="12475111972" visible="true" version="2" changeset="170502661" timestamp="2025-08-15T23:38:02Z" user="Pich14" uid="20877334" lat="-32.8921988" lon="-68.8568053">
+  <tag k="addr:city" v="Mendoza"/>
+  <tag k="addr:housenumber" v="698"/>
+  <tag k="addr:postcode" v="5500"/>
+  <tag k="addr:street" v="Martínez de Rozas"/>
+ </node>
+ <node id="12475111973" visible="true" version="2" changeset="170502661" timestamp="2025-08-15T23:38:02Z" user="Pich14" uid="20877334" lat="-32.8922373" lon="-68.8566078">
+  <tag k="addr:city" v="Mendoza"/>
+  <tag k="addr:housenumber" v="699"/>
+  <tag k="addr:postcode" v="5500"/>
+  <tag k="addr:street" v="Martínez de Rozas"/>
+ </node>
+ <node id="12475111974" visible="true" version="2" changeset="170502661" timestamp="2025-08-15T23:38:02Z" user="Pich14" uid="20877334" lat="-32.8929358" lon="-68.8567833">
+  <tag k="addr:city" v="Mendoza"/>
+  <tag k="addr:housenumber" v="601"/>
+  <tag k="addr:postcode" v="5500"/>
+  <tag k="addr:street" v="Martínez de Rozas"/>
+ </node>
+ <node id="12475111975" visible="true" version="1" changeset="161009019" timestamp="2025-01-05T04:20:36Z" user="Pich14" uid="20877334" lat="-32.8925454" lon="-68.8546743">
+  <tag k="addr:city" v="Mendoza"/>
+  <tag k="addr:housenumber" v="699"/>
+  <tag k="addr:postcode" v="5500"/>
+  <tag k="addr:street" v="Manuel Olascoaga"/>
+ </node>
+ <node id="12475111976" visible="true" version="1" changeset="161009019" timestamp="2025-01-05T04:20:36Z" user="Pich14" uid="20877334" lat="-32.8932944" lon="-68.8548751">
+  <tag k="addr:city" v="Mendoza"/>
+  <tag k="addr:housenumber" v="601"/>
+  <tag k="addr:postcode" v="5500"/>
+  <tag k="addr:street" v="Manuel Olascoaga"/>
+ </node>
+ <node id="13117131719" visible="true" version="2" changeset="171885232" timestamp="2025-09-13T16:57:51Z" user="Pich14" uid="20877334" lat="-32.9016717" lon="-68.8571113">
+  <tag k="highway" v="crossing"/>
+ </node>
+ <node id="13117131720" visible="true" version="1" changeset="171429102" timestamp="2025-09-03T23:59:16Z" user="Pich14" uid="20877334" lat="-32.9005000" lon="-68.8570326"/>
+ <node id="13117131721" visible="true" version="1" changeset="171429102" timestamp="2025-09-03T23:59:16Z" user="Pich14" uid="20877334" lat="-32.8994205" lon="-68.8569520"/>
+ <node id="13117131722" visible="true" version="1" changeset="171429102" timestamp="2025-09-03T23:59:16Z" user="Pich14" uid="20877334" lat="-32.8982184" lon="-68.8568248"/>
+ <node id="13117131723" visible="true" version="1" changeset="171429102" timestamp="2025-09-03T23:59:16Z" user="Pich14" uid="20877334" lat="-32.8969551" lon="-68.8567220"/>
+ <node id="13117131724" visible="true" version="1" changeset="171429102" timestamp="2025-09-03T23:59:16Z" user="Pich14" uid="20877334" lat="-32.8967599" lon="-68.8566998"/>
+ <node id="13117131725" visible="true" version="1" changeset="171429102" timestamp="2025-09-03T23:59:16Z" user="Pich14" uid="20877334" lat="-32.8966755" lon="-68.8566905"/>
+ <node id="13117131726" visible="true" version="1" changeset="171429102" timestamp="2025-09-03T23:59:16Z" user="Pich14" uid="20877334" lat="-32.8965932" lon="-68.8566905"/>
+ <node id="13117131727" visible="true" version="1" changeset="171429102" timestamp="2025-09-03T23:59:16Z" user="Pich14" uid="20877334" lat="-32.8965403" lon="-68.8566987"/>
+ <node id="13117131728" visible="true" version="1" changeset="171429102" timestamp="2025-09-03T23:59:16Z" user="Pich14" uid="20877334" lat="-32.8964795" lon="-68.8567197"/>
+ <node id="13117131729" visible="true" version="1" changeset="171429102" timestamp="2025-09-03T23:59:16Z" user="Pich14" uid="20877334" lat="-32.8963805" lon="-68.8567734"/>
+ <node id="13117131730" visible="true" version="1" changeset="171429102" timestamp="2025-09-03T23:59:16Z" user="Pich14" uid="20877334" lat="-32.8962521" lon="-68.8569182"/>
+ <node id="13117131731" visible="true" version="1" changeset="171429102" timestamp="2025-09-03T23:59:16Z" user="Pich14" uid="20877334" lat="-32.8961629" lon="-68.8570349"/>
+ <node id="13117131732" visible="true" version="1" changeset="171429102" timestamp="2025-09-03T23:59:16Z" user="Pich14" uid="20877334" lat="-32.8961266" lon="-68.8571120"/>
+ <node id="13117131733" visible="true" version="1" changeset="171429102" timestamp="2025-09-03T23:59:16Z" user="Pich14" uid="20877334" lat="-32.8960982" lon="-68.8572334"/>
+ <node id="13117131734" visible="true" version="1" changeset="171429102" timestamp="2025-09-03T23:59:16Z" user="Pich14" uid="20877334" lat="-32.8960746" lon="-68.8573210"/>
+ <node id="13117131735" visible="true" version="1" changeset="171429102" timestamp="2025-09-03T23:59:16Z" user="Pich14" uid="20877334" lat="-32.8960472" lon="-68.8573922"/>
+ <node id="13117131736" visible="true" version="1" changeset="171429102" timestamp="2025-09-03T23:59:16Z" user="Pich14" uid="20877334" lat="-32.8960168" lon="-68.8574167"/>
+ <node id="13117131737" visible="true" version="1" changeset="171429102" timestamp="2025-09-03T23:59:16Z" user="Pich14" uid="20877334" lat="-32.8959756" lon="-68.8574272"/>
+ <node id="13117131738" visible="true" version="1" changeset="171429102" timestamp="2025-09-03T23:59:16Z" user="Pich14" uid="20877334" lat="-32.8958943" lon="-68.8574424"/>
+ <node id="13117131739" visible="true" version="1" changeset="171429102" timestamp="2025-09-03T23:59:16Z" user="Pich14" uid="20877334" lat="-32.8957467" lon="-68.8574398"/>
+ <node id="13117131740" visible="true" version="1" changeset="171429102" timestamp="2025-09-03T23:59:16Z" user="Pich14" uid="20877334" lat="-32.8951358" lon="-68.8573406"/>
+ <node id="13117131741" visible="true" version="1" changeset="171429102" timestamp="2025-09-03T23:59:16Z" user="Pich14" uid="20877334" lat="-32.8941728" lon="-68.8571338"/>
+ <node id="13117131742" visible="true" version="1" changeset="171429102" timestamp="2025-09-03T23:59:16Z" user="Pich14" uid="20877334" lat="-32.8931039" lon="-68.8568658"/>
+ <node id="13117131743" visible="true" version="1" changeset="171429102" timestamp="2025-09-03T23:59:16Z" user="Pich14" uid="20877334" lat="-32.8920113" lon="-68.8565784"/>
+ <node id="13117131744" visible="true" version="1" changeset="171429102" timestamp="2025-09-03T23:59:16Z" user="Pich14" uid="20877334" lat="-32.8908980" lon="-68.8562832"/>
+ <node id="13117131745" visible="true" version="1" changeset="171429102" timestamp="2025-09-03T23:59:16Z" user="Pich14" uid="20877334" lat="-32.8898429" lon="-68.8560092"/>
+ <node id="13117131746" visible="true" version="1" changeset="171429102" timestamp="2025-09-03T23:59:16Z" user="Pich14" uid="20877334" lat="-32.8887927" lon="-68.8557287"/>
+ <node id="13117131747" visible="true" version="1" changeset="171429102" timestamp="2025-09-03T23:59:16Z" user="Pich14" uid="20877334" lat="-32.8876741" lon="-68.8554438"/>
+ <node id="13117131748" visible="true" version="1" changeset="171429102" timestamp="2025-09-03T23:59:16Z" user="Pich14" uid="20877334" lat="-32.8865947" lon="-68.8551747"/>
+ <node id="13117131749" visible="true" version="1" changeset="171429102" timestamp="2025-09-03T23:59:16Z" user="Pich14" uid="20877334" lat="-32.8855484" lon="-68.8549061"/>
+ <node id="13117131750" visible="true" version="2" changeset="171759532" timestamp="2025-09-10T23:47:05Z" user="Pich14" uid="20877334" lat="-32.8851808" lon="-68.8548194"/>
+ <node id="13117131751" visible="true" version="1" changeset="171429102" timestamp="2025-09-03T23:59:16Z" user="Pich14" uid="20877334" lat="-32.8837938" lon="-68.8544520"/>
+ <node id="13117131752" visible="true" version="2" changeset="171520726" timestamp="2025-09-05T23:21:15Z" user="Pich14" uid="20877334" lat="-32.8822724" lon="-68.8540358"/>
+ <node id="13117131753" visible="true" version="1" changeset="171429102" timestamp="2025-09-03T23:59:16Z" user="Pich14" uid="20877334" lat="-32.8811901" lon="-68.8537397"/>
+ <node id="13117131754" visible="true" version="1" changeset="171429102" timestamp="2025-09-03T23:59:16Z" user="Pich14" uid="20877334" lat="-32.8798959" lon="-68.8534090"/>
+ <node id="13117131755" visible="true" version="1" changeset="171429102" timestamp="2025-09-03T23:59:16Z" user="Pich14" uid="20877334" lat="-32.8788437" lon="-68.8531287"/>
+ <node id="13117131756" visible="true" version="1" changeset="171429102" timestamp="2025-09-03T23:59:16Z" user="Pich14" uid="20877334" lat="-32.8778021" lon="-68.8528508"/>
+ <node id="13117131757" visible="true" version="1" changeset="171429102" timestamp="2025-09-03T23:59:16Z" user="Pich14" uid="20877334" lat="-32.8767461" lon="-68.8525739"/>
+ <node id="13117131758" visible="true" version="1" changeset="171429102" timestamp="2025-09-03T23:59:16Z" user="Pich14" uid="20877334" lat="-32.8756800" lon="-68.8522832"/>
+ <node id="13117131759" visible="true" version="1" changeset="171429102" timestamp="2025-09-03T23:59:16Z" user="Pich14" uid="20877334" lat="-32.8746562" lon="-68.8520185"/>
+ <node id="13135314771" visible="true" version="1" changeset="171759532" timestamp="2025-09-10T23:47:05Z" user="Pich14" uid="20877334" lat="-32.8852190" lon="-68.8548280"/>
+ <node id="13141161970" visible="true" version="1" changeset="171885232" timestamp="2025-09-13T16:57:51Z" user="Pich14" uid="20877334" lat="-32.9019566" lon="-68.8571321">
+  <tag k="highway" v="crossing"/>
+ </node>
+ <way id="93653359" visible="true" version="15" changeset="171429102" timestamp="2025-09-03T23:59:16Z" user="Pich14" uid="20877334">
+  <nd ref="1086779838"/>
+  <nd ref="1086779899"/>
+  <nd ref="5523159091"/>
+  <nd ref="1086779984"/>
+  <nd ref="5523159093"/>
+  <nd ref="2180082423"/>
+  <nd ref="1086780176"/>
+  <nd ref="13117131741"/>
+  <nd ref="1086780032"/>
+  <tag k="alt_name" v="Manuel A. Sáez"/>
+  <tag k="highway" v="residential"/>
+  <tag k="lit" v="yes"/>
+  <tag k="name" v="Manuel Antonio Sáez"/>
+  <tag k="oneway" v="yes"/>
+  <tag k="surface" v="concrete"/>
+ </way>
+ <way id="93653363" visible="true" version="20" changeset="117284047" timestamp="2022-02-11T11:29:28Z" user="AndresDuhour" uid="2985830">
+  <nd ref="1085863467"/>
+  <nd ref="1086265174"/>
+  <nd ref="1086780064"/>
+  <nd ref="3958241852"/>
+  <nd ref="1086232657"/>
+  <nd ref="1086779959"/>
+  <nd ref="1086780130"/>
+  <nd ref="1086123054"/>
+  <nd ref="4872684310"/>
+  <nd ref="1086780069"/>
+  <nd ref="1086780032"/>
+  <tag k="alt_name" v="11 Oeste"/>
+  <tag k="highway" v="residential"/>
+  <tag k="lanes" v="2"/>
+  <tag k="lit" v="yes"/>
+  <tag k="name" v="Manuel Olascoaga"/>
+  <tag k="oneway" v="yes"/>
+  <tag k="surface" v="concrete"/>
+ </way>
+ <way id="93653379" visible="true" version="9" changeset="171429102" timestamp="2025-09-03T23:59:16Z" user="Pich14" uid="20877334">
+  <nd ref="1086779948"/>
+  <nd ref="1086779916"/>
+  <nd ref="13117131742"/>
+  <nd ref="1086779974"/>
+  <nd ref="1086780140"/>
+  <tag k="alt_name" v="Sargento Cabral"/>
+  <tag k="highway" v="residential"/>
+  <tag k="name" v="Sgto. Juan Bautista Cabral"/>
+  <tag k="oneway" v="yes"/>
+  <tag k="surface" v="asphalt"/>
+ </way>
+ <way id="332272036" visible="true" version="9" changeset="117284047" timestamp="2022-02-11T11:29:28Z" user="AndresDuhour" uid="2985830">
+  <nd ref="1086780032"/>
+  <nd ref="1086779916"/>
+  <nd ref="1086780142"/>
+  <nd ref="1115816185"/>
+  <nd ref="1115816191"/>
+  <nd ref="3639401235"/>
+  <nd ref="676748125"/>
+  <nd ref="5512377111"/>
+  <nd ref="480890151"/>
+  <nd ref="5512766907"/>
+  <nd ref="480890153"/>
+  <tag k="alt_name" v="11 Oeste"/>
+  <tag k="highway" v="residential"/>
+  <tag k="lanes" v="2"/>
+  <tag k="name" v="Manuel Olascoaga"/>
+  <tag k="oneway" v="yes"/>
+  <tag k="surface" v="asphalt"/>
+ </way>
+ <way id="495527903" visible="true" version="1" changeset="48925268" timestamp="2017-05-23T18:44:39Z" user="Sefer" uid="657892">
+  <nd ref="4872684315"/>
+  <nd ref="4872684314"/>
+  <tag k="addr:interpolation" v="even"/>
+ </way>
+ <way id="495527904" visible="true" version="1" changeset="48925268" timestamp="2017-05-23T18:44:39Z" user="Sefer" uid="657892">
+  <nd ref="4872684317"/>
+  <nd ref="4872684316"/>
+  <tag k="addr:interpolation" v="even"/>
+ </way>
+ <way id="495527905" visible="true" version="1" changeset="48925268" timestamp="2017-05-23T18:44:40Z" user="Sefer" uid="657892">
+  <nd ref="4872684319"/>
+  <nd ref="4872684318"/>
+  <tag k="addr:interpolation" v="even"/>
+ </way>
+ <way id="495527906" visible="true" version="1" changeset="48925268" timestamp="2017-05-23T18:44:40Z" user="Sefer" uid="657892">
+  <nd ref="4872686021"/>
+  <nd ref="4872684320"/>
+  <tag k="addr:interpolation" v="even"/>
+ </way>
+ <way id="495564636" visible="true" version="1" changeset="48930767" timestamp="2017-05-23T23:11:59Z" user="Sefer" uid="657892">
+  <nd ref="4873043810"/>
+  <nd ref="4873043809"/>
+  <tag k="addr:interpolation" v="odd"/>
+ </way>
+ <way id="495564637" visible="true" version="1" changeset="48930767" timestamp="2017-05-23T23:11:59Z" user="Sefer" uid="657892">
+  <nd ref="4873043812"/>
+  <nd ref="4873043811"/>
+  <tag k="addr:interpolation" v="even"/>
+ </way>
+ <way id="495564645" visible="true" version="1" changeset="48930767" timestamp="2017-05-23T23:11:59Z" user="Sefer" uid="657892">
+  <nd ref="4873043828"/>
+  <nd ref="4873043827"/>
+  <tag k="addr:interpolation" v="even"/>
+ </way>
+ <way id="747287926" visible="true" version="1" changeset="77323926" timestamp="2019-11-20T12:44:35Z" user="Sefer" uid="657892">
+  <nd ref="6992436324"/>
+  <nd ref="6992436323"/>
+  <tag k="addr:interpolation" v="even"/>
+ </way>
+ <way id="747287927" visible="true" version="1" changeset="77323926" timestamp="2019-11-20T12:44:35Z" user="Sefer" uid="657892">
+  <nd ref="6992436326"/>
+  <nd ref="6992436325"/>
+  <tag k="addr:inclusion" v="actual"/>
+  <tag k="addr:interpolation" v="odd"/>
+ </way>
+ <way id="747287928" visible="true" version="2" changeset="161009019" timestamp="2025-01-05T04:20:36Z" user="Pich14" uid="20877334">
+  <nd ref="6992436329"/>
+  <nd ref="12475111857"/>
+  <nd ref="12475111966"/>
+  <nd ref="6992436327"/>
+  <tag k="addr:inclusion" v="actual"/>
+  <tag k="addr:interpolation" v="odd"/>
+ </way>
+ <way id="747287929" visible="true" version="1" changeset="77323926" timestamp="2019-11-20T12:44:35Z" user="Sefer" uid="657892">
+  <nd ref="6992436331"/>
+  <nd ref="6992436330"/>
+  <tag k="addr:inclusion" v="actual"/>
+  <tag k="addr:interpolation" v="odd"/>
+ </way>
+ <way id="1090202902" visible="true" version="1" changeset="125519979" timestamp="2022-08-29T11:50:29Z" user="Federico Petroni" uid="16851481">
+  <nd ref="9985877839"/>
+  <nd ref="9985877840"/>
+  <tag k="addr:interpolation" v="even"/>
+ </way>
+ <way id="1090205811" visible="true" version="1" changeset="125520466" timestamp="2022-08-29T12:01:36Z" user="Federico Petroni" uid="16851481">
+  <nd ref="9985880769"/>
+  <nd ref="9985880770"/>
+  <tag k="addr:interpolation" v="odd"/>
+ </way>
+ <way id="1304794574" visible="true" version="2" changeset="155172094" timestamp="2024-08-12T23:59:08Z" user="Sefer" uid="657892">
+  <nd ref="676748124"/>
+  <nd ref="1086779974"/>
+  <nd ref="4184621998"/>
+  <nd ref="1086780176"/>
+  <nd ref="5509782801"/>
+  <nd ref="480124259"/>
+  <nd ref="5509782800"/>
+  <nd ref="3165121665"/>
+  <nd ref="5509782799"/>
+  <nd ref="1086123027"/>
+  <tag k="bicycle" v="yes"/>
+  <tag k="cycleway:left" v="lane"/>
+  <tag k="highway" v="tertiary"/>
+  <tag k="lanes" v="2"/>
+  <tag k="lit" v="yes"/>
+  <tag k="maxspeed" v="50"/>
+  <tag k="name" v="Martínez de Rozas"/>
+  <tag k="official_name" v="Juan Martínez de Rozas"/>
+  <tag k="oneway" v="yes"/>
+  <tag k="surface" v="concrete"/>
+ </way>
+ <way id="1348640107" visible="true" version="1" changeset="161009019" timestamp="2025-01-05T04:20:36Z" user="Pich14" uid="20877334">
+  <nd ref="12475111858"/>
+  <nd ref="12475111860"/>
+  <nd ref="12475111861"/>
+  <nd ref="12475111859"/>
+  <tag k="addr:interpolation" v="odd"/>
+ </way>
+ <way id="1348640116" visible="true" version="1" changeset="161009019" timestamp="2025-01-05T04:20:36Z" user="Pich14" uid="20877334">
+  <nd ref="12475111886"/>
+  <nd ref="12475111887"/>
+  <tag k="addr:interpolation" v="odd"/>
+ </way>
+ <way id="1348640117" visible="true" version="1" changeset="161009019" timestamp="2025-01-05T04:20:36Z" user="Pich14" uid="20877334">
+  <nd ref="12475111888"/>
+  <nd ref="12475111889"/>
+  <tag k="addr:interpolation" v="even"/>
+ </way>
+ <way id="1348640143" visible="true" version="1" changeset="161009019" timestamp="2025-01-05T04:20:36Z" user="Pich14" uid="20877334">
+  <nd ref="12475111967"/>
+  <nd ref="12475111968"/>
+  <tag k="addr:interpolation" v="even"/>
+ </way>
+ <way id="1348640144" visible="true" version="1" changeset="161009019" timestamp="2025-01-05T04:20:36Z" user="Pich14" uid="20877334">
+  <nd ref="12475111969"/>
+  <nd ref="12475111970"/>
+  <tag k="addr:interpolation" v="odd"/>
+ </way>
+ <way id="1348640145" visible="true" version="1" changeset="161009019" timestamp="2025-01-05T04:20:36Z" user="Pich14" uid="20877334">
+  <nd ref="12475111971"/>
+  <nd ref="12475111972"/>
+  <tag k="addr:interpolation" v="even"/>
+ </way>
+ <way id="1348640146" visible="true" version="1" changeset="161009019" timestamp="2025-01-05T04:20:36Z" user="Pich14" uid="20877334">
+  <nd ref="12475111973"/>
+  <nd ref="12475111974"/>
+  <tag k="addr:interpolation" v="odd"/>
+ </way>
+ <way id="1348640147" visible="true" version="1" changeset="161009019" timestamp="2025-01-05T04:20:36Z" user="Pich14" uid="20877334">
+  <nd ref="12475111975"/>
+  <nd ref="12475111976"/>
+  <tag k="addr:interpolation" v="odd"/>
+ </way>
+ <way id="1426937345" visible="true" version="3" changeset="171885232" timestamp="2025-09-13T16:57:51Z" user="Pich14" uid="20877334">
+  <nd ref="10775560194"/>
+  <nd ref="13141161970"/>
+  <nd ref="13117131719"/>
+  <nd ref="13117131720"/>
+  <nd ref="13117131721"/>
+  <nd ref="13117131722"/>
+  <nd ref="13117131723"/>
+  <nd ref="13117131724"/>
+  <nd ref="13117131725"/>
+  <nd ref="13117131726"/>
+  <nd ref="13117131727"/>
+  <nd ref="13117131728"/>
+  <nd ref="13117131729"/>
+  <nd ref="13117131730"/>
+  <nd ref="13117131731"/>
+  <nd ref="13117131732"/>
+  <nd ref="13117131733"/>
+  <nd ref="13117131734"/>
+  <nd ref="13117131735"/>
+  <nd ref="13117131736"/>
+  <nd ref="13117131737"/>
+  <nd ref="13117131738"/>
+  <nd ref="13117131739"/>
+  <nd ref="13117131740"/>
+  <nd ref="13117131741"/>
+  <nd ref="13117131742"/>
+  <nd ref="13117131743"/>
+  <nd ref="13117131744"/>
+  <nd ref="13117131745"/>
+  <nd ref="13117131746"/>
+  <nd ref="13117131747"/>
+  <nd ref="13117131748"/>
+  <nd ref="13117131749"/>
+  <nd ref="13135314771"/>
+  <nd ref="13117131750"/>
+  <nd ref="13117131751"/>
+  <nd ref="13117131752"/>
+  <nd ref="13117131753"/>
+  <nd ref="13117131754"/>
+  <nd ref="13117131755"/>
+  <nd ref="13117131756"/>
+  <nd ref="13117131757"/>
+  <nd ref="13117131758"/>
+  <nd ref="13117131759"/>
+  <nd ref="4595363146"/>
+  <tag k="highway" v="cycleway"/>
+  <tag k="surface" v="asphalt"/>
+ </way>
+ <relation id="4664544" visible="true" version="29" changeset="167241611" timestamp="2025-06-05T20:59:21Z" user="dcskobuffs" uid="14174445">
+  <member type="way" ref="332272029" role=""/>
+  <member type="way" ref="652985758" role=""/>
+  <member type="way" ref="332272025" role=""/>
+  <member type="way" ref="574886580" role=""/>
+  <member type="way" ref="230221157" role=""/>
+  <member type="way" ref="97828267" role=""/>
+  <member type="way" ref="1145362160" role=""/>
+  <member type="way" ref="1145362159" role=""/>
+  <member type="way" ref="170101509" role=""/>
+  <member type="way" ref="26125916" role=""/>
+  <member type="way" ref="158462847" role=""/>
+  <member type="way" ref="576005543" role=""/>
+  <member type="way" ref="158462848" role=""/>
+  <member type="way" ref="255698066" role=""/>
+  <member type="way" ref="227338244" role=""/>
+  <member type="way" ref="227834027" role=""/>
+  <member type="way" ref="255113745" role=""/>
+  <member type="way" ref="364936617" role=""/>
+  <member type="way" ref="93807660" role=""/>
+  <member type="way" ref="681201872" role=""/>
+  <member type="way" ref="254799608" role=""/>
+  <member type="way" ref="223622283" role=""/>
+  <member type="way" ref="223783276" role=""/>
+  <member type="way" ref="574657213" role=""/>
+  <member type="way" ref="95019171" role=""/>
+  <member type="way" ref="681196166" role=""/>
+  <member type="way" ref="681196164" role=""/>
+  <member type="way" ref="681196159" role=""/>
+  <member type="way" ref="681196157" role=""/>
+  <member type="way" ref="332272028" role=""/>
+  <member type="way" ref="223783269" role=""/>
+  <member type="way" ref="161265849" role=""/>
+  <member type="way" ref="370321200" role=""/>
+  <member type="way" ref="223783270" role=""/>
+  <member type="way" ref="574534153" role=""/>
+  <member type="way" ref="370321202" role=""/>
+  <member type="way" ref="574534149" role=""/>
+  <member type="way" ref="227830914" role=""/>
+  <member type="way" ref="93653359" role=""/>
+  <member type="way" ref="332272036" role=""/>
+  <member type="way" ref="332272023" role=""/>
+  <member type="way" ref="332272024" role=""/>
+  <member type="way" ref="370321199" role=""/>
+  <member type="way" ref="95151032" role=""/>
+  <member type="way" ref="576523311" role=""/>
+  <member type="way" ref="332272031" role=""/>
+  <member type="way" ref="1256758491" role=""/>
+  <member type="way" ref="97866013" role=""/>
+  <member type="way" ref="1230064056" role=""/>
+  <member type="way" ref="383796887" role=""/>
+  <member type="way" ref="95151031" role=""/>
+  <member type="way" ref="1392447447" role=""/>
+  <member type="way" ref="332272038" role=""/>
+  <member type="way" ref="95151024" role=""/>
+  <member type="way" ref="126833912" role=""/>
+  <member type="way" ref="95151027" role=""/>
+  <member type="way" ref="126833918" role=""/>
+  <member type="way" ref="126833917" role=""/>
+  <member type="way" ref="126833921" role=""/>
+  <member type="way" ref="126833909" role=""/>
+  <member type="way" ref="564526116" role=""/>
+  <member type="way" ref="96991973" role=""/>
+  <member type="way" ref="644994362" role=""/>
+  <member type="way" ref="644994368" role=""/>
+  <member type="way" ref="644994365" role=""/>
+  <member type="way" ref="332272042" role=""/>
+  <member type="way" ref="332272041" role=""/>
+  <member type="way" ref="205286265" role=""/>
+  <member type="way" ref="332272037" role=""/>
+  <member type="way" ref="644994366" role=""/>
+  <member type="way" ref="644994368" role=""/>
+  <member type="way" ref="644994361" role=""/>
+  <tag k="from" v="Las Heras"/>
+  <tag k="name" v="Línea G03 - Recorrido 112 - Las Heras =&gt; Bº La Favorita"/>
+  <tag k="operator" v="UTE-Alavear-Roca-Los Andes"/>
+  <tag k="public_transport:version" v="2"/>
+  <tag k="ref" v="G03-112"/>
+  <tag k="route" v="bus"/>
+  <tag k="to" v="Bº La Favorita"/>
+  <tag k="type" v="route"/>
+  <tag k="via" v="Escuela Videla Correa - Escuela Sarmiento"/>
+ </relation>
+</osm>
