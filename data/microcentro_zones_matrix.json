@@ -1,0 +1,101 @@
+{
+  "5ta-Norte": {
+    "5ta-Norte": 0.0,
+    "5ta-Sur": 0.2644737767212172,
+    "Aristides": 66.54454860180662,
+    "Bologne/Parque": 43.01866072176755,
+    "Costanera": 3.1585829991682648e-06,
+    "Guaymallen": 3.569432224199781e-08,
+    "Microcentro": 89.96345815767665,
+    "Parque Civico": 0.20685270790667235,
+    "Peltier": 0.0020028398439484708
+  },
+  "5ta-Sur": {
+    "5ta-Norte": 0.3695376522124272,
+    "5ta-Sur": 0.0,
+    "Aristides": 89.7253754963306,
+    "Bologne/Parque": 41.95725014805421,
+    "Costanera": 3.7543376220503664e-06,
+    "Guaymallen": 9.526934863998143e-08,
+    "Microcentro": 4.343471485732136,
+    "Parque Civico": 40.80498589043929,
+    "Peltier": 22.799375477624384
+  },
+  "Aristides": {
+    "5ta-Norte": 0.6109573668356099,
+    "5ta-Sur": 1.0316074276234282,
+    "Aristides": 0.0,
+    "Bologne/Parque": 5.158037138117141,
+    "Costanera": 3.277883513885416e-08,
+    "Guaymallen": 5.603326825187603e-10,
+    "Microcentro": 3.0948222828702843,
+    "Parque Civico": 0.10352750724341903,
+    "Peltier": 0.0010482439709501809
+  },
+  "Bologne/Parque": {
+    "5ta-Norte": 0.8356940693003757,
+    "5ta-Sur": 3.5827070708887807,
+    "Aristides": 31.728622034130126,
+    "Bologne/Parque": 0.0,
+    "Costanera": 2.374770861509883e-11,
+    "Guaymallen": 3.7716307362651444e-13,
+    "Microcentro": 0.0002879650577078591,
+    "Parque Civico": 0.0004253731179637256,
+    "Peltier": 13.85226348748092
+  },
+  "Costanera": {
+    "5ta-Norte": 3.625157887325139e-08,
+    "5ta-Sur": 8.981872611435715e-09,
+    "Aristides": 3.5444536474035854e-07,
+    "Bologne/Parque": 7.349195500426851e-12,
+    "Costanera": 0.0,
+    "Guaymallen": 0.9312431267012427,
+    "Microcentro": 4.867851881787427,
+    "Parque Civico": 3.411463447632656,
+    "Peltier": 0.7894411441925075
+  },
+  "Guaymallen": {
+    "5ta-Norte": 7.276687959545022e-08,
+    "5ta-Sur": 5.632324576945233e-08,
+    "Aristides": 2.222644904214827e-06,
+    "Bologne/Parque": 4.6085105220851004e-11,
+    "Costanera": 92.41664731933137,
+    "Guaymallen": 0.0,
+    "Microcentro": 15.248229161987176,
+    "Parque Civico": 21.392498258089145,
+    "Peltier": 70.94262290881119
+  },
+  "Microcentro": {
+    "5ta-Norte": 3.306226855338835,
+    "5ta-Sur": 0.38995502174481456,
+    "Aristides": 24.16651809572236,
+    "Bologne/Parque": 0.00039630514969565014,
+    "Costanera": 12.452619532433244,
+    "Guaymallen": 0.31666125214867846,
+    "Microcentro": 0.0,
+    "Parque Civico": 9.25506603434811,
+    "Peltier": 0.11255690311426851
+  },
+  "Parque Civico": {
+    "5ta-Norte": 0.10148540153029768,
+    "5ta-Sur": 5.00358616463709,
+    "Aristides": 7.27993743628855,
+    "Bologne/Parque": 0.0008396853524319992,
+    "Costanera": 21.0402616583535,
+    "Guaymallen": 0.9122158528961906,
+    "Microcentro": 8.679424738391749,
+    "Parque Civico": 0.0,
+    "Peltier": 26.982249062550185
+  },
+  "Peltier": {
+    "5ta-Norte": 0.00010746081726784187,
+    "5ta-Sur": 2.3350530676714816,
+    "Aristides": 0.02347395797803108,
+    "Bologne/Parque": 4.062465124725293,
+    "Costanera": 21.493386132333566,
+    "Guaymallen": 2.1757717495437334,
+    "Microcentro": 0.2659057752644229,
+    "Parque Civico": 19.64383673166621,
+    "Peltier": 0.0
+  }
+}
