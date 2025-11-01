@@ -1,0 +1,17 @@
+{
+  "Zona_Bancaria": {
+    "Zona_Bancaria": 0.0,
+    "Zona_Centro": 548.6663388218852,
+    "Zona_Este": 1.333661178114803
+  },
+  "Zona_Centro": {
+    "Zona_Bancaria": 359.88777033583085,
+    "Zona_Centro": 0.0,
+    "Zona_Este": 240.11222966416912
+  },
+  "Zona_Este": {
+    "Zona_Bancaria": 0.24067108269366996,
+    "Zona_Centro": 449.75932891730633,
+    "Zona_Este": 0.0
+  }
+}

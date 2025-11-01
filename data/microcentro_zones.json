@@ -1,0 +1,17 @@
+{
+  "Zona_Centro": {
+    "nodes": [247486278, 286045064, 286045221, 286045370],
+    "production": 600.0,
+    "attraction": 700.0
+  },
+  "Zona_Este": {
+    "nodes": [287040660, 287040669, 287040677, 287040684],
+    "production": 450.0,
+    "attraction": 400.0
+  },
+  "Zona_Bancaria": {
+    "nodes": [287042850, 287042851, 287042852, 287042859],
+    "production": 550.0,
+    "attraction": 650.0
+  }
+}

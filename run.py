@@ -19,6 +19,7 @@ Comandos disponibles:
   python run.py test          - Ejecutar tests de instalación
   python run.py examples      - Ejecutar ejemplos básicos
   python run.py advanced      - Ejecutar análisis avanzados
+    python run.py microcentro   - Ejecutar escenario con demanda O-D del microcentro
   python run.py help          - Mostrar esta ayuda
 
 Estructura del proyecto:
@@ -53,6 +54,20 @@ def run_advanced():
     print("\n🔬 Ejecutando análisis avanzados...\n")
     os.system(f"{sys.executable} examples/advanced_examples.py")
 
+def run_microcentro():
+    """Ejecuta el escenario microcentro basado en matriz O-D."""
+    print("\n🚦 Ejecutando escenario Microcentro O-D...\n")
+    output_prefix = "data/microcentro_od"
+    gif_path = "data/microcentro_od_animation.gif"
+    map_path = "data/microcentro_od_attraction.png"
+    command = (
+        f"{sys.executable} examples/run_microcentro_od.py "
+        f"--save-prefix {output_prefix} "
+        f"--animation-gif {gif_path} "
+        f"--attraction-map {map_path}"
+    )
+    os.system(command)
+
 def main():
     """Función principal."""
     if len(sys.argv) < 2:
@@ -65,6 +80,7 @@ def main():
         'test': run_test,
         'examples': run_examples,
         'advanced': run_advanced,
+    'microcentro': run_microcentro,
         'help': print_help,
         '-h': print_help,
         '--help': print_help,

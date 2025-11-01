@@ -15,7 +15,7 @@ import random
 class Vehicle:
     """Representa un vehículo en la simulación."""
     
-    def __init__(self, vehicle_id, edge, position, velocity=0, v_max=5):
+    def __init__(self, vehicle_id, edge, position, velocity=0, v_max=5, destination_zone=None):
         """
         Inicializa un vehículo.
         
@@ -25,12 +25,14 @@ class Vehicle:
             position: Posición en la arista (0 a longitud de la arista en celdas)
             velocity: Velocidad actual (celdas por paso de tiempo)
             v_max: Velocidad máxima permitida
+            destination_zone: Nombre de la zona destino, si aplica
         """
         self.id = vehicle_id
         self.edge = edge  # (u, v, key)
         self.position = position  # Posición en la arista actual
         self.velocity = velocity
         self.v_max = v_max
+        self.destination_zone = destination_zone
         self.color = self._generate_color()
     
     def _generate_color(self):
@@ -100,7 +102,7 @@ class TrafficSimulation:
             self.graph[u][v][key]['length'] = length
             self.graph[u][v][key]['num_cells'] = num_cells
     
-    def add_vehicle(self, edge=None, position=None, velocity=0):
+    def add_vehicle(self, edge=None, position=None, velocity=0, destination=None):
         """
         Añade un vehículo a la simulación.
         
@@ -108,6 +110,7 @@ class TrafficSimulation:
             edge: Tupla (u, v, key). Si es None, se elige aleatoriamente.
             position: Posición inicial. Si es None, se elige aleatoriamente.
             velocity: Velocidad inicial.
+            destination: Nombre de la zona destino para el vehículo.
         
         Returns:
             vehicle_id si se añadió exitosamente, None si la posición está ocupada.
@@ -130,11 +133,11 @@ class TrafficSimulation:
         # Crear vehículo
         vehicle_id = self.vehicle_counter
         self.vehicle_counter += 1
-        
-        vehicle = Vehicle(vehicle_id, edge, position, velocity, self.v_max)
+
+        vehicle = Vehicle(vehicle_id, edge, position, velocity, self.v_max, destination_zone=destination)
         self.vehicles[vehicle_id] = vehicle
         self.edge_occupation[edge][position] = vehicle_id
-        
+
         return vehicle_id
     
     def initialize_vehicles(self, density=0.2):
@@ -166,6 +169,59 @@ class TrafficSimulation:
             attempts += 1
         
         print(f"Vehículos añadidos: {added}")
+
+    def spawn_from_od_matrix(self, zones, od_matrix, scale=1.0, random_seed=None, max_attempts=5):
+        """Genera vehículos según una matriz O-D agregada por zonas."""
+        if random_seed is not None:
+            random.seed(random_seed)
+
+        if scale <= 0:
+            raise ValueError("scale must be positive")
+
+        zones_with_edges = {}
+        for zone_name, node_ids in zones.items():
+            edges = []
+            for node_id in node_ids:
+                edges.extend(list(self.graph.out_edges(node_id, keys=True)))
+            if edges:
+                zones_with_edges[zone_name] = edges
+
+        total_added = 0
+        for origin_zone, destinations in od_matrix.items():
+            origin_edges = zones_with_edges.get(origin_zone)
+            if not origin_edges:
+                continue
+            for destination_zone, demand in destinations.items():
+                if demand <= 0:
+                    continue
+                if destination_zone == origin_zone:
+                    continue
+                vehicle_count = int(round(demand * scale))
+                if vehicle_count <= 0:
+                    continue
+                for _ in range(vehicle_count):
+                    attempts = 0
+                    added_id = None
+                    while attempts < max_attempts and added_id is None:
+                        selected_edge = random.choice(origin_edges)
+                        initial_velocity = random.randint(0, self.v_max)
+                        added_id = self.add_vehicle(
+                            edge=selected_edge,
+                            position=0,
+                            velocity=initial_velocity,
+                            destination=destination_zone,
+                        )
+                        if added_id is None:
+                            added_id = self.add_vehicle(
+                                edge=selected_edge,
+                                position=None,
+                                velocity=initial_velocity,
+                                destination=destination_zone,
+                            )
+                        attempts += 1
+                    if added_id is not None:
+                        total_added += 1
+        return total_added
     
     def _get_distance_to_next_vehicle(self, vehicle):
         """
@@ -334,13 +390,14 @@ class TrafficSimulation:
         
         return positions
     
-    def plot_state(self, ax=None, show_velocity=True):
+    def plot_state(self, ax=None, show_velocity=True, show=True):
         """
         Visualiza el estado actual de la simulación.
         
         Args:
             ax: Eje de matplotlib. Si es None, se crea uno nuevo.
             show_velocity: Si True, colorea los vehículos según su velocidad.
+            show: Si True, muestra la figura en pantalla.
         """
         if ax is None:
             fig, ax = plt.subplots(figsize=(12, 12))
@@ -371,9 +428,12 @@ class TrafficSimulation:
                     f'Vehículos: {len(self.vehicles)}, '
                     f'Velocidad promedio: {np.mean([v.velocity for v in self.vehicles.values()]):.2f}')
         
+        if show and ax.figure:
+            plt.show()
+        
         return ax
     
-    def animate(self, steps=100, interval=100, save_as=None):
+    def animate(self, steps=100, interval=100, save_as=None, show=True):
         """
         Crea una animación de la simulación.
         
@@ -381,6 +441,7 @@ class TrafficSimulation:
             steps: Número de pasos de tiempo a simular
             interval: Intervalo entre frames en milisegundos
             save_as: Nombre de archivo para guardar la animación (opcional)
+            show: Si True, muestra la animación al finalizar
         """
         fig, ax = plt.subplots(figsize=(12, 12))
         
@@ -423,17 +484,22 @@ class TrafficSimulation:
         anim = FuncAnimation(fig, update, init_func=init, frames=steps,
                             interval=interval, blit=True, repeat=False)
         
-        if save_as:
-            anim.save(save_as, writer='pillow', fps=1000//interval)
-            print(f"Animación guardada en {save_as}")
-        
         plt.colorbar(scatter, ax=ax, label='Velocidad')
         plt.tight_layout()
-        plt.show()
+
+        if save_as:
+            fps = max(1, int(1000 / interval)) if interval else 10
+            anim.save(save_as, writer='pillow', fps=fps)
+            print(f"Animación guardada en {save_as}")
+        
+        if show:
+            plt.show()
+        else:
+            plt.close(fig)
         
         return anim
     
-    def plot_statistics(self):
+    def plot_statistics(self, show=True):
         """Visualiza estadísticas de la simulación."""
         fig, axes = plt.subplots(2, 1, figsize=(10, 8))
         
@@ -455,4 +521,7 @@ class TrafficSimulation:
         axes[1].grid(True, alpha=0.3)
         
         plt.tight_layout()
-        plt.show()
+        if show:
+            plt.show()
+        
+        return fig, axes
