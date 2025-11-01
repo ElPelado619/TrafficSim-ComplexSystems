@@ -25,6 +25,7 @@ import osmnx as ox
 
 ZoneNodes = Dict[str, Iterable[int]]
 ZoneFactors = Dict[str, float]
+ZonePolygons = Dict[str, list[tuple[float, float]]]
 
 
 def load_graph(graph_path: Path) -> nx.MultiDiGraph:
@@ -37,7 +38,7 @@ def load_graph(graph_path: Path) -> nx.MultiDiGraph:
     return graph
 
 
-def load_zone_file(zone_path: Path) -> tuple[ZoneNodes, ZoneFactors, ZoneFactors]:
+def load_zone_file(zone_path: Path) -> tuple[ZoneNodes, ZoneFactors, ZoneFactors, ZonePolygons]:
     """Parse the zone definition JSON file."""
     if not zone_path.exists():
         raise FileNotFoundError(f"Zone definition file not found: {zone_path}")
@@ -51,6 +52,7 @@ def load_zone_file(zone_path: Path) -> tuple[ZoneNodes, ZoneFactors, ZoneFactors
     zones: ZoneNodes = {}
     productions: ZoneFactors = {}
     attractions: ZoneFactors = {}
+    polygons: ZonePolygons = {}
 
     for zone_name, payload in raw_data.items():
         if not isinstance(zone_name, str):
@@ -62,10 +64,12 @@ def load_zone_file(zone_path: Path) -> tuple[ZoneNodes, ZoneFactors, ZoneFactors
                 raise ValueError(f"Zone '{zone_name}' is missing the 'nodes' field")
             productions_value = payload.get("production")
             attraction_value = payload.get("attraction")
+            polygon_value = payload.get("polygon")
         elif isinstance(payload, list):
             nodes = payload
             productions_value = None
             attraction_value = None
+            polygon_value = None
         else:
             raise ValueError(
                 "Each zone entry must be either a list of node ids or an object "
@@ -81,8 +85,20 @@ def load_zone_file(zone_path: Path) -> tuple[ZoneNodes, ZoneFactors, ZoneFactors
             productions[zone_name] = float(productions_value)
         if attraction_value is not None:
             attractions[zone_name] = float(attraction_value)
+        if polygon_value is not None:
+            try:
+                polygon_points = [
+                    (float(point[0]), float(point[1]))
+                    for point in polygon_value
+                    if isinstance(point, (list, tuple)) and len(point) == 2
+                ]
+            except Exception as exc:  # noqa: BLE001
+                raise ValueError(f"Zone '{zone_name}' polygon must be a list of coordinate pairs") from exc
+            if len(polygon_points) < 3:
+                raise ValueError(f"Zone '{zone_name}' polygon must contain at least three points")
+            polygons[zone_name] = polygon_points
 
-    return zones, productions, attractions
+    return zones, productions, attractions, polygons
 
 
 def load_factor_file(path: Path | None, label: str) -> ZoneFactors:
@@ -291,7 +307,7 @@ def main() -> None:
     args = parse_args()
 
     graph = load_graph(args.graph)
-    zones, embedded_prod, embedded_attr = load_zone_file(args.zone_file)
+    zones, embedded_prod, embedded_attr, _ = load_zone_file(args.zone_file)
     validate_zone_nodes(graph, zones)
 
     prod_override = load_factor_file(args.productions, "productions")

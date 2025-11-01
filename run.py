@@ -16,11 +16,12 @@ def print_help():
 
 Comandos disponibles:
 
-  python run.py test          - Ejecutar tests de instalación
-  python run.py examples      - Ejecutar ejemplos básicos
-  python run.py advanced      - Ejecutar análisis avanzados
+    python run.py test          - Ejecutar tests de instalación
+    python run.py examples      - Ejecutar ejemplos básicos
+    python run.py advanced      - Ejecutar análisis avanzados
+    python run.py zones         - Abrir editor interactivo de zonas
     python run.py microcentro   - Ejecutar escenario con demanda O-D del microcentro
-  python run.py help          - Mostrar esta ayuda
+    python run.py help          - Mostrar esta ayuda
 
 Estructura del proyecto:
 
@@ -68,6 +69,19 @@ def run_microcentro():
     )
     os.system(command)
 
+
+def run_zone_editor():
+    """Abre el editor interactivo de zonas del microcentro."""
+    print("\n🗺️  Abriendo editor de zonas...\n")
+    command = (
+        f"{sys.executable} tools/zone_builder.py "
+        f"--graph data/microcentro.graphml "
+        f"--zones data/microcentro_zones.json "
+        f"--skip-existing "
+        f"--output data/O-D-maps/microcentro_zones.json"
+    )
+    os.system(command)
+
 def main():
     """Función principal."""
     if len(sys.argv) < 2:
@@ -80,7 +94,8 @@ def main():
         'test': run_test,
         'examples': run_examples,
         'advanced': run_advanced,
-    'microcentro': run_microcentro,
+        'zones': run_zone_editor,
+        'microcentro': run_microcentro,
         'help': print_help,
         '-h': print_help,
         '--help': print_help,

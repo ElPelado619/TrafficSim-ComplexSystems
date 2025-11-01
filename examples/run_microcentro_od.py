@@ -11,6 +11,7 @@ from pathlib import Path
 import matplotlib.pyplot as plt
 import numpy as np
 import osmnx as ox
+from matplotlib import patches
 from matplotlib.animation import FuncAnimation
 from matplotlib.colors import Normalize
 
@@ -197,10 +198,36 @@ def render_animation(
         plt.close(fig)
 
 
+def _convex_hull(points: list[tuple[float, float]]) -> list[tuple[float, float]]:
+    """Compute the convex hull using the monotonic chain algorithm."""
+    unique_points = sorted(set(points))
+    if len(unique_points) <= 1:
+        return unique_points
+
+    def cross(o, a, b):
+        return (a[0] - o[0]) * (b[1] - o[1]) - (a[1] - o[1]) * (b[0] - o[0])
+
+    lower: list[tuple[float, float]] = []
+    for p in unique_points:
+        while len(lower) >= 2 and cross(lower[-2], lower[-1], p) <= 0:
+            lower.pop()
+        lower.append(p)
+
+    upper: list[tuple[float, float]] = []
+    for p in reversed(unique_points):
+        while len(upper) >= 2 and cross(upper[-2], upper[-1], p) <= 0:
+            upper.pop()
+        upper.append(p)
+
+    hull = lower[:-1] + upper[:-1]
+    return hull if hull else unique_points
+
+
 def render_zone_attraction_map(
     graph,
     zones,
     attractions,
+    polygons,
     output_path: Path,
     show: bool,
 ):
@@ -234,22 +261,45 @@ def render_zone_attraction_map(
         attraction = attractions.get(zone_name)
         if attraction is None:
             continue
+
         node_ids = [node_id for node_id in node_ids if node_id in graph]
         if not node_ids:
             continue
+
         coords = np.array([[graph.nodes[node]["x"], graph.nodes[node]["y"]] for node in node_ids])
         centroid = coords.mean(axis=0)
         color = cmap(norm(attraction))
 
-        ax.scatter(
-            coords[:, 0],
-            coords[:, 1],
-            color=color,
-            s=30,
-            alpha=0.6,
-            edgecolors="none",
-            zorder=6,
-        )
+        polygon_points = None
+        if polygons and zone_name in polygons:
+            polygon_points = polygons[zone_name]
+        else:
+            hull = _convex_hull([tuple(row) for row in coords])
+            if len(hull) >= 3:
+                polygon_points = hull
+
+        if polygon_points:
+            polygon_patch = patches.Polygon(
+                polygon_points,
+                closed=True,
+                facecolor=color,
+                edgecolor="black",
+                linewidth=1.0,
+                alpha=0.45,
+                zorder=6,
+            )
+            ax.add_patch(polygon_patch)
+        else:
+            ax.scatter(
+                coords[:, 0],
+                coords[:, 1],
+                color=color,
+                s=30,
+                alpha=0.6,
+                edgecolors="none",
+                zorder=6,
+            )
+
         ax.scatter(
             centroid[0],
             centroid[1],
@@ -296,7 +346,7 @@ def main() -> None:
         p_slow=args.p_slow,
     )
 
-    zones, base_productions, base_attractions = generador_od.load_zone_file(args.zones)
+    zones, base_productions, base_attractions, zone_polygons = generador_od.load_zone_file(args.zones)
     prod_override = generador_od.load_factor_file(args.productions_file, "productions")
     attr_override = generador_od.load_factor_file(args.attractions_file, "attractions")
     productions, attractions = generador_od.merge_factors(
@@ -365,6 +415,7 @@ def main() -> None:
             sim.graph,
             zones,
             attractions,
+            zone_polygons,
             args.attraction_map,
             show=not args.no_show,
         )
