@@ -190,7 +190,21 @@ class GeneticOptimizer:
         """Identifica nodos importantes para colocar semáforos."""
         candidates = []
         
+        # Identificar nodos que son parte de rotondas
+        roundabout_nodes = set()
+        for u, v, key, data in self.graph.edges(keys=True, data=True):
+            # Verificar si la arista es parte de una rotonda
+            if 'junction' in data:
+                junction_type = data['junction']
+                if junction_type in ['roundabout', 'circular']:
+                    roundabout_nodes.add(u)
+                    roundabout_nodes.add(v)
+        
         for node_id in self.graph.nodes():
+            # Excluir nodos que son parte de rotondas
+            if node_id in roundabout_nodes:
+                continue
+            
             # Contar grado del nodo (entradas + salidas)
             in_degree = self.graph.in_degree(node_id)
             out_degree = self.graph.out_degree(node_id)
@@ -199,6 +213,9 @@ class GeneticOptimizer:
             # Considerar nodos con suficiente conectividad
             if total_degree >= self.min_degree:
                 candidates.append(node_id)
+        
+        if roundabout_nodes:
+            print(f"  ℹ️  Excluidos {len(roundabout_nodes)} nodos de rotondas")
         
         return candidates
     
