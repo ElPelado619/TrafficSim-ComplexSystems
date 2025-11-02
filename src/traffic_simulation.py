@@ -8,8 +8,13 @@ import networkx as nx
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
+from matplotlib.patches import Circle
 from collections import defaultdict
 import random
+from pathlib import Path
+
+# Importar el sistema de semáforos
+from .traffic_light import TrafficLightSystem
 
 
 class Vehicle:
@@ -77,6 +82,9 @@ class TrafficSimulation:
         
         # Mapa de ocupación: {edge: {position: vehicle_id}}
         self.edge_occupation = defaultdict(dict)
+        
+        # Sistema de semáforos
+        self.traffic_lights = TrafficLightSystem()
         
         # Estadísticas
         self.time_step = 0
@@ -223,6 +231,16 @@ class TrafficSimulation:
                         total_added += 1
         return total_added
     
+    def load_traffic_lights(self, traffic_lights_file: Path):
+        """
+        Carga la configuración de semáforos desde un archivo JSON.
+        
+        Args:
+            traffic_lights_file: Ruta al archivo JSON con la configuración de semáforos
+        """
+        self.traffic_lights = TrafficLightSystem.load_from_file(traffic_lights_file)
+        print(f"✓ Cargados {len(self.traffic_lights)} semáforos desde {traffic_lights_file}")
+    
     def _get_distance_to_next_vehicle(self, vehicle):
         """
         Calcula la distancia al siguiente vehículo en la misma dirección.
@@ -248,6 +266,11 @@ class TrafficSimulation:
         # Buscar nodos siguientes
         current_node = edge[1]
         visited = set([edge])
+        
+        # Verificar si hay semáforo en rojo en el nodo siguiente
+        if self.traffic_lights.is_red_at_node(current_node):
+            # Si el semáforo está en rojo, la distancia efectiva es hasta el final de la arista
+            return distance
         
         # BFS limitado para encontrar el siguiente vehículo
         max_search_distance = self.v_max * 2
@@ -335,6 +358,9 @@ class TrafficSimulation:
     
     def step(self):
         """Ejecuta un paso de tiempo de la simulación."""
+        # Actualizar semáforos
+        self.traffic_lights.update_all()
+        
         # Aplicar reglas de Nagel-Schreckenberg
         
         # 1. Aceleración
@@ -342,7 +368,7 @@ class TrafficSimulation:
             if vehicle.velocity < vehicle.v_max:
                 vehicle.velocity += 1
         
-        # 2. Frenado (evitar colisiones)
+        # 2. Frenado (evitar colisiones y respetar semáforos)
         for vehicle in self.vehicles.values():
             distance = self._get_distance_to_next_vehicle(vehicle)
             if vehicle.velocity >= distance:
@@ -406,6 +432,20 @@ class TrafficSimulation:
         ox.plot_graph(self.graph, ax=ax, show=False, close=False, 
                       node_size=0, edge_linewidth=0.5, edge_color='gray')
         
+        # Dibujar semáforos
+        for node_id in self.traffic_lights.get_all_node_ids():
+            light = self.traffic_lights.get_light(node_id)
+            node_data = self.graph.nodes[node_id]
+            x, y = node_data['x'], node_data['y']
+            
+            # Desplazar el semáforo ligeramente hacia arriba
+            y_offset = 0.00005  # Ajusta este valor según la escala del mapa
+            
+            color = 'red' if light.is_red else 'green'
+            circle = Circle((x, y + y_offset), radius=0.00003, color=color, zorder=4, 
+                          edgecolor='black', linewidth=1.0, alpha=0.9)
+            ax.add_patch(circle)
+        
         # Dibujar vehículos
         positions = self.get_vehicle_positions()
         
@@ -426,7 +466,8 @@ class TrafficSimulation:
         
         ax.set_title(f'Simulación de Tráfico - Paso {self.time_step}\n'
                     f'Vehículos: {len(self.vehicles)}, '
-                    f'Velocidad promedio: {np.mean([v.velocity for v in self.vehicles.values()]):.2f}')
+                    f'Velocidad promedio: {np.mean([v.velocity for v in self.vehicles.values()]):.2f}\n'
+                    f'Semáforos: {len(self.traffic_lights)}')
         
         if show and ax.figure:
             plt.show()
@@ -452,6 +493,20 @@ class TrafficSimulation:
         scatter = ax.scatter([], [], s=20, zorder=5, edgecolors='black', linewidths=0.5)
         title = ax.set_title('')
         
+        # Preparar círculos para semáforos
+        traffic_light_circles = {}
+        for node_id in self.traffic_lights.get_all_node_ids():
+            node_data = self.graph.nodes[node_id]
+            x, y = node_data['x'], node_data['y']
+            
+            # Desplazar el semáforo ligeramente hacia arriba
+            y_offset = 0.00005  # Ajusta este valor según la escala del mapa
+            
+            circle = Circle((x, y + y_offset), radius=0.00003, color='green', zorder=4,
+                          edgecolor='black', linewidth=1.0, alpha=0.9)
+            ax.add_patch(circle)
+            traffic_light_circles[node_id] = circle
+        
         def init():
             scatter.set_offsets(np.empty((0, 2)))
             return scatter, title
@@ -459,6 +514,11 @@ class TrafficSimulation:
         def update(frame):
             # Ejecutar un paso de simulación
             self.step()
+            
+            # Actualizar colores de semáforos
+            for node_id, circle in traffic_light_circles.items():
+                light = self.traffic_lights.get_light(node_id)
+                circle.set_color('red' if light.is_red else 'green')
             
             # Obtener posiciones
             positions = self.get_vehicle_positions()
@@ -477,12 +537,13 @@ class TrafficSimulation:
             avg_v = np.mean([v.velocity for v in self.vehicles.values()]) if self.vehicles else 0
             title.set_text(f'Simulación de Tráfico - Paso {self.time_step}\n'
                           f'Vehículos: {len(self.vehicles)}, '
-                          f'Velocidad promedio: {avg_v:.2f}')
+                          f'Velocidad promedio: {avg_v:.2f}\n'
+                          f'Semáforos: {len(self.traffic_lights)}')
             
             return scatter, title
         
         anim = FuncAnimation(fig, update, init_func=init, frames=steps,
-                            interval=interval, blit=True, repeat=False)
+                            interval=interval, blit=False, repeat=False)
         
         plt.colorbar(scatter, ax=ax, label='Velocidad')
         plt.tight_layout()
