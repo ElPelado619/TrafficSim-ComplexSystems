@@ -51,24 +51,26 @@ class TrafficLightChromosome:
         self.min_time = min_time
         self.max_time = max_time
         
-        # Genes: para cada nodo, (green_time, red_time, phase_offset)
-        self.genes: Dict[int, Tuple[int, int, int]] = {}
+        # Genes: para cada nodo, (green_time, phase_offset)
+        # red_time será igual a green_time
+        self.genes: Dict[int, Tuple[int, int]] = {}
         for node_id in node_ids:
             green_time = random.randint(min_time, max_time)
-            red_time = random.randint(min_time, max_time)
-            phase_offset = random.randint(0, green_time + red_time - 1)
-            self.genes[node_id] = (green_time, red_time, phase_offset)
+            cycle_time = green_time * 2  # verde + rojo (ambos iguales)
+            phase_offset = random.randint(0, cycle_time - 1)
+            self.genes[node_id] = (green_time, phase_offset)
         
         self.fitness = None
     
     def to_traffic_light_system(self) -> TrafficLightSystem:
         """Convierte el cromosoma en un sistema de semáforos."""
         system = TrafficLightSystem()
-        for node_id, (green_time, red_time, phase_offset) in self.genes.items():
+        for node_id, (green_time, phase_offset) in self.genes.items():
+            # red_time es igual a green_time
             light = TrafficLight(
                 node_id=node_id,
                 green_time=green_time,
-                red_time=red_time,
+                red_time=green_time,
                 phase_offset=phase_offset
             )
             system.add_light(light)
@@ -78,21 +80,21 @@ class TrafficLightChromosome:
         """Aplica mutación aleatoria a los genes."""
         for node_id in self.genes:
             if random.random() < mutation_rate:
-                # Mutar uno de los tres valores
-                choice = random.randint(0, 2)
-                green_time, red_time, phase_offset = self.genes[node_id]
+                # Mutar uno de los dos valores
+                choice = random.randint(0, 1)
+                green_time, phase_offset = self.genes[node_id]
                 
-                if choice == 0:  # Mutar green_time
+                if choice == 0:  # Mutar green_time (red_time cambia automáticamente)
                     delta = random.randint(-5, 5)
                     green_time = max(self.min_time, min(self.max_time, green_time + delta))
-                elif choice == 1:  # Mutar red_time
-                    delta = random.randint(-5, 5)
-                    red_time = max(self.min_time, min(self.max_time, red_time + delta))
+                    cycle_time = green_time * 2
+                    # Ajustar phase_offset si excede el nuevo ciclo
+                    phase_offset = min(phase_offset, cycle_time - 1)
                 else:  # Mutar phase_offset
-                    cycle_time = green_time + red_time
+                    cycle_time = green_time * 2
                     phase_offset = random.randint(0, cycle_time - 1)
                 
-                self.genes[node_id] = (green_time, red_time, phase_offset)
+                self.genes[node_id] = (green_time, phase_offset)
     
     @classmethod
     def crossover(cls, parent1: 'TrafficLightChromosome', parent2: 'TrafficLightChromosome') -> 'TrafficLightChromosome':

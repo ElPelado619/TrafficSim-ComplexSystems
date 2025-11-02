@@ -2,3375 +2,3375 @@
   "traffic_lights": [
     {
       "node_id": 247486278,
-      "green_time": 31,
-      "red_time": 29,
-      "phase_offset": 15
+      "green_time": 47,
+      "red_time": 47,
+      "phase_offset": 58
     },
     {
       "node_id": 286045064,
-      "green_time": 21,
-      "red_time": 28,
-      "phase_offset": 31
+      "green_time": 60,
+      "red_time": 60,
+      "phase_offset": 48
     },
     {
       "node_id": 286045221,
-      "green_time": 29,
-      "red_time": 28,
-      "phase_offset": 10
+      "green_time": 52,
+      "red_time": 52,
+      "phase_offset": 16
     },
     {
       "node_id": 286045370,
-      "green_time": 34,
-      "red_time": 23,
-      "phase_offset": 46
+      "green_time": 41,
+      "red_time": 41,
+      "phase_offset": 36
     },
     {
       "node_id": 286045446,
-      "green_time": 24,
-      "red_time": 16,
-      "phase_offset": 22
+      "green_time": 59,
+      "red_time": 59,
+      "phase_offset": 88
     },
     {
       "node_id": 286054350,
-      "green_time": 28,
-      "red_time": 38,
-      "phase_offset": 9
+      "green_time": 18,
+      "red_time": 18,
+      "phase_offset": 25
     },
     {
       "node_id": 286054443,
-      "green_time": 41,
-      "red_time": 35,
-      "phase_offset": 41
+      "green_time": 19,
+      "red_time": 19,
+      "phase_offset": 11
     },
     {
       "node_id": 286068443,
-      "green_time": 40,
-      "red_time": 30,
-      "phase_offset": 57
+      "green_time": 27,
+      "red_time": 27,
+      "phase_offset": 4
     },
     {
       "node_id": 286994609,
-      "green_time": 49,
-      "red_time": 36,
+      "green_time": 21,
+      "red_time": 21,
       "phase_offset": 5
     },
     {
       "node_id": 287040660,
       "green_time": 38,
-      "red_time": 57,
-      "phase_offset": 5
+      "red_time": 38,
+      "phase_offset": 54
     },
     {
       "node_id": 287040669,
-      "green_time": 55,
-      "red_time": 42,
-      "phase_offset": 55
+      "green_time": 19,
+      "red_time": 19,
+      "phase_offset": 17
     },
     {
       "node_id": 287040677,
-      "green_time": 37,
-      "red_time": 21,
-      "phase_offset": 42
+      "green_time": 41,
+      "red_time": 41,
+      "phase_offset": 46
     },
     {
       "node_id": 287040684,
-      "green_time": 31,
-      "red_time": 25,
-      "phase_offset": 38
+      "green_time": 17,
+      "red_time": 17,
+      "phase_offset": 31
     },
     {
       "node_id": 287040690,
-      "green_time": 47,
-      "red_time": 60,
-      "phase_offset": 95
+      "green_time": 26,
+      "red_time": 26,
+      "phase_offset": 6
     },
     {
       "node_id": 287040698,
-      "green_time": 60,
-      "red_time": 35,
-      "phase_offset": 25
+      "green_time": 58,
+      "red_time": 58,
+      "phase_offset": 16
     },
     {
       "node_id": 287040708,
-      "green_time": 37,
-      "red_time": 55,
-      "phase_offset": 12
+      "green_time": 41,
+      "red_time": 41,
+      "phase_offset": 65
     },
     {
       "node_id": 287040724,
-      "green_time": 29,
-      "red_time": 21,
-      "phase_offset": 39
+      "green_time": 35,
+      "red_time": 35,
+      "phase_offset": 56
     },
     {
       "node_id": 287040734,
-      "green_time": 55,
-      "red_time": 46,
-      "phase_offset": 91
+      "green_time": 28,
+      "red_time": 28,
+      "phase_offset": 32
     },
     {
       "node_id": 287040821,
-      "green_time": 36,
-      "red_time": 43,
-      "phase_offset": 13
+      "green_time": 51,
+      "red_time": 51,
+      "phase_offset": 67
     },
     {
       "node_id": 287042850,
-      "green_time": 55,
-      "red_time": 55,
-      "phase_offset": 9
+      "green_time": 21,
+      "red_time": 21,
+      "phase_offset": 30
     },
     {
       "node_id": 287042851,
-      "green_time": 41,
-      "red_time": 36,
-      "phase_offset": 34
+      "green_time": 30,
+      "red_time": 30,
+      "phase_offset": 52
     },
     {
       "node_id": 287042852,
-      "green_time": 15,
-      "red_time": 16,
-      "phase_offset": 7
+      "green_time": 49,
+      "red_time": 49,
+      "phase_offset": 83
     },
     {
       "node_id": 287042859,
-      "green_time": 54,
-      "red_time": 29,
-      "phase_offset": 21
+      "green_time": 58,
+      "red_time": 58,
+      "phase_offset": 103
     },
     {
       "node_id": 287042860,
-      "green_time": 24,
-      "red_time": 15,
-      "phase_offset": 12
+      "green_time": 39,
+      "red_time": 39,
+      "phase_offset": 3
     },
     {
       "node_id": 287042870,
-      "green_time": 34,
-      "red_time": 41,
-      "phase_offset": 14
+      "green_time": 57,
+      "red_time": 57,
+      "phase_offset": 34
     },
     {
       "node_id": 287044657,
-      "green_time": 51,
-      "red_time": 36,
-      "phase_offset": 85
+      "green_time": 26,
+      "red_time": 26,
+      "phase_offset": 3
     },
     {
       "node_id": 287044661,
-      "green_time": 37,
-      "red_time": 53,
-      "phase_offset": 51
+      "green_time": 56,
+      "red_time": 56,
+      "phase_offset": 73
     },
     {
       "node_id": 287044665,
-      "green_time": 49,
-      "red_time": 56,
-      "phase_offset": 33
+      "green_time": 59,
+      "red_time": 59,
+      "phase_offset": 71
     },
     {
       "node_id": 287044669,
-      "green_time": 26,
-      "red_time": 58,
-      "phase_offset": 8
+      "green_time": 44,
+      "red_time": 44,
+      "phase_offset": 33
     },
     {
       "node_id": 287048117,
-      "green_time": 23,
-      "red_time": 39,
-      "phase_offset": 5
+      "green_time": 20,
+      "red_time": 20,
+      "phase_offset": 11
     },
     {
       "node_id": 287048125,
-      "green_time": 20,
-      "red_time": 60,
-      "phase_offset": 2
+      "green_time": 30,
+      "red_time": 30,
+      "phase_offset": 0
     },
     {
       "node_id": 287048129,
-      "green_time": 59,
-      "red_time": 42,
-      "phase_offset": 100
+      "green_time": 35,
+      "red_time": 35,
+      "phase_offset": 17
     },
     {
       "node_id": 287048132,
-      "green_time": 20,
-      "red_time": 29,
-      "phase_offset": 11
+      "green_time": 23,
+      "red_time": 23,
+      "phase_offset": 30
     },
     {
       "node_id": 287055420,
-      "green_time": 52,
-      "red_time": 34,
-      "phase_offset": 68
+      "green_time": 15,
+      "red_time": 15,
+      "phase_offset": 25
     },
     {
       "node_id": 287055424,
-      "green_time": 59,
-      "red_time": 55,
-      "phase_offset": 42
+      "green_time": 42,
+      "red_time": 42,
+      "phase_offset": 23
     },
     {
       "node_id": 287055428,
-      "green_time": 48,
-      "red_time": 29,
-      "phase_offset": 11
+      "green_time": 34,
+      "red_time": 34,
+      "phase_offset": 25
     },
     {
       "node_id": 287055431,
-      "green_time": 44,
-      "red_time": 33,
-      "phase_offset": 36
+      "green_time": 37,
+      "red_time": 37,
+      "phase_offset": 73
     },
     {
       "node_id": 287055435,
-      "green_time": 38,
-      "red_time": 50,
-      "phase_offset": 44
+      "green_time": 31,
+      "red_time": 31,
+      "phase_offset": 41
     },
     {
       "node_id": 287055445,
-      "green_time": 43,
-      "red_time": 32,
-      "phase_offset": 26
-    },
-    {
-      "node_id": 287055449,
-      "green_time": 28,
-      "red_time": 59,
-      "phase_offset": 21
-    },
-    {
-      "node_id": 287055452,
-      "green_time": 56,
-      "red_time": 28,
-      "phase_offset": 26
-    },
-    {
-      "node_id": 287055453,
-      "green_time": 60,
-      "red_time": 39,
-      "phase_offset": 96
-    },
-    {
-      "node_id": 287055456,
-      "green_time": 31,
-      "red_time": 20,
-      "phase_offset": 44
-    },
-    {
-      "node_id": 287055464,
-      "green_time": 44,
-      "red_time": 56,
+      "green_time": 38,
+      "red_time": 38,
       "phase_offset": 27
     },
     {
+      "node_id": 287055449,
+      "green_time": 23,
+      "red_time": 23,
+      "phase_offset": 5
+    },
+    {
+      "node_id": 287055452,
+      "green_time": 15,
+      "red_time": 15,
+      "phase_offset": 20
+    },
+    {
+      "node_id": 287055453,
+      "green_time": 23,
+      "red_time": 23,
+      "phase_offset": 24
+    },
+    {
+      "node_id": 287055456,
+      "green_time": 57,
+      "red_time": 57,
+      "phase_offset": 43
+    },
+    {
+      "node_id": 287055464,
+      "green_time": 22,
+      "red_time": 22,
+      "phase_offset": 43
+    },
+    {
       "node_id": 287055465,
-      "green_time": 46,
-      "red_time": 56,
-      "phase_offset": 60
+      "green_time": 60,
+      "red_time": 60,
+      "phase_offset": 59
     },
     {
       "node_id": 287057996,
-      "green_time": 29,
-      "red_time": 45,
-      "phase_offset": 58
+      "green_time": 34,
+      "red_time": 34,
+      "phase_offset": 56
     },
     {
       "node_id": 287058011,
-      "green_time": 23,
-      "red_time": 19,
+      "green_time": 27,
+      "red_time": 27,
       "phase_offset": 25
     },
     {
       "node_id": 287058015,
-      "green_time": 50,
-      "red_time": 45,
-      "phase_offset": 65
+      "green_time": 30,
+      "red_time": 30,
+      "phase_offset": 44
     },
     {
       "node_id": 287058020,
-      "green_time": 45,
-      "red_time": 60,
-      "phase_offset": 32
+      "green_time": 21,
+      "red_time": 21,
+      "phase_offset": 38
     },
     {
       "node_id": 287058030,
-      "green_time": 60,
-      "red_time": 17,
-      "phase_offset": 66
+      "green_time": 25,
+      "red_time": 25,
+      "phase_offset": 25
     },
     {
       "node_id": 287058036,
-      "green_time": 28,
-      "red_time": 30,
-      "phase_offset": 10
+      "green_time": 20,
+      "red_time": 20,
+      "phase_offset": 38
     },
     {
       "node_id": 287058041,
-      "green_time": 44,
-      "red_time": 54,
-      "phase_offset": 5
+      "green_time": 34,
+      "red_time": 34,
+      "phase_offset": 62
     },
     {
       "node_id": 287058046,
-      "green_time": 33,
-      "red_time": 57,
-      "phase_offset": 74
-    },
-    {
-      "node_id": 287058051,
-      "green_time": 38,
-      "red_time": 59,
-      "phase_offset": 80
-    },
-    {
-      "node_id": 287058057,
-      "green_time": 43,
-      "red_time": 46,
-      "phase_offset": 80
-    },
-    {
-      "node_id": 287058063,
-      "green_time": 22,
-      "red_time": 52,
+      "green_time": 20,
+      "red_time": 20,
       "phase_offset": 18
     },
     {
-      "node_id": 287060783,
-      "green_time": 41,
-      "red_time": 26,
-      "phase_offset": 64
-    },
-    {
-      "node_id": 287060785,
-      "green_time": 60,
-      "red_time": 23,
-      "phase_offset": 66
-    },
-    {
-      "node_id": 287060788,
-      "green_time": 25,
-      "red_time": 51,
-      "phase_offset": 58
-    },
-    {
-      "node_id": 287060791,
-      "green_time": 24,
-      "red_time": 58,
-      "phase_offset": 26
-    },
-    {
-      "node_id": 287060795,
-      "green_time": 47,
-      "red_time": 47,
-      "phase_offset": 90
-    },
-    {
-      "node_id": 287060813,
-      "green_time": 52,
-      "red_time": 35,
-      "phase_offset": 20
-    },
-    {
-      "node_id": 304371007,
-      "green_time": 57,
-      "red_time": 49,
+      "node_id": 287058051,
+      "green_time": 32,
+      "red_time": 32,
       "phase_offset": 56
     },
     {
+      "node_id": 287058057,
+      "green_time": 32,
+      "red_time": 32,
+      "phase_offset": 46
+    },
+    {
+      "node_id": 287058063,
+      "green_time": 33,
+      "red_time": 33,
+      "phase_offset": 1
+    },
+    {
+      "node_id": 287060783,
+      "green_time": 25,
+      "red_time": 25,
+      "phase_offset": 10
+    },
+    {
+      "node_id": 287060785,
+      "green_time": 39,
+      "red_time": 39,
+      "phase_offset": 22
+    },
+    {
+      "node_id": 287060788,
+      "green_time": 20,
+      "red_time": 20,
+      "phase_offset": 19
+    },
+    {
+      "node_id": 287060791,
+      "green_time": 31,
+      "red_time": 31,
+      "phase_offset": 54
+    },
+    {
+      "node_id": 287060795,
+      "green_time": 35,
+      "red_time": 35,
+      "phase_offset": 49
+    },
+    {
+      "node_id": 287060813,
+      "green_time": 21,
+      "red_time": 21,
+      "phase_offset": 7
+    },
+    {
+      "node_id": 304371007,
+      "green_time": 15,
+      "red_time": 15,
+      "phase_offset": 15
+    },
+    {
       "node_id": 317832040,
-      "green_time": 58,
-      "red_time": 40,
-      "phase_offset": 64
+      "green_time": 21,
+      "red_time": 21,
+      "phase_offset": 32
     },
     {
       "node_id": 437558117,
-      "green_time": 58,
-      "red_time": 59,
-      "phase_offset": 41
+      "green_time": 47,
+      "red_time": 47,
+      "phase_offset": 54
     },
     {
       "node_id": 437558119,
       "green_time": 57,
-      "red_time": 26,
-      "phase_offset": 30
+      "red_time": 57,
+      "phase_offset": 105
     },
     {
       "node_id": 437558120,
-      "green_time": 34,
-      "red_time": 38,
-      "phase_offset": 21
+      "green_time": 47,
+      "red_time": 47,
+      "phase_offset": 35
     },
     {
       "node_id": 437558121,
-      "green_time": 28,
-      "red_time": 26,
-      "phase_offset": 28
+      "green_time": 22,
+      "red_time": 22,
+      "phase_offset": 18
     },
     {
       "node_id": 437558123,
-      "green_time": 59,
-      "red_time": 43,
-      "phase_offset": 3
+      "green_time": 45,
+      "red_time": 45,
+      "phase_offset": 18
     },
     {
       "node_id": 437558124,
-      "green_time": 26,
-      "red_time": 59,
-      "phase_offset": 56
-    },
-    {
-      "node_id": 437558126,
-      "green_time": 26,
-      "red_time": 29,
-      "phase_offset": 28
-    },
-    {
-      "node_id": 437558469,
-      "green_time": 55,
+      "green_time": 33,
       "red_time": 33,
-      "phase_offset": 47
-    },
-    {
-      "node_id": 437561644,
-      "green_time": 15,
-      "red_time": 47,
-      "phase_offset": 32
-    },
-    {
-      "node_id": 437561646,
-      "green_time": 18,
-      "red_time": 55,
-      "phase_offset": 39
-    },
-    {
-      "node_id": 437561648,
-      "green_time": 19,
-      "red_time": 22,
-      "phase_offset": 36
-    },
-    {
-      "node_id": 437561738,
-      "green_time": 46,
-      "red_time": 53,
-      "phase_offset": 44
-    },
-    {
-      "node_id": 437561739,
-      "green_time": 52,
-      "red_time": 54,
-      "phase_offset": 33
-    },
-    {
-      "node_id": 437562111,
-      "green_time": 50,
-      "red_time": 57,
-      "phase_offset": 4
-    },
-    {
-      "node_id": 437562112,
-      "green_time": 40,
-      "red_time": 47,
-      "phase_offset": 38
-    },
-    {
-      "node_id": 437562113,
-      "green_time": 21,
-      "red_time": 19,
-      "phase_offset": 38
-    },
-    {
-      "node_id": 437562115,
-      "green_time": 45,
-      "red_time": 57,
-      "phase_offset": 65
-    },
-    {
-      "node_id": 437562116,
-      "green_time": 15,
-      "red_time": 27,
-      "phase_offset": 33
-    },
-    {
-      "node_id": 437562121,
-      "green_time": 20,
-      "red_time": 42,
-      "phase_offset": 4
-    },
-    {
-      "node_id": 458896744,
-      "green_time": 41,
-      "red_time": 42,
-      "phase_offset": 6
-    },
-    {
-      "node_id": 458914808,
-      "green_time": 18,
-      "red_time": 46,
-      "phase_offset": 52
-    },
-    {
-      "node_id": 480124249,
-      "green_time": 36,
-      "red_time": 21,
-      "phase_offset": 16
-    },
-    {
-      "node_id": 480124259,
-      "green_time": 39,
-      "red_time": 35,
-      "phase_offset": 37
-    },
-    {
-      "node_id": 480124264,
-      "green_time": 15,
-      "red_time": 50,
-      "phase_offset": 4
-    },
-    {
-      "node_id": 480124277,
-      "green_time": 29,
-      "red_time": 39,
-      "phase_offset": 27
-    },
-    {
-      "node_id": 480124279,
-      "green_time": 35,
-      "red_time": 24,
-      "phase_offset": 55
-    },
-    {
-      "node_id": 480124288,
-      "green_time": 48,
-      "red_time": 30,
-      "phase_offset": 19
-    },
-    {
-      "node_id": 480890077,
-      "green_time": 27,
-      "red_time": 51,
-      "phase_offset": 74
-    },
-    {
-      "node_id": 480890082,
-      "green_time": 58,
-      "red_time": 55,
-      "phase_offset": 59
-    },
-    {
-      "node_id": 480890083,
-      "green_time": 20,
-      "red_time": 49,
-      "phase_offset": 26
-    },
-    {
-      "node_id": 480890085,
-      "green_time": 60,
-      "red_time": 20,
-      "phase_offset": 19
-    },
-    {
-      "node_id": 480890092,
-      "green_time": 55,
-      "red_time": 25,
-      "phase_offset": 36
-    },
-    {
-      "node_id": 480890095,
-      "green_time": 59,
-      "red_time": 31,
-      "phase_offset": 45
-    },
-    {
-      "node_id": 480890119,
-      "green_time": 46,
-      "red_time": 48,
-      "phase_offset": 7
-    },
-    {
-      "node_id": 480890121,
-      "green_time": 22,
-      "red_time": 32,
-      "phase_offset": 16
-    },
-    {
-      "node_id": 480890127,
-      "green_time": 23,
-      "red_time": 20,
-      "phase_offset": 38
-    },
-    {
-      "node_id": 480890149,
-      "green_time": 35,
-      "red_time": 37,
-      "phase_offset": 70
-    },
-    {
-      "node_id": 480890151,
-      "green_time": 24,
-      "red_time": 48,
       "phase_offset": 22
     },
     {
-      "node_id": 480890153,
+      "node_id": 437558126,
+      "green_time": 43,
+      "red_time": 43,
+      "phase_offset": 53
+    },
+    {
+      "node_id": 437558469,
+      "green_time": 29,
+      "red_time": 29,
+      "phase_offset": 42
+    },
+    {
+      "node_id": 437561644,
+      "green_time": 48,
+      "red_time": 48,
+      "phase_offset": 89
+    },
+    {
+      "node_id": 437561646,
+      "green_time": 37,
+      "red_time": 37,
+      "phase_offset": 56
+    },
+    {
+      "node_id": 437561648,
+      "green_time": 48,
+      "red_time": 48,
+      "phase_offset": 64
+    },
+    {
+      "node_id": 437561738,
       "green_time": 20,
-      "red_time": 18,
-      "phase_offset": 9
-    },
-    {
-      "node_id": 480890160,
-      "green_time": 34,
-      "red_time": 46,
-      "phase_offset": 52
-    },
-    {
-      "node_id": 524678129,
-      "green_time": 42,
-      "red_time": 46,
-      "phase_offset": 62
-    },
-    {
-      "node_id": 524678130,
-      "green_time": 20,
-      "red_time": 50,
-      "phase_offset": 19
-    },
-    {
-      "node_id": 524678131,
-      "green_time": 19,
-      "red_time": 41,
+      "red_time": 20,
       "phase_offset": 33
     },
     {
-      "node_id": 524678132,
-      "green_time": 38,
-      "red_time": 57,
-      "phase_offset": 67
+      "node_id": 437561739,
+      "green_time": 51,
+      "red_time": 51,
+      "phase_offset": 9
     },
     {
-      "node_id": 583617091,
-      "green_time": 48,
-      "red_time": 24,
-      "phase_offset": 58
+      "node_id": 437562111,
+      "green_time": 40,
+      "red_time": 40,
+      "phase_offset": 44
     },
     {
-      "node_id": 621170534,
-      "green_time": 39,
-      "red_time": 60,
-      "phase_offset": 97
-    },
-    {
-      "node_id": 623492253,
-      "green_time": 46,
-      "red_time": 50,
-      "phase_offset": 92
-    },
-    {
-      "node_id": 623492261,
-      "green_time": 35,
-      "red_time": 21,
-      "phase_offset": 25
-    },
-    {
-      "node_id": 623492539,
-      "green_time": 49,
+      "node_id": 437562112,
+      "green_time": 15,
       "red_time": 15,
       "phase_offset": 15
     },
     {
-      "node_id": 623931827,
+      "node_id": 437562113,
+      "green_time": 57,
+      "red_time": 57,
+      "phase_offset": 35
+    },
+    {
+      "node_id": 437562115,
       "green_time": 46,
-      "red_time": 53,
-      "phase_offset": 60
+      "red_time": 46,
+      "phase_offset": 53
     },
     {
-      "node_id": 623931828,
-      "green_time": 18,
-      "red_time": 40,
-      "phase_offset": 47
+      "node_id": 437562116,
+      "green_time": 35,
+      "red_time": 35,
+      "phase_offset": 6
     },
     {
-      "node_id": 623939915,
-      "green_time": 34,
-      "red_time": 40,
-      "phase_offset": 63
+      "node_id": 437562121,
+      "green_time": 51,
+      "red_time": 51,
+      "phase_offset": 13
     },
     {
-      "node_id": 623939928,
-      "green_time": 41,
-      "red_time": 40,
-      "phase_offset": 15
+      "node_id": 458896744,
+      "green_time": 51,
+      "red_time": 51,
+      "phase_offset": 72
     },
     {
-      "node_id": 623948377,
-      "green_time": 45,
+      "node_id": 458914808,
+      "green_time": 25,
+      "red_time": 25,
+      "phase_offset": 29
+    },
+    {
+      "node_id": 480124249,
+      "green_time": 43,
       "red_time": 43,
-      "phase_offset": 62
+      "phase_offset": 42
     },
     {
-      "node_id": 623948380,
-      "green_time": 34,
-      "red_time": 52,
-      "phase_offset": 83
+      "node_id": 480124259,
+      "green_time": 31,
+      "red_time": 31,
+      "phase_offset": 46
     },
     {
-      "node_id": 623948381,
-      "green_time": 15,
-      "red_time": 37,
-      "phase_offset": 19
+      "node_id": 480124264,
+      "green_time": 47,
+      "red_time": 47,
+      "phase_offset": 85
     },
     {
-      "node_id": 623948419,
-      "green_time": 52,
-      "red_time": 32,
+      "node_id": 480124277,
+      "green_time": 57,
+      "red_time": 57,
       "phase_offset": 18
     },
     {
-      "node_id": 676748101,
+      "node_id": 480124279,
+      "green_time": 49,
+      "red_time": 49,
+      "phase_offset": 3
+    },
+    {
+      "node_id": 480124288,
+      "green_time": 26,
+      "red_time": 26,
+      "phase_offset": 0
+    },
+    {
+      "node_id": 480890077,
+      "green_time": 17,
+      "red_time": 17,
+      "phase_offset": 33
+    },
+    {
+      "node_id": 480890082,
+      "green_time": 51,
+      "red_time": 51,
+      "phase_offset": 40
+    },
+    {
+      "node_id": 480890083,
+      "green_time": 50,
+      "red_time": 50,
+      "phase_offset": 35
+    },
+    {
+      "node_id": 480890085,
+      "green_time": 26,
+      "red_time": 26,
+      "phase_offset": 9
+    },
+    {
+      "node_id": 480890092,
+      "green_time": 42,
+      "red_time": 42,
+      "phase_offset": 26
+    },
+    {
+      "node_id": 480890095,
+      "green_time": 17,
+      "red_time": 17,
+      "phase_offset": 11
+    },
+    {
+      "node_id": 480890119,
+      "green_time": 32,
+      "red_time": 32,
+      "phase_offset": 25
+    },
+    {
+      "node_id": 480890121,
+      "green_time": 15,
+      "red_time": 15,
+      "phase_offset": 2
+    },
+    {
+      "node_id": 480890127,
+      "green_time": 24,
+      "red_time": 24,
+      "phase_offset": 21
+    },
+    {
+      "node_id": 480890149,
+      "green_time": 45,
+      "red_time": 45,
+      "phase_offset": 17
+    },
+    {
+      "node_id": 480890151,
       "green_time": 47,
-      "red_time": 54,
-      "phase_offset": 94
+      "red_time": 47,
+      "phase_offset": 56
+    },
+    {
+      "node_id": 480890153,
+      "green_time": 35,
+      "red_time": 35,
+      "phase_offset": 0
+    },
+    {
+      "node_id": 480890160,
+      "green_time": 22,
+      "red_time": 22,
+      "phase_offset": 30
+    },
+    {
+      "node_id": 524678129,
+      "green_time": 48,
+      "red_time": 48,
+      "phase_offset": 36
+    },
+    {
+      "node_id": 524678130,
+      "green_time": 16,
+      "red_time": 16,
+      "phase_offset": 17
+    },
+    {
+      "node_id": 524678131,
+      "green_time": 22,
+      "red_time": 22,
+      "phase_offset": 4
+    },
+    {
+      "node_id": 524678132,
+      "green_time": 47,
+      "red_time": 47,
+      "phase_offset": 48
+    },
+    {
+      "node_id": 583617091,
+      "green_time": 60,
+      "red_time": 60,
+      "phase_offset": 41
+    },
+    {
+      "node_id": 621170534,
+      "green_time": 19,
+      "red_time": 19,
+      "phase_offset": 17
+    },
+    {
+      "node_id": 623492253,
+      "green_time": 59,
+      "red_time": 59,
+      "phase_offset": 83
+    },
+    {
+      "node_id": 623492261,
+      "green_time": 24,
+      "red_time": 24,
+      "phase_offset": 32
+    },
+    {
+      "node_id": 623492539,
+      "green_time": 39,
+      "red_time": 39,
+      "phase_offset": 49
+    },
+    {
+      "node_id": 623931827,
+      "green_time": 18,
+      "red_time": 18,
+      "phase_offset": 19
+    },
+    {
+      "node_id": 623931828,
+      "green_time": 15,
+      "red_time": 15,
+      "phase_offset": 8
+    },
+    {
+      "node_id": 623939915,
+      "green_time": 59,
+      "red_time": 59,
+      "phase_offset": 18
+    },
+    {
+      "node_id": 623939928,
+      "green_time": 50,
+      "red_time": 50,
+      "phase_offset": 44
+    },
+    {
+      "node_id": 623948377,
+      "green_time": 36,
+      "red_time": 36,
+      "phase_offset": 39
+    },
+    {
+      "node_id": 623948380,
+      "green_time": 40,
+      "red_time": 40,
+      "phase_offset": 46
+    },
+    {
+      "node_id": 623948381,
+      "green_time": 48,
+      "red_time": 48,
+      "phase_offset": 63
+    },
+    {
+      "node_id": 623948419,
+      "green_time": 28,
+      "red_time": 28,
+      "phase_offset": 3
+    },
+    {
+      "node_id": 676748101,
+      "green_time": 24,
+      "red_time": 24,
+      "phase_offset": 27
     },
     {
       "node_id": 676748105,
-      "green_time": 23,
-      "red_time": 43,
+      "green_time": 51,
+      "red_time": 51,
       "phase_offset": 22
     },
     {
       "node_id": 676748107,
-      "green_time": 22,
-      "red_time": 20,
-      "phase_offset": 6
+      "green_time": 44,
+      "red_time": 44,
+      "phase_offset": 86
     },
     {
       "node_id": 676748116,
-      "green_time": 35,
-      "red_time": 52,
-      "phase_offset": 21
+      "green_time": 40,
+      "red_time": 40,
+      "phase_offset": 11
     },
     {
       "node_id": 676748119,
-      "green_time": 52,
-      "red_time": 35,
-      "phase_offset": 2
+      "green_time": 45,
+      "red_time": 45,
+      "phase_offset": 17
     },
     {
       "node_id": 676748121,
-      "green_time": 43,
-      "red_time": 39,
-      "phase_offset": 22
+      "green_time": 25,
+      "red_time": 25,
+      "phase_offset": 15
     },
     {
       "node_id": 676748122,
-      "green_time": 22,
-      "red_time": 57,
-      "phase_offset": 31
+      "green_time": 48,
+      "red_time": 48,
+      "phase_offset": 80
     },
     {
       "node_id": 676748123,
-      "green_time": 40,
-      "red_time": 50,
-      "phase_offset": 38
+      "green_time": 38,
+      "red_time": 38,
+      "phase_offset": 2
     },
     {
       "node_id": 676748124,
-      "green_time": 39,
-      "red_time": 32,
-      "phase_offset": 54
+      "green_time": 53,
+      "red_time": 53,
+      "phase_offset": 40
     },
     {
       "node_id": 676748125,
-      "green_time": 21,
-      "red_time": 56,
-      "phase_offset": 7
+      "green_time": 59,
+      "red_time": 59,
+      "phase_offset": 37
     },
     {
       "node_id": 676748126,
-      "green_time": 22,
-      "red_time": 32,
-      "phase_offset": 4
+      "green_time": 41,
+      "red_time": 41,
+      "phase_offset": 30
     },
     {
       "node_id": 676748131,
-      "green_time": 31,
-      "red_time": 52,
-      "phase_offset": 75
+      "green_time": 48,
+      "red_time": 48,
+      "phase_offset": 31
     },
     {
       "node_id": 676748132,
-      "green_time": 29,
+      "green_time": 47,
       "red_time": 47,
-      "phase_offset": 42
+      "phase_offset": 55
     },
     {
       "node_id": 676748133,
       "green_time": 36,
-      "red_time": 47,
+      "red_time": 36,
       "phase_offset": 49
     },
     {
       "node_id": 676748143,
-      "green_time": 48,
-      "red_time": 15,
-      "phase_offset": 12
+      "green_time": 25,
+      "red_time": 25,
+      "phase_offset": 35
     },
     {
       "node_id": 676748153,
-      "green_time": 57,
-      "red_time": 21,
-      "phase_offset": 61
+      "green_time": 47,
+      "red_time": 47,
+      "phase_offset": 21
     },
     {
       "node_id": 676748154,
-      "green_time": 19,
-      "red_time": 44,
-      "phase_offset": 62
+      "green_time": 15,
+      "red_time": 15,
+      "phase_offset": 13
     },
     {
       "node_id": 676748155,
-      "green_time": 15,
-      "red_time": 45,
-      "phase_offset": 6
-    },
-    {
-      "node_id": 676748156,
-      "green_time": 33,
-      "red_time": 15,
-      "phase_offset": 46
-    },
-    {
-      "node_id": 676748161,
-      "green_time": 21,
-      "red_time": 32,
-      "phase_offset": 10
-    },
-    {
-      "node_id": 676748165,
-      "green_time": 45,
-      "red_time": 42,
-      "phase_offset": 63
-    },
-    {
-      "node_id": 676748167,
-      "green_time": 38,
-      "red_time": 39,
-      "phase_offset": 60
-    },
-    {
-      "node_id": 676748171,
-      "green_time": 30,
-      "red_time": 20,
-      "phase_offset": 6
-    },
-    {
-      "node_id": 676748182,
-      "green_time": 34,
-      "red_time": 24,
-      "phase_offset": 56
-    },
-    {
-      "node_id": 676748185,
-      "green_time": 22,
-      "red_time": 27,
-      "phase_offset": 26
-    },
-    {
-      "node_id": 676748186,
-      "green_time": 38,
-      "red_time": 16,
-      "phase_offset": 48
-    },
-    {
-      "node_id": 676748187,
-      "green_time": 22,
-      "red_time": 28,
-      "phase_offset": 49
-    },
-    {
-      "node_id": 886406726,
-      "green_time": 27,
-      "red_time": 54,
-      "phase_offset": 66
-    },
-    {
-      "node_id": 886406741,
-      "green_time": 48,
-      "red_time": 58,
-      "phase_offset": 89
-    },
-    {
-      "node_id": 890729088,
-      "green_time": 57,
-      "red_time": 16,
-      "phase_offset": 43
-    },
-    {
-      "node_id": 890729091,
-      "green_time": 58,
-      "red_time": 29,
-      "phase_offset": 55
-    },
-    {
-      "node_id": 890729096,
-      "green_time": 49,
-      "red_time": 15,
-      "phase_offset": 50
-    },
-    {
-      "node_id": 890729132,
-      "green_time": 26,
-      "red_time": 38,
-      "phase_offset": 18
-    },
-    {
-      "node_id": 890729140,
-      "green_time": 26,
-      "red_time": 18,
-      "phase_offset": 32
-    },
-    {
-      "node_id": 890729153,
-      "green_time": 48,
-      "red_time": 55,
-      "phase_offset": 51
-    },
-    {
-      "node_id": 1085596799,
-      "green_time": 25,
-      "red_time": 23,
-      "phase_offset": 14
-    },
-    {
-      "node_id": 1085711099,
-      "green_time": 39,
-      "red_time": 16,
-      "phase_offset": 30
-    },
-    {
-      "node_id": 1085711147,
-      "green_time": 37,
-      "red_time": 41,
-      "phase_offset": 65
-    },
-    {
-      "node_id": 1085711152,
-      "green_time": 20,
-      "red_time": 16,
-      "phase_offset": 19
-    },
-    {
-      "node_id": 1085711157,
-      "green_time": 40,
-      "red_time": 25,
-      "phase_offset": 21
-    },
-    {
-      "node_id": 1085752595,
-      "green_time": 52,
-      "red_time": 33,
-      "phase_offset": 79
-    },
-    {
-      "node_id": 1085752611,
-      "green_time": 55,
+      "green_time": 36,
       "red_time": 36,
-      "phase_offset": 59
-    },
-    {
-      "node_id": 1085752622,
-      "green_time": 47,
-      "red_time": 37,
-      "phase_offset": 28
-    },
-    {
-      "node_id": 1085752652,
-      "green_time": 25,
-      "red_time": 45,
-      "phase_offset": 60
-    },
-    {
-      "node_id": 1085752679,
-      "green_time": 51,
-      "red_time": 32,
-      "phase_offset": 5
-    },
-    {
-      "node_id": 1085863345,
-      "green_time": 59,
-      "red_time": 39,
-      "phase_offset": 71
-    },
-    {
-      "node_id": 1085863377,
-      "green_time": 37,
-      "red_time": 15,
-      "phase_offset": 17
-    },
-    {
-      "node_id": 1085863432,
-      "green_time": 23,
-      "red_time": 21,
-      "phase_offset": 27
-    },
-    {
-      "node_id": 1085863449,
-      "green_time": 44,
-      "red_time": 58,
-      "phase_offset": 24
-    },
-    {
-      "node_id": 1085863508,
-      "green_time": 26,
-      "red_time": 34,
       "phase_offset": 3
     },
     {
-      "node_id": 1085863510,
-      "green_time": 55,
-      "red_time": 28,
-      "phase_offset": 63
-    },
-    {
-      "node_id": 1085863512,
-      "green_time": 44,
-      "red_time": 35,
-      "phase_offset": 33
-    },
-    {
-      "node_id": 1085863514,
-      "green_time": 21,
-      "red_time": 18,
-      "phase_offset": 15
-    },
-    {
-      "node_id": 1085863548,
-      "green_time": 39,
-      "red_time": 24,
-      "phase_offset": 33
-    },
-    {
-      "node_id": 1085863557,
-      "green_time": 25,
-      "red_time": 18,
-      "phase_offset": 24
-    },
-    {
-      "node_id": 1085863570,
-      "green_time": 33,
-      "red_time": 55,
-      "phase_offset": 66
-    },
-    {
-      "node_id": 1085998390,
-      "green_time": 56,
-      "red_time": 55,
-      "phase_offset": 30
-    },
-    {
-      "node_id": 1086014015,
-      "green_time": 59,
-      "red_time": 21,
-      "phase_offset": 71
-    },
-    {
-      "node_id": 1086014021,
-      "green_time": 36,
-      "red_time": 20,
-      "phase_offset": 21
-    },
-    {
-      "node_id": 1086062886,
-      "green_time": 34,
-      "red_time": 22,
-      "phase_offset": 37
-    },
-    {
-      "node_id": 1086062889,
-      "green_time": 29,
-      "red_time": 28,
-      "phase_offset": 48
-    },
-    {
-      "node_id": 1086062891,
+      "node_id": 676748156,
       "green_time": 58,
-      "red_time": 22,
-      "phase_offset": 59
+      "red_time": 58,
+      "phase_offset": 99
     },
     {
-      "node_id": 1086062896,
-      "green_time": 24,
-      "red_time": 31,
-      "phase_offset": 17
+      "node_id": 676748161,
+      "green_time": 32,
+      "red_time": 32,
+      "phase_offset": 26
     },
     {
-      "node_id": 1086062933,
-      "green_time": 44,
-      "red_time": 56,
-      "phase_offset": 29
-    },
-    {
-      "node_id": 1086062935,
-      "green_time": 50,
-      "red_time": 30,
-      "phase_offset": 56
-    },
-    {
-      "node_id": 1086062938,
-      "green_time": 59,
-      "red_time": 42,
+      "node_id": 676748165,
+      "green_time": 40,
+      "red_time": 40,
       "phase_offset": 41
     },
     {
-      "node_id": 1086062975,
-      "green_time": 42,
-      "red_time": 48,
-      "phase_offset": 66
+      "node_id": 676748167,
+      "green_time": 37,
+      "red_time": 37,
+      "phase_offset": 64
     },
     {
-      "node_id": 1086062984,
-      "green_time": 56,
-      "red_time": 36,
-      "phase_offset": 29
+      "node_id": 676748171,
+      "green_time": 47,
+      "red_time": 47,
+      "phase_offset": 55
     },
     {
-      "node_id": 1086062987,
-      "green_time": 33,
-      "red_time": 35,
-      "phase_offset": 23
+      "node_id": 676748182,
+      "green_time": 32,
+      "red_time": 32,
+      "phase_offset": 13
     },
     {
-      "node_id": 1086123027,
-      "green_time": 33,
-      "red_time": 25,
-      "phase_offset": 25
+      "node_id": 676748185,
+      "green_time": 59,
+      "red_time": 59,
+      "phase_offset": 90
     },
     {
-      "node_id": 1086123036,
-      "green_time": 40,
-      "red_time": 45,
+      "node_id": 676748186,
+      "green_time": 26,
+      "red_time": 26,
+      "phase_offset": 45
+    },
+    {
+      "node_id": 676748187,
+      "green_time": 53,
+      "red_time": 53,
+      "phase_offset": 40
+    },
+    {
+      "node_id": 886406726,
+      "green_time": 31,
+      "red_time": 31,
+      "phase_offset": 59
+    },
+    {
+      "node_id": 886406741,
+      "green_time": 55,
+      "red_time": 55,
+      "phase_offset": 64
+    },
+    {
+      "node_id": 890729088,
+      "green_time": 50,
+      "red_time": 50,
+      "phase_offset": 19
+    },
+    {
+      "node_id": 890729091,
+      "green_time": 34,
+      "red_time": 34,
+      "phase_offset": 59
+    },
+    {
+      "node_id": 890729096,
+      "green_time": 18,
+      "red_time": 18,
       "phase_offset": 34
     },
     {
-      "node_id": 1086123039,
+      "node_id": 890729132,
+      "green_time": 46,
+      "red_time": 46,
+      "phase_offset": 0
+    },
+    {
+      "node_id": 890729140,
+      "green_time": 34,
+      "red_time": 34,
+      "phase_offset": 35
+    },
+    {
+      "node_id": 890729153,
+      "green_time": 59,
+      "red_time": 59,
+      "phase_offset": 104
+    },
+    {
+      "node_id": 1085596799,
+      "green_time": 34,
+      "red_time": 34,
+      "phase_offset": 9
+    },
+    {
+      "node_id": 1085711099,
+      "green_time": 44,
+      "red_time": 44,
+      "phase_offset": 26
+    },
+    {
+      "node_id": 1085711147,
+      "green_time": 59,
+      "red_time": 59,
+      "phase_offset": 63
+    },
+    {
+      "node_id": 1085711152,
+      "green_time": 43,
+      "red_time": 43,
+      "phase_offset": 64
+    },
+    {
+      "node_id": 1085711157,
       "green_time": 50,
+      "red_time": 50,
+      "phase_offset": 59
+    },
+    {
+      "node_id": 1085752595,
+      "green_time": 35,
+      "red_time": 35,
+      "phase_offset": 63
+    },
+    {
+      "node_id": 1085752611,
+      "green_time": 43,
+      "red_time": 43,
+      "phase_offset": 46
+    },
+    {
+      "node_id": 1085752622,
+      "green_time": 30,
+      "red_time": 30,
+      "phase_offset": 35
+    },
+    {
+      "node_id": 1085752652,
+      "green_time": 32,
+      "red_time": 32,
+      "phase_offset": 41
+    },
+    {
+      "node_id": 1085752679,
+      "green_time": 35,
+      "red_time": 35,
+      "phase_offset": 25
+    },
+    {
+      "node_id": 1085863345,
+      "green_time": 17,
+      "red_time": 17,
+      "phase_offset": 29
+    },
+    {
+      "node_id": 1085863377,
+      "green_time": 24,
+      "red_time": 24,
+      "phase_offset": 15
+    },
+    {
+      "node_id": 1085863432,
+      "green_time": 30,
+      "red_time": 30,
+      "phase_offset": 33
+    },
+    {
+      "node_id": 1085863449,
+      "green_time": 60,
       "red_time": 60,
-      "phase_offset": 61
+      "phase_offset": 20
     },
     {
-      "node_id": 1086123047,
-      "green_time": 48,
-      "red_time": 52,
-      "phase_offset": 58
-    },
-    {
-      "node_id": 1086123054,
+      "node_id": 1085863508,
       "green_time": 25,
-      "red_time": 27,
-      "phase_offset": 30
+      "red_time": 25,
+      "phase_offset": 4
     },
     {
-      "node_id": 1086123057,
-      "green_time": 54,
+      "node_id": 1085863510,
+      "green_time": 60,
+      "red_time": 60,
+      "phase_offset": 71
+    },
+    {
+      "node_id": 1085863512,
+      "green_time": 42,
+      "red_time": 42,
+      "phase_offset": 65
+    },
+    {
+      "node_id": 1085863514,
+      "green_time": 46,
+      "red_time": 46,
+      "phase_offset": 53
+    },
+    {
+      "node_id": 1085863548,
+      "green_time": 16,
       "red_time": 16,
       "phase_offset": 1
     },
     {
-      "node_id": 1086205256,
+      "node_id": 1085863557,
+      "green_time": 28,
+      "red_time": 28,
+      "phase_offset": 33
+    },
+    {
+      "node_id": 1085863570,
       "green_time": 60,
-      "red_time": 30,
-      "phase_offset": 87
-    },
-    {
-      "node_id": 1086205298,
-      "green_time": 17,
       "red_time": 60,
-      "phase_offset": 76
+      "phase_offset": 34
     },
     {
-      "node_id": 1086205301,
-      "green_time": 16,
-      "red_time": 22,
-      "phase_offset": 4
+      "node_id": 1085998390,
+      "green_time": 38,
+      "red_time": 38,
+      "phase_offset": 58
     },
     {
-      "node_id": 1086232632,
-      "green_time": 42,
+      "node_id": 1086014015,
+      "green_time": 20,
       "red_time": 20,
       "phase_offset": 36
     },
     {
-      "node_id": 1086232657,
-      "green_time": 59,
-      "red_time": 26,
-      "phase_offset": 41
+      "node_id": 1086014021,
+      "green_time": 33,
+      "red_time": 33,
+      "phase_offset": 57
     },
     {
-      "node_id": 1086265159,
+      "node_id": 1086062886,
+      "green_time": 49,
+      "red_time": 49,
+      "phase_offset": 54
+    },
+    {
+      "node_id": 1086062889,
+      "green_time": 53,
+      "red_time": 53,
+      "phase_offset": 8
+    },
+    {
+      "node_id": 1086062891,
+      "green_time": 41,
+      "red_time": 41,
+      "phase_offset": 14
+    },
+    {
+      "node_id": 1086062896,
+      "green_time": 39,
+      "red_time": 39,
+      "phase_offset": 77
+    },
+    {
+      "node_id": 1086062933,
+      "green_time": 39,
+      "red_time": 39,
+      "phase_offset": 61
+    },
+    {
+      "node_id": 1086062935,
+      "green_time": 29,
+      "red_time": 29,
+      "phase_offset": 19
+    },
+    {
+      "node_id": 1086062938,
       "green_time": 27,
-      "red_time": 35,
+      "red_time": 27,
+      "phase_offset": 13
+    },
+    {
+      "node_id": 1086062975,
+      "green_time": 58,
+      "red_time": 58,
+      "phase_offset": 75
+    },
+    {
+      "node_id": 1086062984,
+      "green_time": 58,
+      "red_time": 58,
+      "phase_offset": 51
+    },
+    {
+      "node_id": 1086062987,
+      "green_time": 32,
+      "red_time": 32,
+      "phase_offset": 6
+    },
+    {
+      "node_id": 1086123027,
+      "green_time": 22,
+      "red_time": 22,
+      "phase_offset": 16
+    },
+    {
+      "node_id": 1086123036,
+      "green_time": 36,
+      "red_time": 36,
+      "phase_offset": 69
+    },
+    {
+      "node_id": 1086123039,
+      "green_time": 60,
+      "red_time": 60,
+      "phase_offset": 76
+    },
+    {
+      "node_id": 1086123047,
+      "green_time": 28,
+      "red_time": 28,
+      "phase_offset": 26
+    },
+    {
+      "node_id": 1086123054,
+      "green_time": 21,
+      "red_time": 21,
+      "phase_offset": 40
+    },
+    {
+      "node_id": 1086123057,
+      "green_time": 24,
+      "red_time": 24,
+      "phase_offset": 34
+    },
+    {
+      "node_id": 1086205256,
+      "green_time": 52,
+      "red_time": 52,
+      "phase_offset": 36
+    },
+    {
+      "node_id": 1086205298,
+      "green_time": 52,
+      "red_time": 52,
+      "phase_offset": 18
+    },
+    {
+      "node_id": 1086205301,
+      "green_time": 18,
+      "red_time": 18,
+      "phase_offset": 10
+    },
+    {
+      "node_id": 1086232632,
+      "green_time": 43,
+      "red_time": 43,
       "phase_offset": 45
     },
     {
-      "node_id": 1086265189,
-      "green_time": 57,
-      "red_time": 16,
-      "phase_offset": 44
+      "node_id": 1086232657,
+      "green_time": 49,
+      "red_time": 49,
+      "phase_offset": 19
     },
     {
-      "node_id": 1086742602,
-      "green_time": 45,
-      "red_time": 59,
+      "node_id": 1086265159,
+      "green_time": 18,
+      "red_time": 18,
+      "phase_offset": 4
+    },
+    {
+      "node_id": 1086265189,
+      "green_time": 54,
+      "red_time": 54,
       "phase_offset": 81
     },
     {
+      "node_id": 1086742602,
+      "green_time": 59,
+      "red_time": 59,
+      "phase_offset": 88
+    },
+    {
       "node_id": 1086742611,
-      "green_time": 25,
-      "red_time": 60,
-      "phase_offset": 29
+      "green_time": 40,
+      "red_time": 40,
+      "phase_offset": 43
     },
     {
       "node_id": 1086742616,
-      "green_time": 30,
-      "red_time": 56,
-      "phase_offset": 39
+      "green_time": 53,
+      "red_time": 53,
+      "phase_offset": 26
     },
     {
       "node_id": 1086742625,
-      "green_time": 50,
-      "red_time": 36,
-      "phase_offset": 84
+      "green_time": 58,
+      "red_time": 58,
+      "phase_offset": 94
     },
     {
       "node_id": 1086742636,
       "green_time": 57,
-      "red_time": 51,
-      "phase_offset": 55
+      "red_time": 57,
+      "phase_offset": 77
     },
     {
       "node_id": 1086742680,
-      "green_time": 36,
-      "red_time": 48,
-      "phase_offset": 70
+      "green_time": 41,
+      "red_time": 41,
+      "phase_offset": 76
     },
     {
       "node_id": 1086742689,
-      "green_time": 45,
-      "red_time": 16,
-      "phase_offset": 18
-    },
-    {
-      "node_id": 1086742734,
-      "green_time": 54,
-      "red_time": 25,
-      "phase_offset": 57
-    },
-    {
-      "node_id": 1086779775,
-      "green_time": 31,
-      "red_time": 44,
-      "phase_offset": 21
-    },
-    {
-      "node_id": 1086779782,
-      "green_time": 39,
-      "red_time": 48,
-      "phase_offset": 9
-    },
-    {
-      "node_id": 1086779787,
-      "green_time": 31,
-      "red_time": 15,
-      "phase_offset": 21
-    },
-    {
-      "node_id": 1086779799,
-      "green_time": 56,
-      "red_time": 30,
-      "phase_offset": 47
-    },
-    {
-      "node_id": 1086779838,
-      "green_time": 40,
-      "red_time": 37,
-      "phase_offset": 44
-    },
-    {
-      "node_id": 1086779842,
-      "green_time": 39,
-      "red_time": 31,
+      "green_time": 57,
+      "red_time": 57,
       "phase_offset": 45
     },
     {
-      "node_id": 1086779852,
-      "green_time": 40,
+      "node_id": 1086742734,
+      "green_time": 23,
+      "red_time": 23,
+      "phase_offset": 44
+    },
+    {
+      "node_id": 1086779775,
+      "green_time": 52,
+      "red_time": 52,
+      "phase_offset": 28
+    },
+    {
+      "node_id": 1086779782,
+      "green_time": 57,
+      "red_time": 57,
+      "phase_offset": 70
+    },
+    {
+      "node_id": 1086779787,
+      "green_time": 33,
       "red_time": 33,
-      "phase_offset": 5
+      "phase_offset": 59
+    },
+    {
+      "node_id": 1086779799,
+      "green_time": 36,
+      "red_time": 36,
+      "phase_offset": 68
+    },
+    {
+      "node_id": 1086779838,
+      "green_time": 42,
+      "red_time": 42,
+      "phase_offset": 21
+    },
+    {
+      "node_id": 1086779842,
+      "green_time": 55,
+      "red_time": 55,
+      "phase_offset": 7
+    },
+    {
+      "node_id": 1086779852,
+      "green_time": 37,
+      "red_time": 37,
+      "phase_offset": 15
     },
     {
       "node_id": 1086779855,
-      "green_time": 43,
-      "red_time": 16,
-      "phase_offset": 34
+      "green_time": 40,
+      "red_time": 40,
+      "phase_offset": 1
     },
     {
       "node_id": 1086779858,
-      "green_time": 28,
-      "red_time": 23,
+      "green_time": 49,
+      "red_time": 49,
       "phase_offset": 19
     },
     {
       "node_id": 1086779861,
-      "green_time": 59,
-      "red_time": 26,
-      "phase_offset": 2
+      "green_time": 54,
+      "red_time": 54,
+      "phase_offset": 77
     },
     {
       "node_id": 1086779865,
-      "green_time": 21,
-      "red_time": 49,
-      "phase_offset": 3
-    },
-    {
-      "node_id": 1086779887,
-      "green_time": 44,
-      "red_time": 25,
-      "phase_offset": 51
-    },
-    {
-      "node_id": 1086779893,
-      "green_time": 26,
-      "red_time": 22,
-      "phase_offset": 35
-    },
-    {
-      "node_id": 1086779899,
-      "green_time": 25,
-      "red_time": 47,
-      "phase_offset": 66
-    },
-    {
-      "node_id": 1086779916,
-      "green_time": 31,
-      "red_time": 30,
-      "phase_offset": 57
-    },
-    {
-      "node_id": 1086779938,
-      "green_time": 41,
-      "red_time": 40,
-      "phase_offset": 53
-    },
-    {
-      "node_id": 1086779948,
-      "green_time": 16,
-      "red_time": 25,
-      "phase_offset": 30
-    },
-    {
-      "node_id": 1086779950,
-      "green_time": 50,
-      "red_time": 45,
-      "phase_offset": 73
-    },
-    {
-      "node_id": 1086779953,
-      "green_time": 18,
-      "red_time": 57,
-      "phase_offset": 21
-    },
-    {
-      "node_id": 1086779957,
       "green_time": 60,
-      "red_time": 43,
-      "phase_offset": 51
-    },
-    {
-      "node_id": 1086779959,
-      "green_time": 27,
-      "red_time": 15,
-      "phase_offset": 13
-    },
-    {
-      "node_id": 1086779974,
-      "green_time": 43,
-      "red_time": 35,
-      "phase_offset": 38
-    },
-    {
-      "node_id": 1086779978,
-      "green_time": 34,
-      "red_time": 39,
-      "phase_offset": 28
-    },
-    {
-      "node_id": 1086779981,
-      "green_time": 44,
-      "red_time": 47,
-      "phase_offset": 68
-    },
-    {
-      "node_id": 1086779984,
-      "green_time": 28,
-      "red_time": 58,
-      "phase_offset": 81
-    },
-    {
-      "node_id": 1086779986,
-      "green_time": 24,
-      "red_time": 43,
-      "phase_offset": 49
-    },
-    {
-      "node_id": 1086779988,
-      "green_time": 23,
-      "red_time": 55,
-      "phase_offset": 53
-    },
-    {
-      "node_id": 1086780010,
-      "green_time": 28,
-      "red_time": 22,
+      "red_time": 60,
       "phase_offset": 42
     },
     {
-      "node_id": 1086780013,
-      "green_time": 40,
-      "red_time": 30,
-      "phase_offset": 24
+      "node_id": 1086779887,
+      "green_time": 52,
+      "red_time": 52,
+      "phase_offset": 68
     },
     {
-      "node_id": 1086780022,
-      "green_time": 58,
-      "red_time": 29,
+      "node_id": 1086779893,
+      "green_time": 34,
+      "red_time": 34,
+      "phase_offset": 57
+    },
+    {
+      "node_id": 1086779899,
+      "green_time": 28,
+      "red_time": 28,
+      "phase_offset": 15
+    },
+    {
+      "node_id": 1086779916,
+      "green_time": 23,
+      "red_time": 23,
+      "phase_offset": 13
+    },
+    {
+      "node_id": 1086779938,
+      "green_time": 23,
+      "red_time": 23,
+      "phase_offset": 29
+    },
+    {
+      "node_id": 1086779948,
+      "green_time": 43,
+      "red_time": 43,
+      "phase_offset": 80
+    },
+    {
+      "node_id": 1086779950,
+      "green_time": 28,
+      "red_time": 28,
       "phase_offset": 46
     },
     {
-      "node_id": 1086780025,
-      "green_time": 44,
+      "node_id": 1086779953,
+      "green_time": 52,
+      "red_time": 52,
+      "phase_offset": 63
+    },
+    {
+      "node_id": 1086779957,
+      "green_time": 45,
+      "red_time": 45,
+      "phase_offset": 48
+    },
+    {
+      "node_id": 1086779959,
+      "green_time": 46,
+      "red_time": 46,
+      "phase_offset": 73
+    },
+    {
+      "node_id": 1086779974,
+      "green_time": 28,
+      "red_time": 28,
+      "phase_offset": 3
+    },
+    {
+      "node_id": 1086779978,
+      "green_time": 45,
+      "red_time": 45,
+      "phase_offset": 19
+    },
+    {
+      "node_id": 1086779981,
+      "green_time": 25,
+      "red_time": 25,
+      "phase_offset": 10
+    },
+    {
+      "node_id": 1086779984,
+      "green_time": 57,
+      "red_time": 57,
+      "phase_offset": 87
+    },
+    {
+      "node_id": 1086779986,
+      "green_time": 23,
+      "red_time": 23,
+      "phase_offset": 43
+    },
+    {
+      "node_id": 1086779988,
+      "green_time": 33,
       "red_time": 33,
-      "phase_offset": 75
+      "phase_offset": 62
+    },
+    {
+      "node_id": 1086780010,
+      "green_time": 17,
+      "red_time": 17,
+      "phase_offset": 8
+    },
+    {
+      "node_id": 1086780013,
+      "green_time": 60,
+      "red_time": 60,
+      "phase_offset": 106
+    },
+    {
+      "node_id": 1086780022,
+      "green_time": 55,
+      "red_time": 55,
+      "phase_offset": 41
+    },
+    {
+      "node_id": 1086780025,
+      "green_time": 50,
+      "red_time": 50,
+      "phase_offset": 34
     },
     {
       "node_id": 1086780028,
       "green_time": 29,
-      "red_time": 26,
-      "phase_offset": 21
+      "red_time": 29,
+      "phase_offset": 27
     },
     {
       "node_id": 1086780032,
-      "green_time": 16,
-      "red_time": 34,
-      "phase_offset": 37
+      "green_time": 24,
+      "red_time": 24,
+      "phase_offset": 32
     },
     {
       "node_id": 1086780061,
-      "green_time": 20,
-      "red_time": 31,
-      "phase_offset": 39
+      "green_time": 52,
+      "red_time": 52,
+      "phase_offset": 13
     },
     {
       "node_id": 1086780063,
-      "green_time": 33,
-      "red_time": 29,
-      "phase_offset": 17
+      "green_time": 21,
+      "red_time": 21,
+      "phase_offset": 4
     },
     {
       "node_id": 1086780064,
-      "green_time": 52,
-      "red_time": 22,
-      "phase_offset": 51
-    },
-    {
-      "node_id": 1086780066,
-      "green_time": 52,
-      "red_time": 40,
+      "green_time": 17,
+      "red_time": 17,
       "phase_offset": 5
     },
     {
+      "node_id": 1086780066,
+      "green_time": 58,
+      "red_time": 58,
+      "phase_offset": 80
+    },
+    {
       "node_id": 1086780069,
-      "green_time": 39,
+      "green_time": 53,
       "red_time": 53,
-      "phase_offset": 51
+      "phase_offset": 63
     },
     {
       "node_id": 1086780075,
-      "green_time": 24,
-      "red_time": 19,
-      "phase_offset": 9
-    },
-    {
-      "node_id": 1086780113,
-      "green_time": 52,
-      "red_time": 57,
-      "phase_offset": 18
-    },
-    {
-      "node_id": 1086780114,
-      "green_time": 40,
-      "red_time": 18,
-      "phase_offset": 57
-    },
-    {
-      "node_id": 1086780130,
-      "green_time": 37,
+      "green_time": 21,
       "red_time": 21,
       "phase_offset": 8
     },
     {
-      "node_id": 1086780136,
-      "green_time": 30,
-      "red_time": 42,
-      "phase_offset": 17
+      "node_id": 1086780113,
+      "green_time": 56,
+      "red_time": 56,
+      "phase_offset": 104
     },
     {
-      "node_id": 1086780140,
-      "green_time": 51,
-      "red_time": 45,
-      "phase_offset": 55
-    },
-    {
-      "node_id": 1086780142,
-      "green_time": 19,
-      "red_time": 40,
-      "phase_offset": 12
-    },
-    {
-      "node_id": 1086780145,
-      "green_time": 41,
-      "red_time": 42,
-      "phase_offset": 52
-    },
-    {
-      "node_id": 1086780174,
-      "green_time": 43,
-      "red_time": 45,
-      "phase_offset": 30
-    },
-    {
-      "node_id": 1086780176,
-      "green_time": 20,
-      "red_time": 57,
-      "phase_offset": 50
-    },
-    {
-      "node_id": 1088158206,
-      "green_time": 34,
-      "red_time": 44,
+      "node_id": 1086780114,
+      "green_time": 48,
+      "red_time": 48,
       "phase_offset": 44
     },
     {
-      "node_id": 1088158207,
+      "node_id": 1086780130,
+      "green_time": 36,
+      "red_time": 36,
+      "phase_offset": 22
+    },
+    {
+      "node_id": 1086780136,
+      "green_time": 51,
+      "red_time": 51,
+      "phase_offset": 63
+    },
+    {
+      "node_id": 1086780140,
       "green_time": 57,
-      "red_time": 37,
-      "phase_offset": 90
+      "red_time": 57,
+      "phase_offset": 83
+    },
+    {
+      "node_id": 1086780142,
+      "green_time": 22,
+      "red_time": 22,
+      "phase_offset": 35
+    },
+    {
+      "node_id": 1086780145,
+      "green_time": 47,
+      "red_time": 47,
+      "phase_offset": 67
+    },
+    {
+      "node_id": 1086780174,
+      "green_time": 33,
+      "red_time": 33,
+      "phase_offset": 44
+    },
+    {
+      "node_id": 1086780176,
+      "green_time": 25,
+      "red_time": 25,
+      "phase_offset": 11
+    },
+    {
+      "node_id": 1088158206,
+      "green_time": 45,
+      "red_time": 45,
+      "phase_offset": 23
+    },
+    {
+      "node_id": 1088158207,
+      "green_time": 46,
+      "red_time": 46,
+      "phase_offset": 87
     },
     {
       "node_id": 1088158209,
-      "green_time": 16,
-      "red_time": 20,
-      "phase_offset": 26
+      "green_time": 46,
+      "red_time": 46,
+      "phase_offset": 64
     },
     {
       "node_id": 1088158210,
-      "green_time": 34,
-      "red_time": 40,
-      "phase_offset": 12
+      "green_time": 45,
+      "red_time": 45,
+      "phase_offset": 82
     },
     {
       "node_id": 1089201093,
-      "green_time": 54,
-      "red_time": 51,
-      "phase_offset": 48
+      "green_time": 48,
+      "red_time": 48,
+      "phase_offset": 78
     },
     {
       "node_id": 1089201152,
-      "green_time": 43,
-      "red_time": 45,
-      "phase_offset": 25
+      "green_time": 48,
+      "red_time": 48,
+      "phase_offset": 56
     },
     {
       "node_id": 1089201192,
       "green_time": 19,
-      "red_time": 59,
-      "phase_offset": 27
+      "red_time": 19,
+      "phase_offset": 15
     },
     {
       "node_id": 1089228664,
-      "green_time": 24,
-      "red_time": 42,
-      "phase_offset": 42
-    },
-    {
-      "node_id": 1089228667,
-      "green_time": 45,
-      "red_time": 59,
-      "phase_offset": 52
-    },
-    {
-      "node_id": 1089228677,
-      "green_time": 60,
-      "red_time": 51,
-      "phase_offset": 53
-    },
-    {
-      "node_id": 1089228685,
-      "green_time": 19,
-      "red_time": 57,
-      "phase_offset": 74
-    },
-    {
-      "node_id": 1091429982,
-      "green_time": 22,
-      "red_time": 47,
-      "phase_offset": 53
-    },
-    {
-      "node_id": 1091430005,
-      "green_time": 18,
-      "red_time": 34,
-      "phase_offset": 3
-    },
-    {
-      "node_id": 1091465815,
-      "green_time": 44,
-      "red_time": 22,
-      "phase_offset": 48
-    },
-    {
-      "node_id": 1091465817,
-      "green_time": 35,
-      "red_time": 56,
-      "phase_offset": 61
-    },
-    {
-      "node_id": 1091465820,
-      "green_time": 40,
-      "red_time": 51,
-      "phase_offset": 18
-    },
-    {
-      "node_id": 1091465821,
-      "green_time": 57,
-      "red_time": 53,
-      "phase_offset": 13
-    },
-    {
-      "node_id": 1091465823,
-      "green_time": 50,
-      "red_time": 38,
-      "phase_offset": 31
-    },
-    {
-      "node_id": 1091465825,
-      "green_time": 45,
-      "red_time": 22,
-      "phase_offset": 48
-    },
-    {
-      "node_id": 1091465827,
-      "green_time": 45,
-      "red_time": 48,
-      "phase_offset": 73
-    },
-    {
-      "node_id": 1091465837,
-      "green_time": 37,
-      "red_time": 45,
-      "phase_offset": 9
-    },
-    {
-      "node_id": 1091465839,
-      "green_time": 19,
-      "red_time": 46,
-      "phase_offset": 12
-    },
-    {
-      "node_id": 1091465841,
-      "green_time": 29,
-      "red_time": 26,
-      "phase_offset": 5
-    },
-    {
-      "node_id": 1091465843,
-      "green_time": 33,
-      "red_time": 39,
-      "phase_offset": 64
-    },
-    {
-      "node_id": 1091465845,
-      "green_time": 30,
-      "red_time": 56,
-      "phase_offset": 64
-    },
-    {
-      "node_id": 1091465848,
-      "green_time": 24,
-      "red_time": 51,
-      "phase_offset": 63
-    },
-    {
-      "node_id": 1091465850,
-      "green_time": 35,
-      "red_time": 20,
-      "phase_offset": 33
-    },
-    {
-      "node_id": 1091465855,
-      "green_time": 17,
-      "red_time": 56,
-      "phase_offset": 42
-    },
-    {
-      "node_id": 1091465865,
-      "green_time": 36,
-      "red_time": 31,
-      "phase_offset": 22
-    },
-    {
-      "node_id": 1091515624,
-      "green_time": 42,
-      "red_time": 50,
-      "phase_offset": 0
-    },
-    {
-      "node_id": 1091515628,
-      "green_time": 39,
-      "red_time": 46,
-      "phase_offset": 33
-    },
-    {
-      "node_id": 1091515631,
-      "green_time": 43,
-      "red_time": 21,
-      "phase_offset": 53
-    },
-    {
-      "node_id": 1091515638,
-      "green_time": 35,
-      "red_time": 40,
-      "phase_offset": 37
-    },
-    {
-      "node_id": 1091515640,
-      "green_time": 27,
-      "red_time": 60,
-      "phase_offset": 80
-    },
-    {
-      "node_id": 1091515641,
-      "green_time": 27,
-      "red_time": 45,
-      "phase_offset": 12
-    },
-    {
-      "node_id": 1091515643,
-      "green_time": 56,
-      "red_time": 20,
-      "phase_offset": 5
-    },
-    {
-      "node_id": 1091515645,
-      "green_time": 46,
-      "red_time": 53,
-      "phase_offset": 66
-    },
-    {
-      "node_id": 1091515646,
       "green_time": 53,
-      "red_time": 19,
-      "phase_offset": 60
-    },
-    {
-      "node_id": 1091515649,
-      "green_time": 40,
-      "red_time": 38,
+      "red_time": 53,
       "phase_offset": 21
     },
     {
-      "node_id": 1091515651,
-      "green_time": 40,
-      "red_time": 57,
-      "phase_offset": 86
+      "node_id": 1089228667,
+      "green_time": 58,
+      "red_time": 58,
+      "phase_offset": 106
     },
     {
-      "node_id": 1091515661,
-      "green_time": 50,
+      "node_id": 1089228677,
+      "green_time": 25,
+      "red_time": 25,
+      "phase_offset": 30
+    },
+    {
+      "node_id": 1089228685,
+      "green_time": 48,
       "red_time": 48,
-      "phase_offset": 12
+      "phase_offset": 24
     },
     {
-      "node_id": 1091515663,
+      "node_id": 1091429982,
       "green_time": 53,
-      "red_time": 44,
-      "phase_offset": 16
+      "red_time": 53,
+      "phase_offset": 40
     },
     {
-      "node_id": 1091515664,
-      "green_time": 38,
-      "red_time": 59,
-      "phase_offset": 28
-    },
-    {
-      "node_id": 1091515667,
-      "green_time": 21,
-      "red_time": 31,
-      "phase_offset": 14
-    },
-    {
-      "node_id": 1091515672,
-      "green_time": 46,
-      "red_time": 55,
-      "phase_offset": 25
-    },
-    {
-      "node_id": 1091515675,
-      "green_time": 51,
+      "node_id": 1091430005,
+      "green_time": 20,
       "red_time": 20,
-      "phase_offset": 23
+      "phase_offset": 38
     },
     {
-      "node_id": 1091515685,
-      "green_time": 57,
-      "red_time": 17,
-      "phase_offset": 41
+      "node_id": 1091465815,
+      "green_time": 60,
+      "red_time": 60,
+      "phase_offset": 73
     },
     {
-      "node_id": 1091515687,
-      "green_time": 33,
-      "red_time": 51,
-      "phase_offset": 66
-    },
-    {
-      "node_id": 1091604998,
-      "green_time": 31,
-      "red_time": 57,
-      "phase_offset": 81
-    },
-    {
-      "node_id": 1091605000,
-      "green_time": 18,
-      "red_time": 27,
-      "phase_offset": 37
-    },
-    {
-      "node_id": 1091605003,
-      "green_time": 28,
-      "red_time": 36,
-      "phase_offset": 12
-    },
-    {
-      "node_id": 1091605004,
-      "green_time": 39,
-      "red_time": 31,
-      "phase_offset": 11
-    },
-    {
-      "node_id": 1091605006,
-      "green_time": 53,
-      "red_time": 59,
-      "phase_offset": 43
-    },
-    {
-      "node_id": 1091605008,
-      "green_time": 52,
-      "red_time": 31,
-      "phase_offset": 44
-    },
-    {
-      "node_id": 1091605024,
-      "green_time": 30,
-      "red_time": 36,
-      "phase_offset": 23
-    },
-    {
-      "node_id": 1091605025,
-      "green_time": 37,
-      "red_time": 27,
-      "phase_offset": 41
-    },
-    {
-      "node_id": 1091605026,
-      "green_time": 46,
-      "red_time": 49,
-      "phase_offset": 41
-    },
-    {
-      "node_id": 1091605028,
-      "green_time": 45,
-      "red_time": 50,
-      "phase_offset": 42
-    },
-    {
-      "node_id": 1091605033,
-      "green_time": 15,
-      "red_time": 26,
-      "phase_offset": 0
-    },
-    {
-      "node_id": 1091605037,
-      "green_time": 44,
-      "red_time": 31,
-      "phase_offset": 43
-    },
-    {
-      "node_id": 1091605056,
-      "green_time": 59,
+      "node_id": 1091465817,
+      "green_time": 40,
       "red_time": 40,
       "phase_offset": 75
     },
     {
-      "node_id": 1091605057,
-      "green_time": 47,
-      "red_time": 31,
-      "phase_offset": 2
-    },
-    {
-      "node_id": 1091605059,
-      "green_time": 24,
-      "red_time": 15,
-      "phase_offset": 33
-    },
-    {
-      "node_id": 1091605069,
-      "green_time": 59,
-      "red_time": 40,
-      "phase_offset": 6
-    },
-    {
-      "node_id": 1091605073,
-      "green_time": 47,
-      "red_time": 56,
-      "phase_offset": 27
-    },
-    {
-      "node_id": 1091605087,
-      "green_time": 18,
-      "red_time": 46,
-      "phase_offset": 3
-    },
-    {
-      "node_id": 1091605091,
-      "green_time": 17,
-      "red_time": 24,
-      "phase_offset": 28
-    },
-    {
-      "node_id": 1091605094,
-      "green_time": 48,
-      "red_time": 59,
-      "phase_offset": 49
-    },
-    {
-      "node_id": 1091605098,
-      "green_time": 30,
-      "red_time": 52,
-      "phase_offset": 15
-    },
-    {
-      "node_id": 1091605101,
-      "green_time": 49,
-      "red_time": 43,
-      "phase_offset": 39
-    },
-    {
-      "node_id": 1091605108,
-      "green_time": 40,
-      "red_time": 42,
-      "phase_offset": 15
-    },
-    {
-      "node_id": 1091605131,
-      "green_time": 36,
-      "red_time": 59,
-      "phase_offset": 10
-    },
-    {
-      "node_id": 1091605136,
-      "green_time": 54,
-      "red_time": 20,
-      "phase_offset": 58
-    },
-    {
-      "node_id": 1091605147,
-      "green_time": 31,
-      "red_time": 16,
-      "phase_offset": 25
-    },
-    {
-      "node_id": 1091605150,
+      "node_id": 1091465820,
       "green_time": 50,
-      "red_time": 37,
-      "phase_offset": 21
-    },
-    {
-      "node_id": 1091672883,
-      "green_time": 59,
-      "red_time": 53,
-      "phase_offset": 65
-    },
-    {
-      "node_id": 1091672889,
-      "green_time": 36,
-      "red_time": 31,
-      "phase_offset": 17
-    },
-    {
-      "node_id": 1091672903,
-      "green_time": 58,
-      "red_time": 38,
-      "phase_offset": 52
-    },
-    {
-      "node_id": 1091672905,
-      "green_time": 39,
-      "red_time": 45,
-      "phase_offset": 16
-    },
-    {
-      "node_id": 1091672910,
-      "green_time": 29,
-      "red_time": 22,
-      "phase_offset": 38
-    },
-    {
-      "node_id": 1091672912,
-      "green_time": 42,
-      "red_time": 47,
-      "phase_offset": 82
-    },
-    {
-      "node_id": 1091672915,
-      "green_time": 32,
-      "red_time": 44,
-      "phase_offset": 36
-    },
-    {
-      "node_id": 1091672926,
-      "green_time": 54,
-      "red_time": 24,
-      "phase_offset": 26
-    },
-    {
-      "node_id": 1091672930,
-      "green_time": 56,
-      "red_time": 25,
-      "phase_offset": 13
-    },
-    {
-      "node_id": 1091672934,
-      "green_time": 47,
-      "red_time": 21,
-      "phase_offset": 12
-    },
-    {
-      "node_id": 1091672938,
-      "green_time": 16,
-      "red_time": 31,
-      "phase_offset": 33
-    },
-    {
-      "node_id": 1091672940,
-      "green_time": 46,
-      "red_time": 42,
-      "phase_offset": 81
-    },
-    {
-      "node_id": 1091682012,
-      "green_time": 55,
-      "red_time": 26,
-      "phase_offset": 51
-    },
-    {
-      "node_id": 1091682018,
-      "green_time": 51,
-      "red_time": 45,
-      "phase_offset": 16
-    },
-    {
-      "node_id": 1091730766,
-      "green_time": 27,
-      "red_time": 41,
-      "phase_offset": 3
-    },
-    {
-      "node_id": 1091730828,
-      "green_time": 59,
-      "red_time": 18,
+      "red_time": 50,
       "phase_offset": 50
     },
     {
-      "node_id": 1091771956,
-      "green_time": 44,
-      "red_time": 48,
-      "phase_offset": 76
+      "node_id": 1091465821,
+      "green_time": 28,
+      "red_time": 28,
+      "phase_offset": 28
     },
     {
-      "node_id": 1091771958,
-      "green_time": 19,
-      "red_time": 29,
-      "phase_offset": 25
-    },
-    {
-      "node_id": 1097956812,
+      "node_id": 1091465823,
       "green_time": 23,
-      "red_time": 31,
-      "phase_offset": 19
+      "red_time": 23,
+      "phase_offset": 29
     },
     {
-      "node_id": 1098925088,
-      "green_time": 43,
-      "red_time": 33,
-      "phase_offset": 63
+      "node_id": 1091465825,
+      "green_time": 39,
+      "red_time": 39,
+      "phase_offset": 50
     },
     {
-      "node_id": 1098925128,
-      "green_time": 35,
+      "node_id": 1091465827,
+      "green_time": 55,
+      "red_time": 55,
+      "phase_offset": 18
+    },
+    {
+      "node_id": 1091465837,
+      "green_time": 41,
+      "red_time": 41,
+      "phase_offset": 50
+    },
+    {
+      "node_id": 1091465839,
+      "green_time": 42,
       "red_time": 42,
-      "phase_offset": 61
+      "phase_offset": 26
     },
     {
-      "node_id": 1098925200,
-      "green_time": 60,
-      "red_time": 34,
-      "phase_offset": 79
+      "node_id": 1091465841,
+      "green_time": 47,
+      "red_time": 47,
+      "phase_offset": 87
     },
     {
-      "node_id": 1098925313,
-      "green_time": 35,
-      "red_time": 59,
-      "phase_offset": 41
+      "node_id": 1091465843,
+      "green_time": 43,
+      "red_time": 43,
+      "phase_offset": 73
     },
     {
-      "node_id": 1100383392,
-      "green_time": 52,
-      "red_time": 40,
-      "phase_offset": 22
+      "node_id": 1091465845,
+      "green_time": 28,
+      "red_time": 28,
+      "phase_offset": 34
     },
     {
-      "node_id": 1100383398,
-      "green_time": 52,
+      "node_id": 1091465848,
+      "green_time": 24,
       "red_time": 24,
+      "phase_offset": 23
+    },
+    {
+      "node_id": 1091465850,
+      "green_time": 22,
+      "red_time": 22,
+      "phase_offset": 17
+    },
+    {
+      "node_id": 1091465855,
+      "green_time": 20,
+      "red_time": 20,
+      "phase_offset": 34
+    },
+    {
+      "node_id": 1091465865,
+      "green_time": 57,
+      "red_time": 57,
       "phase_offset": 14
     },
     {
-      "node_id": 1100383407,
-      "green_time": 55,
-      "red_time": 43,
-      "phase_offset": 53
+      "node_id": 1091515624,
+      "green_time": 44,
+      "red_time": 44,
+      "phase_offset": 80
     },
     {
-      "node_id": 1100413279,
+      "node_id": 1091515628,
+      "green_time": 36,
+      "red_time": 36,
+      "phase_offset": 25
+    },
+    {
+      "node_id": 1091515631,
+      "green_time": 50,
+      "red_time": 50,
+      "phase_offset": 40
+    },
+    {
+      "node_id": 1091515638,
+      "green_time": 54,
+      "red_time": 54,
+      "phase_offset": 38
+    },
+    {
+      "node_id": 1091515640,
       "green_time": 23,
-      "red_time": 46,
+      "red_time": 23,
+      "phase_offset": 32
+    },
+    {
+      "node_id": 1091515641,
+      "green_time": 21,
+      "red_time": 21,
+      "phase_offset": 0
+    },
+    {
+      "node_id": 1091515643,
+      "green_time": 53,
+      "red_time": 53,
+      "phase_offset": 32
+    },
+    {
+      "node_id": 1091515645,
+      "green_time": 19,
+      "red_time": 19,
+      "phase_offset": 17
+    },
+    {
+      "node_id": 1091515646,
+      "green_time": 44,
+      "red_time": 44,
+      "phase_offset": 33
+    },
+    {
+      "node_id": 1091515649,
+      "green_time": 33,
+      "red_time": 33,
+      "phase_offset": 25
+    },
+    {
+      "node_id": 1091515651,
+      "green_time": 59,
+      "red_time": 59,
+      "phase_offset": 18
+    },
+    {
+      "node_id": 1091515661,
+      "green_time": 47,
+      "red_time": 47,
       "phase_offset": 56
     },
     {
-      "node_id": 1100413310,
-      "green_time": 56,
+      "node_id": 1091515663,
+      "green_time": 31,
+      "red_time": 31,
+      "phase_offset": 49
+    },
+    {
+      "node_id": 1091515664,
+      "green_time": 19,
+      "red_time": 19,
+      "phase_offset": 6
+    },
+    {
+      "node_id": 1091515667,
+      "green_time": 22,
+      "red_time": 22,
+      "phase_offset": 43
+    },
+    {
+      "node_id": 1091515672,
+      "green_time": 25,
+      "red_time": 25,
+      "phase_offset": 7
+    },
+    {
+      "node_id": 1091515675,
+      "green_time": 45,
+      "red_time": 45,
+      "phase_offset": 47
+    },
+    {
+      "node_id": 1091515685,
+      "green_time": 43,
+      "red_time": 43,
+      "phase_offset": 85
+    },
+    {
+      "node_id": 1091515687,
+      "green_time": 41,
+      "red_time": 41,
+      "phase_offset": 10
+    },
+    {
+      "node_id": 1091604998,
+      "green_time": 48,
+      "red_time": 48,
+      "phase_offset": 51
+    },
+    {
+      "node_id": 1091605000,
+      "green_time": 33,
+      "red_time": 33,
+      "phase_offset": 20
+    },
+    {
+      "node_id": 1091605003,
+      "green_time": 37,
+      "red_time": 37,
+      "phase_offset": 47
+    },
+    {
+      "node_id": 1091605004,
+      "green_time": 17,
+      "red_time": 17,
+      "phase_offset": 18
+    },
+    {
+      "node_id": 1091605006,
+      "green_time": 59,
+      "red_time": 59,
+      "phase_offset": 9
+    },
+    {
+      "node_id": 1091605008,
+      "green_time": 46,
+      "red_time": 46,
+      "phase_offset": 54
+    },
+    {
+      "node_id": 1091605024,
+      "green_time": 36,
+      "red_time": 36,
+      "phase_offset": 29
+    },
+    {
+      "node_id": 1091605025,
+      "green_time": 28,
+      "red_time": 28,
+      "phase_offset": 55
+    },
+    {
+      "node_id": 1091605026,
+      "green_time": 27,
+      "red_time": 27,
+      "phase_offset": 6
+    },
+    {
+      "node_id": 1091605028,
+      "green_time": 55,
+      "red_time": 55,
+      "phase_offset": 57
+    },
+    {
+      "node_id": 1091605033,
+      "green_time": 28,
+      "red_time": 28,
+      "phase_offset": 37
+    },
+    {
+      "node_id": 1091605037,
+      "green_time": 44,
+      "red_time": 44,
+      "phase_offset": 8
+    },
+    {
+      "node_id": 1091605056,
+      "green_time": 60,
+      "red_time": 60,
+      "phase_offset": 101
+    },
+    {
+      "node_id": 1091605057,
+      "green_time": 25,
+      "red_time": 25,
+      "phase_offset": 47
+    },
+    {
+      "node_id": 1091605059,
+      "green_time": 27,
+      "red_time": 27,
+      "phase_offset": 16
+    },
+    {
+      "node_id": 1091605069,
+      "green_time": 44,
+      "red_time": 44,
+      "phase_offset": 81
+    },
+    {
+      "node_id": 1091605073,
+      "green_time": 32,
+      "red_time": 32,
+      "phase_offset": 0
+    },
+    {
+      "node_id": 1091605087,
+      "green_time": 59,
+      "red_time": 59,
+      "phase_offset": 112
+    },
+    {
+      "node_id": 1091605091,
+      "green_time": 44,
+      "red_time": 44,
+      "phase_offset": 43
+    },
+    {
+      "node_id": 1091605094,
+      "green_time": 57,
+      "red_time": 57,
+      "phase_offset": 89
+    },
+    {
+      "node_id": 1091605098,
+      "green_time": 25,
+      "red_time": 25,
+      "phase_offset": 32
+    },
+    {
+      "node_id": 1091605101,
+      "green_time": 48,
+      "red_time": 48,
+      "phase_offset": 89
+    },
+    {
+      "node_id": 1091605108,
+      "green_time": 57,
+      "red_time": 57,
+      "phase_offset": 91
+    },
+    {
+      "node_id": 1091605131,
+      "green_time": 27,
+      "red_time": 27,
+      "phase_offset": 32
+    },
+    {
+      "node_id": 1091605136,
+      "green_time": 32,
+      "red_time": 32,
+      "phase_offset": 47
+    },
+    {
+      "node_id": 1091605147,
+      "green_time": 52,
+      "red_time": 52,
+      "phase_offset": 41
+    },
+    {
+      "node_id": 1091605150,
+      "green_time": 23,
+      "red_time": 23,
+      "phase_offset": 24
+    },
+    {
+      "node_id": 1091672883,
+      "green_time": 55,
+      "red_time": 55,
+      "phase_offset": 57
+    },
+    {
+      "node_id": 1091672889,
+      "green_time": 28,
+      "red_time": 28,
+      "phase_offset": 36
+    },
+    {
+      "node_id": 1091672903,
+      "green_time": 39,
+      "red_time": 39,
+      "phase_offset": 30
+    },
+    {
+      "node_id": 1091672905,
+      "green_time": 45,
+      "red_time": 45,
+      "phase_offset": 27
+    },
+    {
+      "node_id": 1091672910,
+      "green_time": 60,
+      "red_time": 60,
+      "phase_offset": 114
+    },
+    {
+      "node_id": 1091672912,
+      "green_time": 40,
+      "red_time": 40,
+      "phase_offset": 32
+    },
+    {
+      "node_id": 1091672915,
+      "green_time": 43,
+      "red_time": 43,
+      "phase_offset": 0
+    },
+    {
+      "node_id": 1091672926,
+      "green_time": 36,
+      "red_time": 36,
+      "phase_offset": 22
+    },
+    {
+      "node_id": 1091672930,
+      "green_time": 33,
+      "red_time": 33,
+      "phase_offset": 40
+    },
+    {
+      "node_id": 1091672934,
+      "green_time": 58,
+      "red_time": 58,
+      "phase_offset": 78
+    },
+    {
+      "node_id": 1091672938,
+      "green_time": 40,
+      "red_time": 40,
+      "phase_offset": 77
+    },
+    {
+      "node_id": 1091672940,
+      "green_time": 17,
+      "red_time": 17,
+      "phase_offset": 19
+    },
+    {
+      "node_id": 1091682012,
+      "green_time": 54,
+      "red_time": 54,
+      "phase_offset": 90
+    },
+    {
+      "node_id": 1091682018,
+      "green_time": 28,
+      "red_time": 28,
+      "phase_offset": 46
+    },
+    {
+      "node_id": 1091730766,
+      "green_time": 38,
       "red_time": 38,
-      "phase_offset": 93
+      "phase_offset": 38
+    },
+    {
+      "node_id": 1091730828,
+      "green_time": 55,
+      "red_time": 55,
+      "phase_offset": 84
+    },
+    {
+      "node_id": 1091771956,
+      "green_time": 26,
+      "red_time": 26,
+      "phase_offset": 48
+    },
+    {
+      "node_id": 1091771958,
+      "green_time": 18,
+      "red_time": 18,
+      "phase_offset": 33
+    },
+    {
+      "node_id": 1097956812,
+      "green_time": 18,
+      "red_time": 18,
+      "phase_offset": 9
+    },
+    {
+      "node_id": 1098925088,
+      "green_time": 27,
+      "red_time": 27,
+      "phase_offset": 15
+    },
+    {
+      "node_id": 1098925128,
+      "green_time": 16,
+      "red_time": 16,
+      "phase_offset": 1
+    },
+    {
+      "node_id": 1098925200,
+      "green_time": 27,
+      "red_time": 27,
+      "phase_offset": 15
+    },
+    {
+      "node_id": 1098925313,
+      "green_time": 21,
+      "red_time": 21,
+      "phase_offset": 1
+    },
+    {
+      "node_id": 1100383392,
+      "green_time": 47,
+      "red_time": 47,
+      "phase_offset": 5
+    },
+    {
+      "node_id": 1100383398,
+      "green_time": 55,
+      "red_time": 55,
+      "phase_offset": 37
+    },
+    {
+      "node_id": 1100383407,
+      "green_time": 28,
+      "red_time": 28,
+      "phase_offset": 38
+    },
+    {
+      "node_id": 1100413279,
+      "green_time": 50,
+      "red_time": 50,
+      "phase_offset": 10
+    },
+    {
+      "node_id": 1100413310,
+      "green_time": 46,
+      "red_time": 46,
+      "phase_offset": 78
     },
     {
       "node_id": 1100413329,
-      "green_time": 16,
-      "red_time": 48,
-      "phase_offset": 62
+      "green_time": 44,
+      "red_time": 44,
+      "phase_offset": 46
     },
     {
       "node_id": 1100413332,
-      "green_time": 37,
-      "red_time": 56,
-      "phase_offset": 4
+      "green_time": 40,
+      "red_time": 40,
+      "phase_offset": 36
     },
     {
       "node_id": 1100447014,
-      "green_time": 41,
-      "red_time": 49,
-      "phase_offset": 79
+      "green_time": 29,
+      "red_time": 29,
+      "phase_offset": 49
     },
     {
       "node_id": 1100447032,
-      "green_time": 35,
-      "red_time": 60,
+      "green_time": 29,
+      "red_time": 29,
       "phase_offset": 52
     },
     {
       "node_id": 1100603500,
-      "green_time": 53,
+      "green_time": 46,
       "red_time": 46,
-      "phase_offset": 25
+      "phase_offset": 59
     },
     {
       "node_id": 1100603503,
-      "green_time": 32,
-      "red_time": 17,
-      "phase_offset": 29
+      "green_time": 28,
+      "red_time": 28,
+      "phase_offset": 40
     },
     {
       "node_id": 1102523503,
-      "green_time": 23,
-      "red_time": 30,
-      "phase_offset": 46
+      "green_time": 35,
+      "red_time": 35,
+      "phase_offset": 6
     },
     {
       "node_id": 1102523588,
       "green_time": 44,
-      "red_time": 26,
-      "phase_offset": 7
+      "red_time": 44,
+      "phase_offset": 50
     },
     {
       "node_id": 1103783090,
-      "green_time": 17,
-      "red_time": 46,
-      "phase_offset": 8
+      "green_time": 19,
+      "red_time": 19,
+      "phase_offset": 10
     },
     {
       "node_id": 1104053880,
-      "green_time": 59,
-      "red_time": 19,
-      "phase_offset": 36
+      "green_time": 17,
+      "red_time": 17,
+      "phase_offset": 25
     },
     {
       "node_id": 1109727349,
-      "green_time": 47,
-      "red_time": 40,
-      "phase_offset": 22
+      "green_time": 21,
+      "red_time": 21,
+      "phase_offset": 14
     },
     {
       "node_id": 1109738378,
-      "green_time": 59,
-      "red_time": 52,
+      "green_time": 20,
+      "red_time": 20,
       "phase_offset": 30
     },
     {
       "node_id": 1109738380,
-      "green_time": 25,
-      "red_time": 22,
-      "phase_offset": 23
+      "green_time": 34,
+      "red_time": 34,
+      "phase_offset": 53
     },
     {
       "node_id": 1109738382,
-      "green_time": 44,
-      "red_time": 47,
-      "phase_offset": 49
+      "green_time": 42,
+      "red_time": 42,
+      "phase_offset": 61
     },
     {
       "node_id": 1109773188,
-      "green_time": 40,
-      "red_time": 50,
-      "phase_offset": 63
+      "green_time": 26,
+      "red_time": 26,
+      "phase_offset": 11
     },
     {
       "node_id": 1109775974,
-      "green_time": 29,
-      "red_time": 32,
-      "phase_offset": 28
+      "green_time": 18,
+      "red_time": 18,
+      "phase_offset": 33
     },
     {
       "node_id": 1109775986,
-      "green_time": 21,
-      "red_time": 51,
-      "phase_offset": 28
+      "green_time": 50,
+      "red_time": 50,
+      "phase_offset": 9
     },
     {
       "node_id": 1110588630,
-      "green_time": 51,
-      "red_time": 17,
-      "phase_offset": 9
+      "green_time": 21,
+      "red_time": 21,
+      "phase_offset": 7
     },
     {
       "node_id": 1110588684,
-      "green_time": 19,
-      "red_time": 45,
-      "phase_offset": 19
+      "green_time": 29,
+      "red_time": 29,
+      "phase_offset": 31
     },
     {
       "node_id": 1110588760,
-      "green_time": 49,
-      "red_time": 41,
-      "phase_offset": 14
+      "green_time": 58,
+      "red_time": 58,
+      "phase_offset": 30
     },
     {
       "node_id": 1112147153,
-      "green_time": 54,
-      "red_time": 20,
-      "phase_offset": 23
+      "green_time": 49,
+      "red_time": 49,
+      "phase_offset": 31
     },
     {
       "node_id": 1115816185,
-      "green_time": 19,
-      "red_time": 51,
-      "phase_offset": 64
+      "green_time": 40,
+      "red_time": 40,
+      "phase_offset": 34
     },
     {
       "node_id": 1115816191,
-      "green_time": 36,
-      "red_time": 43,
-      "phase_offset": 9
+      "green_time": 30,
+      "red_time": 30,
+      "phase_offset": 4
     },
     {
       "node_id": 1135845772,
-      "green_time": 18,
-      "red_time": 27,
-      "phase_offset": 42
+      "green_time": 40,
+      "red_time": 40,
+      "phase_offset": 78
     },
     {
       "node_id": 1135845780,
-      "green_time": 35,
-      "red_time": 56,
-      "phase_offset": 23
-    },
-    {
-      "node_id": 1135845793,
-      "green_time": 26,
-      "red_time": 33,
-      "phase_offset": 49
-    },
-    {
-      "node_id": 1135845821,
-      "green_time": 46,
-      "red_time": 59,
-      "phase_offset": 18
-    },
-    {
-      "node_id": 1135845856,
-      "green_time": 15,
-      "red_time": 50,
-      "phase_offset": 60
-    },
-    {
-      "node_id": 1135845916,
-      "green_time": 23,
-      "red_time": 16,
-      "phase_offset": 14
-    },
-    {
-      "node_id": 1135845967,
-      "green_time": 34,
-      "red_time": 41,
-      "phase_offset": 28
-    },
-    {
-      "node_id": 1135846033,
-      "green_time": 41,
-      "red_time": 45,
-      "phase_offset": 35
-    },
-    {
-      "node_id": 1135846106,
-      "green_time": 51,
-      "red_time": 46,
-      "phase_offset": 85
-    },
-    {
-      "node_id": 1135846157,
-      "green_time": 52,
-      "red_time": 16,
-      "phase_offset": 56
-    },
-    {
-      "node_id": 1135846232,
-      "green_time": 59,
-      "red_time": 38,
-      "phase_offset": 15
-    },
-    {
-      "node_id": 1135846257,
-      "green_time": 59,
-      "red_time": 27,
-      "phase_offset": 45
-    },
-    {
-      "node_id": 1135846281,
-      "green_time": 20,
-      "red_time": 29,
-      "phase_offset": 27
-    },
-    {
-      "node_id": 1135846290,
-      "green_time": 23,
-      "red_time": 24,
-      "phase_offset": 8
-    },
-    {
-      "node_id": 1135846364,
-      "green_time": 40,
-      "red_time": 52,
-      "phase_offset": 62
-    },
-    {
-      "node_id": 1135888069,
-      "green_time": 42,
-      "red_time": 57,
+      "green_time": 43,
+      "red_time": 43,
       "phase_offset": 54
     },
     {
+      "node_id": 1135845793,
+      "green_time": 19,
+      "red_time": 19,
+      "phase_offset": 24
+    },
+    {
+      "node_id": 1135845821,
+      "green_time": 18,
+      "red_time": 18,
+      "phase_offset": 7
+    },
+    {
+      "node_id": 1135845856,
+      "green_time": 29,
+      "red_time": 29,
+      "phase_offset": 18
+    },
+    {
+      "node_id": 1135845916,
+      "green_time": 41,
+      "red_time": 41,
+      "phase_offset": 11
+    },
+    {
+      "node_id": 1135845967,
+      "green_time": 18,
+      "red_time": 18,
+      "phase_offset": 12
+    },
+    {
+      "node_id": 1135846033,
+      "green_time": 47,
+      "red_time": 47,
+      "phase_offset": 21
+    },
+    {
+      "node_id": 1135846106,
+      "green_time": 41,
+      "red_time": 41,
+      "phase_offset": 61
+    },
+    {
+      "node_id": 1135846157,
+      "green_time": 30,
+      "red_time": 30,
+      "phase_offset": 23
+    },
+    {
+      "node_id": 1135846232,
+      "green_time": 22,
+      "red_time": 22,
+      "phase_offset": 6
+    },
+    {
+      "node_id": 1135846257,
+      "green_time": 22,
+      "red_time": 22,
+      "phase_offset": 12
+    },
+    {
+      "node_id": 1135846281,
+      "green_time": 52,
+      "red_time": 52,
+      "phase_offset": 3
+    },
+    {
+      "node_id": 1135846290,
+      "green_time": 56,
+      "red_time": 56,
+      "phase_offset": 65
+    },
+    {
+      "node_id": 1135846364,
+      "green_time": 56,
+      "red_time": 56,
+      "phase_offset": 50
+    },
+    {
+      "node_id": 1135888069,
+      "green_time": 39,
+      "red_time": 39,
+      "phase_offset": 38
+    },
+    {
       "node_id": 1135888071,
-      "green_time": 26,
-      "red_time": 34,
+      "green_time": 17,
+      "red_time": 17,
       "phase_offset": 22
     },
     {
       "node_id": 1135888072,
-      "green_time": 56,
-      "red_time": 31,
-      "phase_offset": 49
+      "green_time": 52,
+      "red_time": 52,
+      "phase_offset": 92
     },
     {
       "node_id": 1135888170,
-      "green_time": 34,
-      "red_time": 52,
-      "phase_offset": 85
+      "green_time": 33,
+      "red_time": 33,
+      "phase_offset": 36
     },
     {
       "node_id": 1135888173,
-      "green_time": 38,
-      "red_time": 17,
-      "phase_offset": 41
+      "green_time": 56,
+      "red_time": 56,
+      "phase_offset": 107
     },
     {
       "node_id": 1135888219,
-      "green_time": 40,
-      "red_time": 43,
-      "phase_offset": 60
-    },
-    {
-      "node_id": 1135888265,
-      "green_time": 17,
-      "red_time": 52,
-      "phase_offset": 63
-    },
-    {
-      "node_id": 1136089006,
-      "green_time": 34,
-      "red_time": 33,
-      "phase_offset": 55
-    },
-    {
-      "node_id": 1136089515,
-      "green_time": 52,
-      "red_time": 46,
-      "phase_offset": 72
-    },
-    {
-      "node_id": 1167453332,
-      "green_time": 43,
-      "red_time": 52,
-      "phase_offset": 88
-    },
-    {
-      "node_id": 1184298161,
-      "green_time": 42,
-      "red_time": 53,
+      "green_time": 44,
+      "red_time": 44,
       "phase_offset": 73
     },
     {
-      "node_id": 1184298165,
+      "node_id": 1135888265,
+      "green_time": 19,
+      "red_time": 19,
+      "phase_offset": 15
+    },
+    {
+      "node_id": 1136089006,
+      "green_time": 42,
+      "red_time": 42,
+      "phase_offset": 65
+    },
+    {
+      "node_id": 1136089515,
+      "green_time": 32,
+      "red_time": 32,
+      "phase_offset": 54
+    },
+    {
+      "node_id": 1167453332,
       "green_time": 17,
-      "red_time": 51,
-      "phase_offset": 49
+      "red_time": 17,
+      "phase_offset": 33
+    },
+    {
+      "node_id": 1184298161,
+      "green_time": 26,
+      "red_time": 26,
+      "phase_offset": 14
+    },
+    {
+      "node_id": 1184298165,
+      "green_time": 20,
+      "red_time": 20,
+      "phase_offset": 10
     },
     {
       "node_id": 1184298174,
-      "green_time": 19,
-      "red_time": 46,
-      "phase_offset": 19
+      "green_time": 59,
+      "red_time": 59,
+      "phase_offset": 81
     },
     {
       "node_id": 1184298176,
-      "green_time": 31,
-      "red_time": 33,
-      "phase_offset": 7
+      "green_time": 32,
+      "red_time": 32,
+      "phase_offset": 13
     },
     {
       "node_id": 1184298177,
       "green_time": 20,
-      "red_time": 47,
-      "phase_offset": 21
-    },
-    {
-      "node_id": 1184298178,
-      "green_time": 45,
-      "red_time": 21,
-      "phase_offset": 53
-    },
-    {
-      "node_id": 1184298180,
-      "green_time": 41,
-      "red_time": 31,
-      "phase_offset": 61
-    },
-    {
-      "node_id": 1184301729,
-      "green_time": 19,
-      "red_time": 18,
-      "phase_offset": 22
-    },
-    {
-      "node_id": 1184301730,
-      "green_time": 44,
-      "red_time": 33,
-      "phase_offset": 8
-    },
-    {
-      "node_id": 1184301734,
-      "green_time": 29,
-      "red_time": 47,
+      "red_time": 20,
       "phase_offset": 36
     },
     {
+      "node_id": 1184298178,
+      "green_time": 44,
+      "red_time": 44,
+      "phase_offset": 80
+    },
+    {
+      "node_id": 1184298180,
+      "green_time": 43,
+      "red_time": 43,
+      "phase_offset": 67
+    },
+    {
+      "node_id": 1184301729,
+      "green_time": 38,
+      "red_time": 38,
+      "phase_offset": 26
+    },
+    {
+      "node_id": 1184301730,
+      "green_time": 59,
+      "red_time": 59,
+      "phase_offset": 78
+    },
+    {
+      "node_id": 1184301734,
+      "green_time": 48,
+      "red_time": 48,
+      "phase_offset": 62
+    },
+    {
       "node_id": 1184301735,
-      "green_time": 45,
-      "red_time": 51,
-      "phase_offset": 9
+      "green_time": 15,
+      "red_time": 15,
+      "phase_offset": 22
     },
     {
       "node_id": 1184301737,
-      "green_time": 27,
-      "red_time": 16,
-      "phase_offset": 29
+      "green_time": 60,
+      "red_time": 60,
+      "phase_offset": 86
     },
     {
       "node_id": 1391435617,
-      "green_time": 59,
-      "red_time": 25,
-      "phase_offset": 53
+      "green_time": 37,
+      "red_time": 37,
+      "phase_offset": 18
     },
     {
       "node_id": 1391435660,
-      "green_time": 37,
-      "red_time": 15,
-      "phase_offset": 37
+      "green_time": 35,
+      "red_time": 35,
+      "phase_offset": 44
     },
     {
       "node_id": 1391435663,
-      "green_time": 45,
-      "red_time": 46,
-      "phase_offset": 69
+      "green_time": 58,
+      "red_time": 58,
+      "phase_offset": 115
     },
     {
       "node_id": 1400464647,
-      "green_time": 39,
-      "red_time": 32,
-      "phase_offset": 64
+      "green_time": 30,
+      "red_time": 30,
+      "phase_offset": 18
     },
     {
       "node_id": 1706323062,
-      "green_time": 56,
-      "red_time": 59,
-      "phase_offset": 96
+      "green_time": 34,
+      "red_time": 34,
+      "phase_offset": 1
     },
     {
       "node_id": 1706323063,
-      "green_time": 58,
-      "red_time": 29,
-      "phase_offset": 6
+      "green_time": 17,
+      "red_time": 17,
+      "phase_offset": 3
     },
     {
       "node_id": 1706326546,
-      "green_time": 56,
-      "red_time": 42,
-      "phase_offset": 6
+      "green_time": 26,
+      "red_time": 26,
+      "phase_offset": 22
     },
     {
       "node_id": 1706326564,
-      "green_time": 46,
-      "red_time": 34,
-      "phase_offset": 68
+      "green_time": 39,
+      "red_time": 39,
+      "phase_offset": 26
     },
     {
       "node_id": 1706500169,
       "green_time": 59,
-      "red_time": 49,
-      "phase_offset": 62
+      "red_time": 59,
+      "phase_offset": 117
     },
     {
       "node_id": 1706500170,
-      "green_time": 27,
-      "red_time": 55,
-      "phase_offset": 20
-    },
-    {
-      "node_id": 1707555167,
-      "green_time": 27,
-      "red_time": 31,
-      "phase_offset": 56
-    },
-    {
-      "node_id": 1707555168,
-      "green_time": 27,
-      "red_time": 28,
-      "phase_offset": 20
-    },
-    {
-      "node_id": 1707555170,
-      "green_time": 40,
-      "red_time": 15,
-      "phase_offset": 33
-    },
-    {
-      "node_id": 1707563934,
-      "green_time": 52,
-      "red_time": 38,
-      "phase_offset": 43
-    },
-    {
-      "node_id": 1707873812,
-      "green_time": 31,
-      "red_time": 56,
-      "phase_offset": 74
-    },
-    {
-      "node_id": 1707873815,
-      "green_time": 44,
-      "red_time": 27,
-      "phase_offset": 8
-    },
-    {
-      "node_id": 1707877994,
-      "green_time": 15,
-      "red_time": 38,
-      "phase_offset": 17
-    },
-    {
-      "node_id": 1707877996,
-      "green_time": 57,
-      "red_time": 57,
-      "phase_offset": 96
-    },
-    {
-      "node_id": 1707877998,
-      "green_time": 27,
-      "red_time": 15,
-      "phase_offset": 29
-    },
-    {
-      "node_id": 1707878001,
-      "green_time": 15,
-      "red_time": 35,
-      "phase_offset": 41
-    },
-    {
-      "node_id": 1728999931,
-      "green_time": 57,
-      "red_time": 51,
-      "phase_offset": 79
-    },
-    {
-      "node_id": 1728999957,
-      "green_time": 60,
-      "red_time": 55,
-      "phase_offset": 93
-    },
-    {
-      "node_id": 1729273009,
-      "green_time": 17,
-      "red_time": 44,
-      "phase_offset": 47
-    },
-    {
-      "node_id": 1729273010,
-      "green_time": 24,
-      "red_time": 30,
-      "phase_offset": 37
-    },
-    {
-      "node_id": 1729273012,
-      "green_time": 41,
-      "red_time": 55,
-      "phase_offset": 62
-    },
-    {
-      "node_id": 1729273014,
-      "green_time": 22,
-      "red_time": 53,
-      "phase_offset": 70
-    },
-    {
-      "node_id": 1732486426,
-      "green_time": 41,
-      "red_time": 17,
+      "green_time": 37,
+      "red_time": 37,
       "phase_offset": 57
     },
     {
-      "node_id": 1732499003,
+      "node_id": 1707555167,
+      "green_time": 41,
+      "red_time": 41,
+      "phase_offset": 68
+    },
+    {
+      "node_id": 1707555168,
+      "green_time": 52,
+      "red_time": 52,
+      "phase_offset": 32
+    },
+    {
+      "node_id": 1707555170,
+      "green_time": 51,
+      "red_time": 51,
+      "phase_offset": 20
+    },
+    {
+      "node_id": 1707563934,
+      "green_time": 30,
+      "red_time": 30,
+      "phase_offset": 41
+    },
+    {
+      "node_id": 1707873812,
+      "green_time": 49,
+      "red_time": 49,
+      "phase_offset": 60
+    },
+    {
+      "node_id": 1707873815,
+      "green_time": 47,
+      "red_time": 47,
+      "phase_offset": 22
+    },
+    {
+      "node_id": 1707877994,
+      "green_time": 21,
+      "red_time": 21,
+      "phase_offset": 16
+    },
+    {
+      "node_id": 1707877996,
+      "green_time": 52,
+      "red_time": 52,
+      "phase_offset": 22
+    },
+    {
+      "node_id": 1707877998,
+      "green_time": 56,
+      "red_time": 56,
+      "phase_offset": 25
+    },
+    {
+      "node_id": 1707878001,
+      "green_time": 60,
+      "red_time": 60,
+      "phase_offset": 111
+    },
+    {
+      "node_id": 1728999931,
+      "green_time": 43,
+      "red_time": 43,
+      "phase_offset": 2
+    },
+    {
+      "node_id": 1728999957,
+      "green_time": 29,
+      "red_time": 29,
+      "phase_offset": 15
+    },
+    {
+      "node_id": 1729273009,
+      "green_time": 52,
+      "red_time": 52,
+      "phase_offset": 101
+    },
+    {
+      "node_id": 1729273010,
+      "green_time": 18,
+      "red_time": 18,
+      "phase_offset": 18
+    },
+    {
+      "node_id": 1729273012,
       "green_time": 31,
-      "red_time": 20,
-      "phase_offset": 3
+      "red_time": 31,
+      "phase_offset": 28
+    },
+    {
+      "node_id": 1729273014,
+      "green_time": 17,
+      "red_time": 17,
+      "phase_offset": 15
+    },
+    {
+      "node_id": 1732486426,
+      "green_time": 42,
+      "red_time": 42,
+      "phase_offset": 19
+    },
+    {
+      "node_id": 1732499003,
+      "green_time": 54,
+      "red_time": 54,
+      "phase_offset": 29
     },
     {
       "node_id": 1732499008,
-      "green_time": 60,
-      "red_time": 27,
-      "phase_offset": 6
+      "green_time": 46,
+      "red_time": 46,
+      "phase_offset": 2
     },
     {
       "node_id": 1732499015,
-      "green_time": 50,
-      "red_time": 60,
+      "green_time": 30,
+      "red_time": 30,
       "phase_offset": 20
     },
     {
       "node_id": 1732511204,
-      "green_time": 51,
-      "red_time": 15,
-      "phase_offset": 5
+      "green_time": 16,
+      "red_time": 16,
+      "phase_offset": 21
     },
     {
       "node_id": 1732511206,
-      "green_time": 38,
-      "red_time": 59,
-      "phase_offset": 69
+      "green_time": 18,
+      "red_time": 18,
+      "phase_offset": 3
     },
     {
       "node_id": 1762729867,
-      "green_time": 23,
-      "red_time": 41,
-      "phase_offset": 52
+      "green_time": 36,
+      "red_time": 36,
+      "phase_offset": 10
     },
     {
       "node_id": 1814822407,
-      "green_time": 45,
-      "red_time": 56,
-      "phase_offset": 55
+      "green_time": 32,
+      "red_time": 32,
+      "phase_offset": 19
     },
     {
       "node_id": 1814822408,
-      "green_time": 15,
-      "red_time": 21,
+      "green_time": 18,
+      "red_time": 18,
       "phase_offset": 14
     },
     {
       "node_id": 1814822409,
-      "green_time": 16,
-      "red_time": 33,
-      "phase_offset": 10
+      "green_time": 34,
+      "red_time": 34,
+      "phase_offset": 35
     },
     {
       "node_id": 1814822410,
-      "green_time": 48,
-      "red_time": 48,
-      "phase_offset": 54
+      "green_time": 34,
+      "red_time": 34,
+      "phase_offset": 6
     },
     {
       "node_id": 1840278949,
-      "green_time": 17,
-      "red_time": 53,
-      "phase_offset": 10
-    },
-    {
-      "node_id": 1840278950,
-      "green_time": 21,
-      "red_time": 31,
-      "phase_offset": 46
-    },
-    {
-      "node_id": 1840278959,
-      "green_time": 33,
-      "red_time": 19,
+      "green_time": 20,
+      "red_time": 20,
       "phase_offset": 13
     },
     {
+      "node_id": 1840278950,
+      "green_time": 18,
+      "red_time": 18,
+      "phase_offset": 27
+    },
+    {
+      "node_id": 1840278959,
+      "green_time": 17,
+      "red_time": 17,
+      "phase_offset": 0
+    },
+    {
       "node_id": 1840278966,
-      "green_time": 58,
-      "red_time": 20,
-      "phase_offset": 43
+      "green_time": 60,
+      "red_time": 60,
+      "phase_offset": 85
     },
     {
       "node_id": 1840279037,
-      "green_time": 23,
-      "red_time": 47,
-      "phase_offset": 60
+      "green_time": 55,
+      "red_time": 55,
+      "phase_offset": 50
     },
     {
       "node_id": 1840279039,
-      "green_time": 26,
-      "red_time": 58,
-      "phase_offset": 32
+      "green_time": 51,
+      "red_time": 51,
+      "phase_offset": 76
     },
     {
       "node_id": 1840279043,
-      "green_time": 46,
-      "red_time": 16,
-      "phase_offset": 53
+      "green_time": 35,
+      "red_time": 35,
+      "phase_offset": 67
     },
     {
       "node_id": 1840279046,
-      "green_time": 19,
-      "red_time": 53,
-      "phase_offset": 58
+      "green_time": 51,
+      "red_time": 51,
+      "phase_offset": 101
     },
     {
       "node_id": 1854274224,
-      "green_time": 36,
-      "red_time": 40,
-      "phase_offset": 34
+      "green_time": 17,
+      "red_time": 17,
+      "phase_offset": 16
     },
     {
       "node_id": 1854274227,
-      "green_time": 25,
-      "red_time": 30,
-      "phase_offset": 46
+      "green_time": 51,
+      "red_time": 51,
+      "phase_offset": 47
     },
     {
       "node_id": 1866455049,
-      "green_time": 52,
-      "red_time": 35,
-      "phase_offset": 52
+      "green_time": 17,
+      "red_time": 17,
+      "phase_offset": 4
     },
     {
       "node_id": 1866455050,
       "green_time": 25,
-      "red_time": 30,
-      "phase_offset": 36
+      "red_time": 25,
+      "phase_offset": 48
     },
     {
       "node_id": 1934081671,
-      "green_time": 41,
-      "red_time": 51,
-      "phase_offset": 71
-    },
-    {
-      "node_id": 1934097746,
-      "green_time": 46,
-      "red_time": 39,
-      "phase_offset": 58
-    },
-    {
-      "node_id": 1934097767,
-      "green_time": 31,
-      "red_time": 40,
-      "phase_offset": 33
-    },
-    {
-      "node_id": 1934097769,
-      "green_time": 31,
-      "red_time": 21,
-      "phase_offset": 20
-    },
-    {
-      "node_id": 1934097787,
-      "green_time": 60,
-      "red_time": 59,
-      "phase_offset": 25
-    },
-    {
-      "node_id": 1937184195,
-      "green_time": 60,
-      "red_time": 18,
-      "phase_offset": 34
-    },
-    {
-      "node_id": 1937184196,
-      "green_time": 58,
-      "red_time": 21,
-      "phase_offset": 40
-    },
-    {
-      "node_id": 1937184202,
-      "green_time": 44,
-      "red_time": 34,
+      "green_time": 36,
+      "red_time": 36,
       "phase_offset": 44
     },
     {
-      "node_id": 1937184207,
-      "green_time": 25,
+      "node_id": 1934097746,
+      "green_time": 51,
+      "red_time": 51,
+      "phase_offset": 96
+    },
+    {
+      "node_id": 1934097767,
+      "green_time": 27,
+      "red_time": 27,
+      "phase_offset": 42
+    },
+    {
+      "node_id": 1934097769,
+      "green_time": 42,
       "red_time": 42,
+      "phase_offset": 47
+    },
+    {
+      "node_id": 1934097787,
+      "green_time": 56,
+      "red_time": 56,
+      "phase_offset": 84
+    },
+    {
+      "node_id": 1937184195,
+      "green_time": 19,
+      "red_time": 19,
+      "phase_offset": 36
+    },
+    {
+      "node_id": 1937184196,
+      "green_time": 59,
+      "red_time": 59,
+      "phase_offset": 1
+    },
+    {
+      "node_id": 1937184202,
+      "green_time": 55,
+      "red_time": 55,
+      "phase_offset": 68
+    },
+    {
+      "node_id": 1937184207,
+      "green_time": 39,
+      "red_time": 39,
       "phase_offset": 5
     },
     {
       "node_id": 1937184213,
-      "green_time": 33,
-      "red_time": 26,
-      "phase_offset": 11
+      "green_time": 32,
+      "red_time": 32,
+      "phase_offset": 22
     },
     {
       "node_id": 1941488110,
-      "green_time": 21,
-      "red_time": 51,
-      "phase_offset": 4
+      "green_time": 55,
+      "red_time": 55,
+      "phase_offset": 69
     },
     {
       "node_id": 1941488159,
-      "green_time": 54,
-      "red_time": 41,
-      "phase_offset": 4
+      "green_time": 15,
+      "red_time": 15,
+      "phase_offset": 11
     },
     {
       "node_id": 1941488164,
-      "green_time": 60,
-      "red_time": 34,
-      "phase_offset": 17
+      "green_time": 32,
+      "red_time": 32,
+      "phase_offset": 55
     },
     {
       "node_id": 1941488165,
-      "green_time": 42,
-      "red_time": 47,
-      "phase_offset": 80
+      "green_time": 43,
+      "red_time": 43,
+      "phase_offset": 73
     },
     {
       "node_id": 1999074971,
-      "green_time": 59,
-      "red_time": 43,
-      "phase_offset": 0
+      "green_time": 47,
+      "red_time": 47,
+      "phase_offset": 92
     },
     {
       "node_id": 1999074973,
-      "green_time": 26,
-      "red_time": 50,
-      "phase_offset": 26
+      "green_time": 46,
+      "red_time": 46,
+      "phase_offset": 52
     },
     {
       "node_id": 2179932740,
-      "green_time": 44,
-      "red_time": 22,
-      "phase_offset": 7
+      "green_time": 30,
+      "red_time": 30,
+      "phase_offset": 21
     },
     {
       "node_id": 2180082423,
-      "green_time": 56,
-      "red_time": 43,
-      "phase_offset": 13
+      "green_time": 41,
+      "red_time": 41,
+      "phase_offset": 59
     },
     {
       "node_id": 2180082428,
-      "green_time": 28,
-      "red_time": 25,
-      "phase_offset": 26
+      "green_time": 37,
+      "red_time": 37,
+      "phase_offset": 9
     },
     {
       "node_id": 2545210449,
-      "green_time": 54,
-      "red_time": 18,
-      "phase_offset": 33
+      "green_time": 53,
+      "red_time": 53,
+      "phase_offset": 35
     },
     {
       "node_id": 2545210457,
-      "green_time": 22,
-      "red_time": 39,
-      "phase_offset": 14
+      "green_time": 43,
+      "red_time": 43,
+      "phase_offset": 17
     },
     {
       "node_id": 2624642126,
-      "green_time": 54,
-      "red_time": 30,
-      "phase_offset": 77
+      "green_time": 31,
+      "red_time": 31,
+      "phase_offset": 51
     },
     {
       "node_id": 2969205882,
-      "green_time": 50,
-      "red_time": 28,
-      "phase_offset": 59
+      "green_time": 26,
+      "red_time": 26,
+      "phase_offset": 4
     },
     {
       "node_id": 2969205886,
-      "green_time": 51,
-      "red_time": 49,
-      "phase_offset": 53
+      "green_time": 48,
+      "red_time": 48,
+      "phase_offset": 48
     },
     {
       "node_id": 2969205903,
-      "green_time": 36,
-      "red_time": 39,
-      "phase_offset": 65
+      "green_time": 35,
+      "red_time": 35,
+      "phase_offset": 18
     },
     {
       "node_id": 3154322566,
-      "green_time": 55,
-      "red_time": 57,
-      "phase_offset": 38
+      "green_time": 30,
+      "red_time": 30,
+      "phase_offset": 22
     },
     {
       "node_id": 3168536692,
-      "green_time": 29,
-      "red_time": 17,
-      "phase_offset": 5
+      "green_time": 31,
+      "red_time": 31,
+      "phase_offset": 19
     },
     {
       "node_id": 3350645355,
-      "green_time": 46,
-      "red_time": 46,
-      "phase_offset": 40
+      "green_time": 15,
+      "red_time": 15,
+      "phase_offset": 12
     },
     {
       "node_id": 3350645356,
-      "green_time": 60,
-      "red_time": 38,
-      "phase_offset": 20
+      "green_time": 52,
+      "red_time": 52,
+      "phase_offset": 57
     },
     {
       "node_id": 3452400229,
-      "green_time": 28,
-      "red_time": 38,
-      "phase_offset": 59
+      "green_time": 25,
+      "red_time": 25,
+      "phase_offset": 20
     },
     {
       "node_id": 3462572407,
-      "green_time": 57,
-      "red_time": 37,
-      "phase_offset": 28
+      "green_time": 49,
+      "red_time": 49,
+      "phase_offset": 82
     },
     {
       "node_id": 3462572408,
-      "green_time": 26,
-      "red_time": 49,
-      "phase_offset": 25
-    },
-    {
-      "node_id": 3584741704,
-      "green_time": 45,
-      "red_time": 18,
+      "green_time": 50,
+      "red_time": 50,
       "phase_offset": 0
     },
     {
+      "node_id": 3584741704,
+      "green_time": 31,
+      "red_time": 31,
+      "phase_offset": 12
+    },
+    {
       "node_id": 3599930196,
-      "green_time": 46,
-      "red_time": 39,
-      "phase_offset": 45
+      "green_time": 16,
+      "red_time": 16,
+      "phase_offset": 31
     },
     {
       "node_id": 3780427121,
-      "green_time": 38,
-      "red_time": 52,
-      "phase_offset": 23
+      "green_time": 45,
+      "red_time": 45,
+      "phase_offset": 54
     },
     {
       "node_id": 3780431412,
       "green_time": 41,
-      "red_time": 31,
-      "phase_offset": 21
+      "red_time": 41,
+      "phase_offset": 65
     },
     {
       "node_id": 4085513689,
-      "green_time": 41,
-      "red_time": 35,
-      "phase_offset": 11
+      "green_time": 34,
+      "red_time": 34,
+      "phase_offset": 66
     },
     {
       "node_id": 4100622602,
-      "green_time": 54,
-      "red_time": 40,
-      "phase_offset": 19
+      "green_time": 60,
+      "red_time": 60,
+      "phase_offset": 69
     },
     {
       "node_id": 4564587981,
-      "green_time": 25,
-      "red_time": 28,
-      "phase_offset": 4
+      "green_time": 40,
+      "red_time": 40,
+      "phase_offset": 68
     },
     {
       "node_id": 4941355679,
-      "green_time": 52,
-      "red_time": 21,
-      "phase_offset": 15
+      "green_time": 27,
+      "red_time": 27,
+      "phase_offset": 43
     },
     {
       "node_id": 5025282670,
-      "green_time": 41,
-      "red_time": 47,
-      "phase_offset": 59
+      "green_time": 15,
+      "red_time": 15,
+      "phase_offset": 29
     },
     {
       "node_id": 5065211550,
-      "green_time": 46,
-      "red_time": 48,
-      "phase_offset": 12
+      "green_time": 34,
+      "red_time": 34,
+      "phase_offset": 60
     },
     {
       "node_id": 5065211551,
-      "green_time": 17,
-      "red_time": 50,
-      "phase_offset": 31
+      "green_time": 53,
+      "red_time": 53,
+      "phase_offset": 11
     },
     {
       "node_id": 5155445748,
-      "green_time": 50,
-      "red_time": 19,
-      "phase_offset": 51
-    },
-    {
-      "node_id": 5364445246,
-      "green_time": 54,
-      "red_time": 25,
-      "phase_offset": 73
-    },
-    {
-      "node_id": 5364445248,
-      "green_time": 57,
-      "red_time": 22,
-      "phase_offset": 26
-    },
-    {
-      "node_id": 5364445249,
-      "green_time": 16,
-      "red_time": 57,
-      "phase_offset": 35
-    },
-    {
-      "node_id": 5364451009,
-      "green_time": 38,
-      "red_time": 18,
-      "phase_offset": 36
-    },
-    {
-      "node_id": 5364451010,
-      "green_time": 25,
-      "red_time": 32,
-      "phase_offset": 40
-    },
-    {
-      "node_id": 5364451013,
-      "green_time": 43,
-      "red_time": 20,
-      "phase_offset": 18
-    },
-    {
-      "node_id": 5511989738,
-      "green_time": 40,
-      "red_time": 33,
-      "phase_offset": 23
-    },
-    {
-      "node_id": 5529616956,
-      "green_time": 40,
-      "red_time": 25,
-      "phase_offset": 31
-    },
-    {
-      "node_id": 5774020311,
-      "green_time": 21,
-      "red_time": 17,
-      "phase_offset": 33
-    },
-    {
-      "node_id": 5774020318,
-      "green_time": 27,
-      "red_time": 44,
-      "phase_offset": 40
-    },
-    {
-      "node_id": 6050245022,
-      "green_time": 20,
-      "red_time": 28,
-      "phase_offset": 31
-    },
-    {
-      "node_id": 7176677604,
-      "green_time": 46,
-      "red_time": 33,
-      "phase_offset": 42
-    },
-    {
-      "node_id": 7176677610,
-      "green_time": 34,
-      "red_time": 43,
-      "phase_offset": 26
-    },
-    {
-      "node_id": 7176679975,
-      "green_time": 48,
-      "red_time": 15,
+      "green_time": 35,
+      "red_time": 35,
       "phase_offset": 2
     },
     {
-      "node_id": 7176679981,
-      "green_time": 53,
+      "node_id": 5364445246,
+      "green_time": 37,
+      "red_time": 37,
+      "phase_offset": 61
+    },
+    {
+      "node_id": 5364445248,
+      "green_time": 46,
       "red_time": 46,
+      "phase_offset": 54
+    },
+    {
+      "node_id": 5364445249,
+      "green_time": 24,
+      "red_time": 24,
+      "phase_offset": 11
+    },
+    {
+      "node_id": 5364451009,
+      "green_time": 37,
+      "red_time": 37,
+      "phase_offset": 44
+    },
+    {
+      "node_id": 5364451010,
+      "green_time": 36,
+      "red_time": 36,
+      "phase_offset": 41
+    },
+    {
+      "node_id": 5364451013,
+      "green_time": 24,
+      "red_time": 24,
+      "phase_offset": 16
+    },
+    {
+      "node_id": 5511989738,
+      "green_time": 57,
+      "red_time": 57,
+      "phase_offset": 58
+    },
+    {
+      "node_id": 5529616956,
+      "green_time": 49,
+      "red_time": 49,
+      "phase_offset": 79
+    },
+    {
+      "node_id": 5774020311,
+      "green_time": 29,
+      "red_time": 29,
+      "phase_offset": 8
+    },
+    {
+      "node_id": 5774020318,
+      "green_time": 41,
+      "red_time": 41,
+      "phase_offset": 81
+    },
+    {
+      "node_id": 6050245022,
+      "green_time": 24,
+      "red_time": 24,
+      "phase_offset": 5
+    },
+    {
+      "node_id": 7176677604,
+      "green_time": 51,
+      "red_time": 51,
+      "phase_offset": 32
+    },
+    {
+      "node_id": 7176677610,
+      "green_time": 27,
+      "red_time": 27,
+      "phase_offset": 43
+    },
+    {
+      "node_id": 7176679975,
+      "green_time": 44,
+      "red_time": 44,
+      "phase_offset": 73
+    },
+    {
+      "node_id": 7176679981,
+      "green_time": 29,
+      "red_time": 29,
       "phase_offset": 14
     },
     {
       "node_id": 7176695789,
-      "green_time": 42,
-      "red_time": 32,
-      "phase_offset": 13
+      "green_time": 36,
+      "red_time": 36,
+      "phase_offset": 39
     },
     {
       "node_id": 7176695791,
-      "green_time": 56,
-      "red_time": 15,
-      "phase_offset": 43
+      "green_time": 42,
+      "red_time": 42,
+      "phase_offset": 31
     },
     {
       "node_id": 7595922102,
-      "green_time": 27,
-      "red_time": 18,
-      "phase_offset": 43
+      "green_time": 30,
+      "red_time": 30,
+      "phase_offset": 14
     },
     {
       "node_id": 7595922108,
-      "green_time": 16,
-      "red_time": 32,
-      "phase_offset": 14
+      "green_time": 38,
+      "red_time": 38,
+      "phase_offset": 53
     },
     {
       "node_id": 7598051176,
-      "green_time": 42,
-      "red_time": 36,
-      "phase_offset": 63
+      "green_time": 31,
+      "red_time": 31,
+      "phase_offset": 13
     },
     {
       "node_id": 7598054805,
-      "green_time": 52,
-      "red_time": 18,
-      "phase_offset": 30
-    },
-    {
-      "node_id": 7706491230,
-      "green_time": 16,
-      "red_time": 42,
-      "phase_offset": 1
-    },
-    {
-      "node_id": 7706596197,
-      "green_time": 23,
-      "red_time": 49,
-      "phase_offset": 56
-    },
-    {
-      "node_id": 8720683662,
-      "green_time": 30,
-      "red_time": 36,
-      "phase_offset": 17
-    },
-    {
-      "node_id": 9201525265,
-      "green_time": 15,
-      "red_time": 35,
-      "phase_offset": 33
-    },
-    {
-      "node_id": 9708892968,
-      "green_time": 33,
-      "red_time": 58,
-      "phase_offset": 33
-    },
-    {
-      "node_id": 10815785964,
-      "green_time": 52,
-      "red_time": 28,
-      "phase_offset": 20
-    },
-    {
-      "node_id": 10832293202,
-      "green_time": 32,
-      "red_time": 42,
-      "phase_offset": 38
-    },
-    {
-      "node_id": 10832293219,
-      "green_time": 18,
-      "red_time": 17,
+      "green_time": 21,
+      "red_time": 21,
       "phase_offset": 24
     },
     {
-      "node_id": 10832293221,
-      "green_time": 43,
-      "red_time": 55,
-      "phase_offset": 57
+      "node_id": 7706491230,
+      "green_time": 58,
+      "red_time": 58,
+      "phase_offset": 52
     },
     {
-      "node_id": 10832293230,
-      "green_time": 39,
-      "red_time": 47,
-      "phase_offset": 18
+      "node_id": 7706596197,
+      "green_time": 57,
+      "red_time": 57,
+      "phase_offset": 94
     },
     {
-      "node_id": 10832293231,
-      "green_time": 18,
-      "red_time": 50,
-      "phase_offset": 61
-    },
-    {
-      "node_id": 10836258376,
-      "green_time": 59,
-      "red_time": 20,
-      "phase_offset": 50
-    },
-    {
-      "node_id": 10936722266,
-      "green_time": 15,
-      "red_time": 40,
-      "phase_offset": 9
-    },
-    {
-      "node_id": 10936722267,
-      "green_time": 43,
-      "red_time": 15,
-      "phase_offset": 17
-    },
-    {
-      "node_id": 10936722273,
-      "green_time": 15,
-      "red_time": 26,
-      "phase_offset": 15
-    },
-    {
-      "node_id": 10936722274,
-      "green_time": 35,
-      "red_time": 52,
+      "node_id": 8720683662,
+      "green_time": 25,
+      "red_time": 25,
       "phase_offset": 32
     },
     {
+      "node_id": 9201525265,
+      "green_time": 32,
+      "red_time": 32,
+      "phase_offset": 57
+    },
+    {
+      "node_id": 9708892968,
+      "green_time": 45,
+      "red_time": 45,
+      "phase_offset": 57
+    },
+    {
+      "node_id": 10815785964,
+      "green_time": 15,
+      "red_time": 15,
+      "phase_offset": 0
+    },
+    {
+      "node_id": 10832293202,
+      "green_time": 25,
+      "red_time": 25,
+      "phase_offset": 8
+    },
+    {
+      "node_id": 10832293219,
+      "green_time": 30,
+      "red_time": 30,
+      "phase_offset": 28
+    },
+    {
+      "node_id": 10832293221,
+      "green_time": 33,
+      "red_time": 33,
+      "phase_offset": 13
+    },
+    {
+      "node_id": 10832293230,
+      "green_time": 29,
+      "red_time": 29,
+      "phase_offset": 19
+    },
+    {
+      "node_id": 10832293231,
+      "green_time": 33,
+      "red_time": 33,
+      "phase_offset": 31
+    },
+    {
+      "node_id": 10836258376,
+      "green_time": 35,
+      "red_time": 35,
+      "phase_offset": 6
+    },
+    {
+      "node_id": 10936722266,
+      "green_time": 55,
+      "red_time": 55,
+      "phase_offset": 44
+    },
+    {
+      "node_id": 10936722267,
+      "green_time": 33,
+      "red_time": 33,
+      "phase_offset": 13
+    },
+    {
+      "node_id": 10936722273,
+      "green_time": 50,
+      "red_time": 50,
+      "phase_offset": 83
+    },
+    {
+      "node_id": 10936722274,
+      "green_time": 47,
+      "red_time": 47,
+      "phase_offset": 30
+    },
+    {
       "node_id": 12161223128,
-      "green_time": 60,
-      "red_time": 54,
-      "phase_offset": 3
+      "green_time": 58,
+      "red_time": 58,
+      "phase_offset": 107
     },
     {
       "node_id": 12161223129,
-      "green_time": 52,
-      "red_time": 35,
-      "phase_offset": 14
+      "green_time": 38,
+      "red_time": 38,
+      "phase_offset": 62
     },
     {
       "node_id": 12478914529,
-      "green_time": 51,
-      "red_time": 20,
-      "phase_offset": 14
+      "green_time": 44,
+      "red_time": 44,
+      "phase_offset": 56
     },
     {
       "node_id": 12478914553,
-      "green_time": 38,
-      "red_time": 51,
-      "phase_offset": 9
+      "green_time": 52,
+      "red_time": 52,
+      "phase_offset": 79
     },
     {
       "node_id": 12990936866,
-      "green_time": 33,
-      "red_time": 38,
-      "phase_offset": 4
+      "green_time": 56,
+      "red_time": 56,
+      "phase_offset": 50
     },
     {
       "node_id": 12990936872,
-      "green_time": 24,
-      "red_time": 30,
-      "phase_offset": 20
+      "green_time": 52,
+      "red_time": 52,
+      "phase_offset": 48
     },
     {
       "node_id": 12990936873,
-      "green_time": 42,
-      "red_time": 29,
-      "phase_offset": 9
+      "green_time": 16,
+      "red_time": 16,
+      "phase_offset": 0
     },
     {
       "node_id": 12990936874,
-      "green_time": 16,
-      "red_time": 48,
-      "phase_offset": 58
+      "green_time": 23,
+      "red_time": 23,
+      "phase_offset": 13
     },
     {
       "node_id": 13135314774,
-      "green_time": 19,
-      "red_time": 58,
-      "phase_offset": 1
+      "green_time": 18,
+      "red_time": 18,
+      "phase_offset": 29
     },
     {
       "node_id": 13135314788,
-      "green_time": 43,
-      "red_time": 53,
-      "phase_offset": 74
+      "green_time": 32,
+      "red_time": 32,
+      "phase_offset": 11
     }
   ]
 }
