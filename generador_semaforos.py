@@ -36,39 +36,121 @@ import generador_od
 
 
 class TrafficLightChromosome:
-    """Representa un cromosoma con configuración de semáforos."""
+    """Representa un cromosoma con configuración de semáforos por dirección."""
     
-    def __init__(self, node_ids: List[int], min_time: int = 15, max_time: int = 60):
+    def __init__(self, graph: nx.MultiDiGraph, node_ids: List[int], min_time: int = 15, max_time: int = 60):
         """
         Inicializa un cromosoma aleatorio.
         
         Args:
+            graph: Grafo de la red vial para identificar direcciones
             node_ids: Lista de IDs de nodos donde colocar semáforos
             min_time: Tiempo mínimo de verde/rojo
             max_time: Tiempo máximo de verde/rojo
         """
+        self.graph = graph
         self.node_ids = node_ids
         self.min_time = min_time
         self.max_time = max_time
         
-        # Genes: para cada nodo, (green_time, phase_offset)
-        # red_time será igual a green_time
-        self.genes: Dict[int, Tuple[int, int]] = {}
+        # Genes: para cada (node_id, from_node), almacenar (green_time, phase_offset)
+        # Calles perpendiculares tendrán phase_offset desfasado para coordinación
+        self.genes: Dict[Tuple[int, int], Tuple[int, int]] = {}
+        
         for node_id in node_ids:
+            # Obtener todas las aristas que llegan a este nodo
+            in_edges = list(self.graph.in_edges(node_id, keys=True))
+            
+            if not in_edges:
+                continue
+            
+            # Generar tiempo de ciclo común para este nodo
             green_time = random.randint(min_time, max_time)
-            cycle_time = green_time * 2  # verde + rojo (ambos iguales)
-            phase_offset = random.randint(0, cycle_time - 1)
-            self.genes[node_id] = (green_time, phase_offset)
+            cycle_time = green_time * 2
+            
+            # Agrupar aristas por dirección (detectar perpendiculares)
+            edge_groups = self._group_perpendicular_edges(node_id, in_edges)
+            
+            # Asignar fases: grupo 0 empieza en verde, grupo 1 empieza en rojo
+            for group_idx, edges_in_group in enumerate(edge_groups):
+                # Calcular phase_offset: grupo 0 tiene offset 0, grupo 1 tiene offset = green_time
+                phase_offset = (group_idx * green_time) % cycle_time
+                
+                for from_node, _, _ in edges_in_group:
+                    key = (node_id, from_node)
+                    self.genes[key] = (green_time, phase_offset)
         
         self.fitness = None
+    
+    def _group_perpendicular_edges(self, node_id: int, in_edges: List[Tuple]) -> List[List[Tuple]]:
+        """
+        Agrupa aristas que llegan a un nodo según su dirección.
+        Detecta calles perpendiculares para coordinar semáforos.
+        
+        Returns:
+            Lista de grupos de aristas (máximo 2 grupos para calles perpendiculares)
+        """
+        if len(in_edges) <= 1:
+            return [in_edges]
+        
+        # Obtener coordenadas del nodo de intersección
+        node_data = self.graph.nodes[node_id]
+        node_x, node_y = node_data['x'], node_data['y']
+        
+        # Calcular ángulo de llegada de cada arista
+        angles = []
+        for from_node, to_node, key in in_edges:
+            from_data = self.graph.nodes[from_node]
+            from_x, from_y = from_data['x'], from_data['y']
+            
+            # Calcular ángulo de la dirección de llegada
+            dx = node_x - from_x
+            dy = node_y - from_y
+            angle = np.arctan2(dy, dx)  # Ángulo en radianes [-π, π]
+            angles.append((angle, (from_node, to_node, key)))
+        
+        # Si solo hay 2 aristas, separarlas en 2 grupos
+        if len(angles) == 2:
+            return [[angles[0][1]], [angles[1][1]]]
+        
+        # Para más aristas, agrupar por cuadrantes
+        # Normalizar ángulos a [0, 2π)
+        normalized_angles = [(a % (2 * np.pi), edge) for a, edge in angles]
+        normalized_angles.sort(key=lambda x: x[0])
+        
+        # Dividir en dos grupos principales: horizontal (E-W) y vertical (N-S)
+        # Grupo 0: ángulos alrededor de 0° y 180° (E-W)
+        # Grupo 1: ángulos alrededor de 90° y 270° (N-S)
+        group_0 = []  # Este-Oeste
+        group_1 = []  # Norte-Sur
+        
+        for angle, edge in normalized_angles:
+            # Ángulo en grados para facilitar la lógica
+            angle_deg = np.degrees(angle)
+            
+            # Clasificar según proximidad a ejes cardinales
+            # E-W: 315-45° o 135-225°
+            # N-S: 45-135° o 225-315°
+            if (angle_deg >= 315 or angle_deg < 45) or (135 <= angle_deg < 225):
+                group_0.append(edge)
+            else:
+                group_1.append(edge)
+        
+        # Si un grupo está vacío, poner todo en un grupo
+        if not group_0:
+            return [group_1]
+        if not group_1:
+            return [group_0]
+        
+        return [group_0, group_1]
     
     def to_traffic_light_system(self) -> TrafficLightSystem:
         """Convierte el cromosoma en un sistema de semáforos."""
         system = TrafficLightSystem()
-        for node_id, (green_time, phase_offset) in self.genes.items():
-            # red_time es igual a green_time
+        for (node_id, from_node), (green_time, phase_offset) in self.genes.items():
             light = TrafficLight(
                 node_id=node_id,
+                from_node=from_node,
                 green_time=green_time,
                 red_time=green_time,
                 phase_offset=phase_offset
@@ -78,40 +160,66 @@ class TrafficLightChromosome:
     
     def mutate(self, mutation_rate: float = 0.1):
         """Aplica mutación aleatoria a los genes."""
-        for node_id in self.genes:
+        # Agrupar genes por nodo para mantener consistencia en el ciclo
+        nodes_to_mutate = set()
+        
+        for key in self.genes:
             if random.random() < mutation_rate:
-                # Mutar uno de los dos valores
-                choice = random.randint(0, 1)
-                green_time, phase_offset = self.genes[node_id]
+                node_id, from_node = key
+                nodes_to_mutate.add(node_id)
+        
+        # Mutar cada nodo completo (todas sus direcciones)
+        for node_id in nodes_to_mutate:
+            # Obtener todos los genes de este nodo
+            node_genes = {k: v for k, v in self.genes.items() if k[0] == node_id}
+            
+            if not node_genes:
+                continue
+            
+            # Tomar el green_time actual (debe ser igual para todas las direcciones)
+            current_green_time = list(node_genes.values())[0][0]
+            
+            # Mutar el tiempo de verde
+            delta = random.randint(-5, 5)
+            new_green_time = max(self.min_time, min(self.max_time, current_green_time + delta))
+            new_cycle_time = new_green_time * 2
+            
+            # Obtener aristas que llegan a este nodo
+            in_edges = list(self.graph.in_edges(node_id, keys=True))
+            edge_groups = self._group_perpendicular_edges(node_id, in_edges)
+            
+            # Reasignar phase_offsets manteniendo la estructura de grupos
+            for group_idx, edges_in_group in enumerate(edge_groups):
+                phase_offset = (group_idx * new_green_time) % new_cycle_time
                 
-                if choice == 0:  # Mutar green_time (red_time cambia automáticamente)
-                    delta = random.randint(-5, 5)
-                    green_time = max(self.min_time, min(self.max_time, green_time + delta))
-                    cycle_time = green_time * 2
-                    # Ajustar phase_offset si excede el nuevo ciclo
-                    phase_offset = min(phase_offset, cycle_time - 1)
-                else:  # Mutar phase_offset
-                    cycle_time = green_time * 2
-                    phase_offset = random.randint(0, cycle_time - 1)
-                
-                self.genes[node_id] = (green_time, phase_offset)
+                for from_node, _, _ in edges_in_group:
+                    key = (node_id, from_node)
+                    if key in self.genes:
+                        self.genes[key] = (new_green_time, phase_offset)
     
     @classmethod
     def crossover(cls, parent1: 'TrafficLightChromosome', parent2: 'TrafficLightChromosome') -> 'TrafficLightChromosome':
         """Crea un hijo mediante crossover de dos padres."""
         child = cls.__new__(cls)
+        child.graph = parent1.graph
         child.node_ids = parent1.node_ids
         child.min_time = parent1.min_time
         child.max_time = parent1.max_time
         child.genes = {}
         child.fitness = None
         
-        # Crossover uniforme: tomar genes aleatoriamente de cada padre
+        # Crossover por nodos completos (mantener consistencia en cada intersección)
         for node_id in parent1.node_ids:
+            # Elegir de cuál padre tomar los genes de este nodo
             if random.random() < 0.5:
-                child.genes[node_id] = parent1.genes[node_id]
+                source_parent = parent1
             else:
-                child.genes[node_id] = parent2.genes[node_id]
+                source_parent = parent2
+            
+            # Copiar todos los genes de este nodo del padre seleccionado
+            for key, value in source_parent.genes.items():
+                if key[0] == node_id:
+                    child.genes[key] = value
         
         return child
 
@@ -284,7 +392,7 @@ class GeneticOptimizer:
         """Crea la población inicial aleatoria."""
         population = []
         for _ in range(self.population_size):
-            chromosome = TrafficLightChromosome(self.candidate_nodes)
+            chromosome = TrafficLightChromosome(self.graph, self.candidate_nodes)
             population.append(chromosome)
         return population
     

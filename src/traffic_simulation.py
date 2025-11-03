@@ -264,11 +264,12 @@ class TrafficSimulation:
         distance = num_cells - position
         
         # Buscar nodos siguientes
-        current_node = edge[1]
+        current_node = edge[1]  # Nodo al final de la arista actual
+        from_node = edge[0]     # Nodo de origen (para verificar semáforo)
         visited = set([edge])
         
-        # Verificar si hay semáforo en rojo en el nodo siguiente
-        if self.traffic_lights.is_red_at_node(current_node):
+        # Verificar si hay semáforo en rojo en el nodo siguiente para esta dirección
+        if self.traffic_lights.is_red_at_node(current_node, from_node):
             # Si el semáforo está en rojo, la distancia efectiva es hasta el final de la arista
             return distance
         
@@ -432,19 +433,27 @@ class TrafficSimulation:
         ox.plot_graph(self.graph, ax=ax, show=False, close=False, 
                       node_size=0, edge_linewidth=0.5, edge_color='gray')
         
-        # Dibujar semáforos
+        # Dibujar semáforos (uno por cada dirección en las intersecciones)
         for node_id in self.traffic_lights.get_all_node_ids():
-            light = self.traffic_lights.get_light(node_id)
             node_data = self.graph.nodes[node_id]
             x, y = node_data['x'], node_data['y']
             
-            # Desplazar el semáforo ligeramente hacia arriba
-            y_offset = 0.00005  # Ajusta este valor según la escala del mapa
+            # Obtener todos los semáforos en este nodo (diferentes direcciones)
+            lights = self.traffic_lights.get_lights_at_node(node_id)
             
-            color = 'red' if light.is_red else 'green'
-            circle = Circle((x, y + y_offset), radius=0.00003, color=color, zorder=4, 
-                          edgecolor='black', linewidth=1.0, alpha=0.9)
-            ax.add_patch(circle)
+            # Distribuir los semáforos alrededor del nodo
+            num_lights = len(lights)
+            for i, light in enumerate(lights):
+                # Calcular offset angular para cada semáforo
+                angle = (2 * np.pi * i) / num_lights if num_lights > 0 else 0
+                x_offset = 0.00003 * np.cos(angle)
+                y_offset = 0.00003 * np.sin(angle)
+                
+                color = 'red' if light.is_red else 'green'
+                circle = Circle((x + x_offset, y + y_offset), radius=0.00002, 
+                              color=color, zorder=4, 
+                              edgecolor='black', linewidth=1.0, alpha=0.9)
+                ax.add_patch(circle)
         
         # Dibujar vehículos
         positions = self.get_vehicle_positions()
@@ -499,13 +508,25 @@ class TrafficSimulation:
             node_data = self.graph.nodes[node_id]
             x, y = node_data['x'], node_data['y']
             
-            # Desplazar el semáforo ligeramente hacia arriba
-            y_offset = 0.00005  # Ajusta este valor según la escala del mapa
+            # Obtener todos los semáforos en este nodo
+            lights = self.traffic_lights.get_lights_at_node(node_id)
             
-            circle = Circle((x, y + y_offset), radius=0.00003, color='green', zorder=4,
-                          edgecolor='black', linewidth=1.0, alpha=0.9)
-            ax.add_patch(circle)
-            traffic_light_circles[node_id] = circle
+            # Distribuir los semáforos alrededor del nodo
+            num_lights = len(lights)
+            for i, light in enumerate(lights):
+                # Calcular offset angular para cada semáforo
+                angle = (2 * np.pi * i) / num_lights if num_lights > 0 else 0
+                x_offset = 0.00003 * np.cos(angle)
+                y_offset = 0.00003 * np.sin(angle)
+                
+                circle = Circle((x + x_offset, y + y_offset), radius=0.00002, 
+                              color='green', zorder=4,
+                              edgecolor='black', linewidth=1.0, alpha=0.9)
+                ax.add_patch(circle)
+                
+                # Guardar referencia usando clave única
+                key = (node_id, light.from_node)
+                traffic_light_circles[key] = circle
         
         def init():
             scatter.set_offsets(np.empty((0, 2)))
@@ -516,9 +537,11 @@ class TrafficSimulation:
             self.step()
             
             # Actualizar colores de semáforos
-            for node_id, circle in traffic_light_circles.items():
-                light = self.traffic_lights.get_light(node_id)
-                circle.set_color('red' if light.is_red else 'green')
+            for key, circle in traffic_light_circles.items():
+                node_id, from_node = key
+                light = self.traffic_lights.get_light(node_id, from_node)
+                if light:
+                    circle.set_color('red' if light.is_red else 'green')
             
             # Obtener posiciones
             positions = self.get_vehicle_positions()

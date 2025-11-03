@@ -15,20 +15,22 @@ class LightState(Enum):
 
 
 class TrafficLight:
-    """Representa un semáforo en una intersección."""
+    """Representa un semáforo en una intersección para una dirección específica."""
     
-    def __init__(self, node_id: int, green_time: int = 30, red_time: int = 30, initial_state: LightState = LightState.GREEN, phase_offset: int = 0):
+    def __init__(self, node_id: int, from_node: int = None, green_time: int = 30, red_time: int = 30, initial_state: LightState = LightState.GREEN, phase_offset: int = 0):
         """
         Inicializa un semáforo.
         
         Args:
             node_id: ID del nodo (intersección) donde se ubica el semáforo
+            from_node: ID del nodo de origen (dirección de llegada), si se especifica
             green_time: Duración de la luz verde en pasos de tiempo
             red_time: Duración de la luz roja en pasos de tiempo
             initial_state: Estado inicial del semáforo
             phase_offset: Offset de fase inicial (permite sincronizar semáforos)
         """
         self.node_id = node_id
+        self.from_node = from_node  # Identifica la dirección de llegada
         self.green_time = green_time
         self.red_time = red_time
         self.state = initial_state
@@ -69,18 +71,22 @@ class TrafficLight:
     
     def to_dict(self) -> dict:
         """Convierte el semáforo a un diccionario serializable."""
-        return {
+        result = {
             'node_id': self.node_id,
             'green_time': self.green_time,
             'red_time': self.red_time,
             'phase_offset': self.phase_offset
         }
+        if self.from_node is not None:
+            result['from_node'] = self.from_node
+        return result
     
     @classmethod
     def from_dict(cls, data: dict) -> 'TrafficLight':
         """Crea un semáforo desde un diccionario."""
         return cls(
             node_id=data['node_id'],
+            from_node=data.get('from_node'),
             green_time=data['green_time'],
             red_time=data['red_time'],
             phase_offset=data.get('phase_offset', 0)
@@ -92,36 +98,63 @@ class TrafficLightSystem:
     
     def __init__(self):
         """Inicializa el sistema de semáforos."""
-        self.lights: Dict[int, TrafficLight] = {}
+        # Cambio: ahora la clave es (node_id, from_node) para identificar dirección
+        # Si from_node es None, se usa solo node_id (compatibilidad con versión anterior)
+        self.lights: Dict[Tuple[int, int], TrafficLight] = {}
     
     def add_light(self, traffic_light: TrafficLight):
         """Añade un semáforo al sistema."""
-        self.lights[traffic_light.node_id] = traffic_light
+        key = self._get_key(traffic_light.node_id, traffic_light.from_node)
+        self.lights[key] = traffic_light
     
-    def remove_light(self, node_id: int):
+    def _get_key(self, node_id: int, from_node: int = None):
+        """Genera la clave para el diccionario de semáforos."""
+        if from_node is None:
+            return (node_id, -1)  # -1 indica sin dirección específica
+        return (node_id, from_node)
+    
+    def remove_light(self, node_id: int, from_node: int = None):
         """Elimina un semáforo del sistema."""
-        if node_id in self.lights:
-            del self.lights[node_id]
+        key = self._get_key(node_id, from_node)
+        if key in self.lights:
+            del self.lights[key]
     
-    def get_light(self, node_id: int) -> TrafficLight:
-        """Obtiene un semáforo por su node_id."""
-        return self.lights.get(node_id)
+    def get_light(self, node_id: int, from_node: int = None) -> TrafficLight:
+        """Obtiene un semáforo por su node_id y dirección de llegada."""
+        key = self._get_key(node_id, from_node)
+        return self.lights.get(key)
     
     def update_all(self):
         """Actualiza el estado de todos los semáforos."""
         for light in self.lights.values():
             light.update()
     
-    def is_red_at_node(self, node_id: int) -> bool:
-        """Verifica si hay un semáforo en rojo en el nodo dado."""
-        light = self.lights.get(node_id)
+    def is_red_at_node(self, node_id: int, from_node: int = None) -> bool:
+        """
+        Verifica si hay un semáforo en rojo en el nodo dado para una dirección específica.
+        
+        Args:
+            node_id: Nodo donde verificar el semáforo
+            from_node: Nodo de origen (dirección de llegada)
+        
+        Returns:
+            True si el semáforo está en rojo, False en caso contrario
+        """
+        light = self.get_light(node_id, from_node)
         if light is None:
             return False
         return light.is_red
     
     def get_all_node_ids(self) -> List[int]:
-        """Retorna lista de todos los nodos con semáforos."""
-        return list(self.lights.keys())
+        """Retorna lista de todos los nodos únicos con semáforos."""
+        unique_nodes = set()
+        for (node_id, _) in self.lights.keys():
+            unique_nodes.add(node_id)
+        return list(unique_nodes)
+    
+    def get_lights_at_node(self, node_id: int) -> List[TrafficLight]:
+        """Retorna todos los semáforos en un nodo dado."""
+        return [light for (nid, _), light in self.lights.items() if nid == node_id]
     
     def save_to_file(self, filepath: Path):
         """Guarda la configuración de semáforos a un archivo JSON."""
