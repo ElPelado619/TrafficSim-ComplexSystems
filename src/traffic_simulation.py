@@ -327,13 +327,29 @@ class TrafficSimulation:
             next_edges = list(self.graph.out_edges(old_edge[1], keys=True))
             
             if not next_edges:
-                # Sin salida - el vehículo se detiene al final de la arista
-                del self.edge_occupation[old_edge][old_position]
-                new_position = num_cells - 1
-                self.edge_occupation[old_edge][new_position] = vehicle.id
-                vehicle.position = new_position
-                vehicle.velocity = 0
-                return True
+                # Sin salida - CALLEJÓN SIN SALIDA REAL
+                # El vehículo debe poder retroceder por donde vino
+                
+                # Crear arista de retroceso (inversa a la actual)
+                reverse_edge = (old_edge[1], old_edge[0], old_edge[2])
+                
+                # Verificar si la arista inversa existe en el grafo
+                if self.graph.has_edge(reverse_edge[0], reverse_edge[1], reverse_edge[2]):
+                    next_edges = [reverse_edge]
+                else:
+                    # No existe arista de retroceso - el vehículo desaparece y se genera uno nuevo
+                    print(f"    [INFO] Vehículo {vehicle.id} removido de callejón sin salida, generando nuevo vehículo")
+                    
+                    # Remover vehículo del mapa de ocupación
+                    del self.edge_occupation[old_edge][old_position]
+                    
+                    # Remover vehículo de la simulación
+                    del self.vehicles[vehicle.id]
+                    
+                    # Generar un nuevo vehículo en una ubicación aleatoria
+                    self._spawn_new_vehicle()
+                    
+                    return True
             
             # Aplicar regla de no retroceso: filtrar aristas disponibles
             available_edges = self._filter_available_edges(vehicle, next_edges)
@@ -395,23 +411,23 @@ class TrafficSimulation:
         # Aplicar reglas de Nagel-Schreckenberg
         
         # 1. Aceleración
-        for vehicle in self.vehicles.values():
+        for vehicle in list(self.vehicles.values()):
             if vehicle.velocity < vehicle.v_max:
                 vehicle.velocity += 1
         
         # 2. Frenado (evitar colisiones y respetar semáforos)
-        for vehicle in self.vehicles.values():
+        for vehicle in list(self.vehicles.values()):
             distance = self._get_distance_to_next_vehicle(vehicle)
             if vehicle.velocity >= distance:
                 vehicle.velocity = max(0, distance - 1)
         
         # 3. Aleatorización (desaceleración estocástica)
-        for vehicle in self.vehicles.values():
+        for vehicle in list(self.vehicles.values()):
             if vehicle.velocity > 0 and random.random() < self.p_slow:
                 vehicle.velocity -= 1
         
         # 4. Movimiento
-        for vehicle in self.vehicles.values():
+        for vehicle in list(self.vehicles.values()):
             self._move_vehicle(vehicle)
         
         # Actualizar estadísticas
@@ -473,16 +489,43 @@ class TrafficSimulation:
         if not available_edges:
             current_node = vehicle.edge[1]  # Nodo actual
             
-            # Excepción: Puede volver si no hay semáforo en el nodo actual
-            if not self.traffic_lights.has_traffic_light_at_node(current_node):
-                # Sin semáforo y sin salida, permitir retroceso
-                return next_edges
-            else:
-                # Con semáforo pero sin salida, el vehículo debe detenerse
-                # Devolver lista vacía para que se quede en la arista actual
-                return []
+            # Excepción: Puede volver si NO HAY OTRAS OPCIONES disponibles
+            # Esto evita que los vehículos se queden atrapados permanentemente
+            # en calles sin salida, independientemente de si hay semáforo o no
+            return next_edges
         
         return available_edges
+    
+    def _spawn_new_vehicle(self):
+        """
+        Genera un nuevo vehículo en una ubicación aleatoria del mapa.
+        """
+        import random
+        
+        # Obtener todas las aristas disponibles
+        all_edges = list(self.graph.edges(keys=True))
+        
+        # Intentar hasta 20 veces encontrar una ubicación libre
+        for attempt in range(20):
+            # Seleccionar arista aleatoria
+            edge = random.choice(all_edges)
+            
+            # Posición aleatoria en los primeros 30% de la arista
+            edge_data = self.graph[edge[0]][edge[1]][edge[2]]
+            max_position = min(edge_data['num_cells'] // 3, 5)
+            position = random.randint(0, max(0, max_position))
+            
+            # Velocidad aleatoria
+            velocity = random.randint(0, min(self.v_max, 3))
+            
+            # Intentar agregar el vehículo
+            new_vehicle_id = self.add_vehicle(edge=edge, position=position, velocity=velocity)
+            
+            if new_vehicle_id is not None:
+                print(f"    [INFO] Nuevo vehículo {new_vehicle_id} generado")
+                return new_vehicle_id
+        
+        return None
     
     def get_vehicle_positions(self):
         """
