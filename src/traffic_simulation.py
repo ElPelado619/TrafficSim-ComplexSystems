@@ -38,6 +38,8 @@ class Vehicle:
         self.velocity = velocity
         self.v_max = v_max
         self.destination_zone = destination_zone
+        self.previous_edge = None  # Arista anterior para evitar retroceso
+        self.node_history = []     # Historial de nodos visitados (últimos 3-5 nodos)
         self.color = self._generate_color()
     
     def _generate_color(self):
@@ -333,8 +335,20 @@ class TrafficSimulation:
                 vehicle.velocity = 0
                 return True
             
-            # Elegir una arista siguiente aleatoriamente
-            next_edge = random.choice(next_edges)
+            # Aplicar regla de no retroceso: filtrar aristas disponibles
+            available_edges = self._filter_available_edges(vehicle, next_edges)
+            
+            if not available_edges:
+                # No hay aristas disponibles después del filtrado - el vehículo se detiene
+                del self.edge_occupation[old_edge][old_position]
+                new_position = num_cells - 1
+                self.edge_occupation[old_edge][new_position] = vehicle.id
+                vehicle.position = new_position
+                vehicle.velocity = 0
+                return True
+            
+            # Elegir una arista siguiente aleatoriamente entre las disponibles
+            next_edge = random.choice(available_edges)
             next_num_cells = self.graph[next_edge[0]][next_edge[1]][next_edge[2]]['num_cells']
             
             if cells_remaining >= next_num_cells:
@@ -353,8 +367,24 @@ class TrafficSimulation:
             # Mover a la nueva arista
             del self.edge_occupation[old_edge][old_position]
             self.edge_occupation[next_edge][cells_remaining] = vehicle.id
+            
+            # Actualizar el historial del vehículo
+            vehicle.previous_edge = vehicle.edge
             vehicle.edge = next_edge
             vehicle.position = cells_remaining
+            
+            # Actualizar historial de nodos visitados
+            if not hasattr(vehicle, 'node_history'):
+                vehicle.node_history = []
+            
+            # Agregar el nodo de origen de la arista anterior al historial
+            previous_node = vehicle.previous_edge[0]
+            vehicle.node_history.append(previous_node)
+            
+            # Mantener solo los últimos 3 nodos en el historial
+            if len(vehicle.node_history) > 3:
+                vehicle.node_history = vehicle.node_history[-3:]
+            
             return True
     
     def step(self):
@@ -389,6 +419,70 @@ class TrafficSimulation:
         if self.vehicles:
             avg_v = np.mean([v.velocity for v in self.vehicles.values()])
             self.avg_velocities.append(avg_v)
+    
+    def _filter_available_edges(self, vehicle, next_edges):
+        """
+        Filtra las aristas disponibles para evitar que el vehículo se dé la vuelta.
+        
+        Regla: Si un vehículo va del nodo A al nodo B, no puede ir desde el nodo B 
+        hacia el nodo A, sin importar la arista específica. También evita regresar
+        a nodos visitados recientemente (últimos 3-4 nodos para prevenir loops).
+        
+        Args:
+            vehicle: El vehículo que necesita elegir una arista
+            next_edges: Lista de todas las aristas disponibles desde el nodo actual
+            
+        Returns:
+            Lista de aristas filtradas (sin las que llevan a nodos recientes)
+        """
+        if not next_edges:
+            return next_edges
+        
+        # Construir conjunto de nodos a evitar
+        nodes_to_avoid = set()
+        
+        # 1. Evitar el nodo inmediatamente anterior (U-turn directo)
+        if vehicle.previous_edge is not None:
+            previous_origin_node = vehicle.previous_edge[0]
+            nodes_to_avoid.add(previous_origin_node)
+        
+        # 2. Evitar nodos del historial reciente (loops cortos)
+        if hasattr(vehicle, 'node_history') and vehicle.node_history:
+            # Evitar los últimos 3 nodos del historial para prevenir loops
+            recent_nodes = vehicle.node_history[-3:]  # Aumentamos a 3 nodos
+            nodes_to_avoid.update(recent_nodes)
+        
+        # 3. Evitar también el nodo de origen de la arista actual (no retroceder en la misma arista)
+        current_origin = vehicle.edge[0]
+        nodes_to_avoid.add(current_origin)
+        
+        # Filtrar aristas que llevarían a nodos que queremos evitar
+        available_edges = []
+        filtered_out = []
+        
+        for edge in next_edges:
+            destination_node = edge[1]  # Nodo destino de esta arista
+            if destination_node not in nodes_to_avoid:
+                # Esta arista NO lleva a un nodo que queremos evitar
+                available_edges.append(edge)
+            else:
+                # Esta arista fue filtrada
+                filtered_out.append(edge)
+        
+        # Si después de filtrar no quedan opciones, verificar si podemos aplicar la excepción
+        if not available_edges:
+            current_node = vehicle.edge[1]  # Nodo actual
+            
+            # Excepción: Puede volver si no hay semáforo en el nodo actual
+            if not self.traffic_lights.has_traffic_light_at_node(current_node):
+                # Sin semáforo y sin salida, permitir retroceso
+                return next_edges
+            else:
+                # Con semáforo pero sin salida, el vehículo debe detenerse
+                # Devolver lista vacía para que se quede en la arista actual
+                return []
+        
+        return available_edges
     
     def get_vehicle_positions(self):
         """

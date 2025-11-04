@@ -156,6 +156,10 @@ class TrafficLightSystem:
         """Retorna todos los semáforos en un nodo dado."""
         return [light for (nid, _), light in self.lights.items() if nid == node_id]
     
+    def has_traffic_light_at_node(self, node_id: int) -> bool:
+        """Verifica si existe al menos un semáforo en el nodo dado."""
+        return any((nid, _) for (nid, _) in self.lights.keys() if nid == node_id)
+    
     def save_to_file(self, filepath: Path):
         """Guarda la configuración de semáforos a un archivo JSON."""
         data = {
