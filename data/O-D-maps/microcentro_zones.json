@@ -83,7 +83,7 @@
         -32.889745559517166
       ]
     ],
-    "production": 200.0
+    "production": 50.0
   },
   "5ta-Sur": {
     "attraction": 50.0,
@@ -631,7 +631,7 @@
         -32.8916080101978
       ]
     ],
-    "production": 50.0
+    "production": 150.0
   },
   "Parque Civico": {
     "attraction": 200.0,

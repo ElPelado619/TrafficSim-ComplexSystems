@@ -110,6 +110,32 @@ sim.plot_statistics()
 sim.animate(steps=100, interval=100, save_as='traffic.gif')
 ```
 
+### Optimización de semáforos con editor interactivo:
+
+```bash
+# 1. Editar y optimizar en un solo comando
+python generador_semaforos.py --edit \
+    --graph data/microcentro.graphml \
+    --zones data/O-D-maps/microcentro_zones.json \
+    --od data/O-D-maps/microcentro_zones_matrix.json
+
+# El comando anterior:
+# - Abre un editor visual donde puedes hacer click en nodos para incluir/excluir semáforos
+# - Al cerrar el editor, automáticamente optimiza los tiempos de semáforo
+# - Guarda la configuración optimizada en data/traffic_lights.json
+
+# 2. O ejecutar el editor por separado
+python tools/traffic_light_editor.py --graph data/microcentro.graphml
+
+# Controles del editor:
+# - Click izquierdo: Toggle incluir/excluir nodo
+# - [s]: Guardar cambios
+# - [r]: Reset (incluir todos)
+# - [q]: Salir
+```
+
+📖 **Ver guía completa**: [Editor de Semáforos](docs/TRAFFIC_LIGHT_EDITOR.md)
+
 ## 🔧 Parámetros del Modelo
 
 ### `TrafficSimulation`
@@ -214,15 +240,29 @@ Esta implementación extiende el modelo 1D original a una red 2D de calles:
 - K. Nagel and M. Schreckenberg, "A cellular automaton model for freeway traffic", *Journal de Physique I*, 1992
 - Documentación de OSMnx: https://osmnx.readthedocs.io/
 
-## 💡 Posibles Extensiones
+## 💡 Extensiones y Características Avanzadas
 
-- [ ] Implementar semáforos en las intersecciones
+### Implementadas
+
+- [x] **Semáforos en intersecciones**: Sistema completo de semáforos con fases configurables
+- [x] **Optimización genética de semáforos**: Algoritmo genético para optimizar tiempos
+- [x] **Editor interactivo de semáforos**: Herramienta visual para seleccionar ubicaciones
+- [x] **Sistema de zonas O-D**: Generación de vehículos basada en matrices origen-destino
+- [x] **Editor de zonas**: Interfaz gráfica para definir zonas de tráfico
+
+### Pendientes
+
 - [ ] Añadir diferentes tipos de vehículos (autos, buses, motos)
 - [ ] Implementar cambios de carril en calles multi-carril
-- [ ] Calcular métricas de rendimiento (throughput, tiempo de viaje)
-- [ ] Optimización de fases de semáforos
+- [ ] Calcular métricas de rendimiento adicionales (throughput, tiempo de viaje)
 - [ ] Simulación de accidentes y bloqueos temporales
 - [ ] Exportar datos para análisis estadístico detallado
+
+### Documentación adicional
+
+- 📖 [Editor de Semáforos](docs/TRAFFIC_LIGHT_EDITOR.md): Guía del editor interactivo
+- 📖 [Semáforos](docs/TRAFFIC_LIGHTS.md): Documentación del sistema de semáforos
+- 📖 [Zonas O-D](docs/ZONES_WORKFLOW.md): Flujo de trabajo con zonas origen-destino
 
 ## 📄 Licencia
 

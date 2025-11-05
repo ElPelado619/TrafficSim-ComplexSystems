@@ -21,7 +21,7 @@ import json
 import random
 import sys
 from pathlib import Path
-from typing import Dict, List, Tuple
+from typing import Dict, List, Optional, Tuple
 
 import networkx as nx
 import numpy as np
@@ -238,7 +238,8 @@ class GeneticOptimizer:
         elite_size: int = 5,
         simulation_steps: int = 500,
         scale: float = 0.01,
-        min_degree: int = 3
+        min_degree: int = 3,
+        exclusions_file: Optional[Path] = None
     ):
         """
         Inicializa el optimizador genético.
@@ -254,6 +255,7 @@ class GeneticOptimizer:
             simulation_steps: Pasos de simulación para evaluar fitness
             scale: Factor de escala para la matriz O-D
             min_degree: Grado mínimo para que un nodo tenga semáforo
+            exclusions_file: Archivo JSON con nodos excluidos
         """
         self.graph_file = graph_file
         self.zones_file = zones_file
@@ -265,15 +267,21 @@ class GeneticOptimizer:
         self.simulation_steps = simulation_steps
         self.scale = scale
         self.min_degree = min_degree
+        self.exclusions_file = exclusions_file
         
         # Cargar grafo y matriz O-D
         self.graph = self._load_graph()
         self.zones, self.od_matrix = self._load_zones_and_od()
         
+        # Cargar exclusiones si existen
+        self.excluded_nodes = self._load_exclusions()
+        
         # Identificar nodos candidatos para semáforos (intersecciones importantes)
         self.candidate_nodes = self._identify_intersections()
         
         print(f"Identificados {len(self.candidate_nodes)} nodos candidatos para semáforos")
+        if self.excluded_nodes:
+            print(f"  ℹ️  Excluidos {len(self.excluded_nodes)} nodos según archivo de exclusiones")
     
     def _load_graph(self) -> nx.MultiDiGraph:
         """Carga el grafo de la red vial."""
@@ -296,6 +304,19 @@ class GeneticOptimizer:
         
         return zones, od_matrix
     
+    def _load_exclusions(self) -> set:
+        """Carga los nodos excluidos desde el archivo JSON."""
+        if self.exclusions_file is None or not self.exclusions_file.exists():
+            return set()
+        
+        try:
+            with open(self.exclusions_file, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+            return set(data.get('excluded_nodes', []))
+        except Exception as e:
+            print(f"⚠️  Error al cargar exclusiones: {e}")
+            return set()
+    
     def _identify_intersections(self) -> List[int]:
         """Identifica nodos importantes para colocar semáforos."""
         candidates = []
@@ -313,6 +334,10 @@ class GeneticOptimizer:
         for node_id in self.graph.nodes():
             # Excluir nodos que son parte de rotondas
             if node_id in roundabout_nodes:
+                continue
+            
+            # Excluir nodos marcados en el archivo de exclusiones
+            if node_id in self.excluded_nodes:
                 continue
             
             # Contar grado del nodo (entradas + salidas)
@@ -507,6 +532,17 @@ def main():
         help="Archivo de salida para la configuración de semáforos"
     )
     parser.add_argument(
+        "--edit",
+        action="store_true",
+        help="Abrir editor interactivo para seleccionar semáforos antes de optimizar"
+    )
+    parser.add_argument(
+        "--exclusions",
+        type=Path,
+        default=Path("data/traffic_light_exclusions.json"),
+        help="Archivo JSON con nodos excluidos de semáforos"
+    )
+    parser.add_argument(
         "--population",
         type=int,
         default=50,
@@ -564,6 +600,64 @@ def main():
         print(f"Error: No se encontró el archivo de matriz O-D: {args.od}")
         return 1
     
+    # Si se solicita el editor, ejecutarlo antes de la optimización
+    if args.edit:
+        print("\n" + "="*60)
+        print("Editor de Semáforos")
+        print("="*60)
+        print("\nAbriendo editor interactivo...")
+        print("Use el editor para seleccionar qué nodos excluir de los semáforos.")
+        print("Los cambios se guardarán en:", args.exclusions)
+        print()
+        
+        # Importar y ejecutar el editor
+        sys.path.insert(0, str(Path(__file__).parent / "tools"))
+        try:
+            import traffic_light_editor
+            
+            # Cargar grafo
+            if args.graph.suffix == '.osm':
+                graph = ox.graph_from_xml(str(args.graph))
+            else:
+                graph = ox.load_graphml(str(args.graph))
+            
+            if not graph.is_directed():
+                graph = graph.to_directed()
+            
+            # Cargar exclusiones existentes si existen
+            existing_exclusions = None
+            if args.exclusions.exists():
+                existing_exclusions = traffic_light_editor.load_exclusions(args.exclusions)
+                print(f"Cargadas {len(existing_exclusions)} exclusiones desde {args.exclusions}")
+            
+            # Crear y ejecutar editor
+            editor = traffic_light_editor.TrafficLightEditor(
+                graph,
+                args.exclusions,
+                min_degree=args.min_degree,
+                existing_exclusions=existing_exclusions,
+            )
+            
+            print(f"✓ {len(editor.candidate_nodes)} nodos candidatos identificados")
+            print(f"✓ {len(editor.excluded_nodes)} nodos ya excluidos")
+            
+            try:
+                editor.run()
+            finally:
+                editor.shutdown()
+            
+            # Guardar si hubo cambios
+            if editor.changed:
+                editor.save(args.exclusions)
+            
+            print("\n" + "="*60)
+            print("Editor cerrado. Continuando con la optimización...")
+            print("="*60 + "\n")
+        
+        except ImportError as e:
+            print(f"Error: No se pudo importar el editor de semáforos: {e}")
+            return 1
+    
     # Ejecutar optimización
     optimizer = GeneticOptimizer(
         graph_file=args.graph,
@@ -575,7 +669,8 @@ def main():
         elite_size=args.elite_size,
         simulation_steps=args.simulation_steps,
         scale=args.scale,
-        min_degree=args.min_degree
+        min_degree=args.min_degree,
+        exclusions_file=args.exclusions if args.exclusions.exists() else None
     )
     
     best_system = optimizer.optimize()
