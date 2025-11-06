@@ -163,7 +163,7 @@
         -32.89290821161636
       ]
     ],
-    "production": 200.0
+    "production": 50.0
   },
   "Aristides": {
     "attraction": 300.0,
@@ -443,7 +443,7 @@
         -32.8996552027613
       ]
     ],
-    "production": 200.0
+    "production": 20.0
   },
   "Microcentro": {
     "attraction": 150.0,
@@ -631,7 +631,7 @@
         -32.8916080101978
       ]
     ],
-    "production": 150.0
+    "production": 250.0
   },
   "Parque Civico": {
     "attraction": 200.0,
