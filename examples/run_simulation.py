@@ -36,18 +36,20 @@ def example_1_basic_simulation():
         if (i + 1) % 10 == 0:
             print(f"  Paso {i + 1}/50 completado")
     
+    # Imprimir reporte de estadísticas
+    sim.print_traffic_report()
+    
     # Visualizar estado final
     print("\nVisualizando estado final...")
-    sim.plot_state()
+    sim.plot_state(show=False)
     plt.savefig('simulation_state.png', dpi=150, bbox_inches='tight')
-    print("Estado guardado en 'simulation_state.png'")
-    plt.show()
+    print("✓ Estado guardado en 'simulation_state.png'")
+    plt.close()
     
-    # Mostrar estadísticas
-    sim.plot_statistics()
-    plt.savefig('simulation_stats.png', dpi=150, bbox_inches='tight')
-    print("Estadísticas guardadas en 'simulation_stats.png'")
-    plt.show()
+    # Guardar estadísticas en archivos separados
+    print("\n📊 Generando gráficos de estadísticas...")
+    saved_files = sim.plot_statistics(output_dir='statistics_ejemplo1', show=False)
+    print(f"✓ {len(saved_files)} gráficos guardados en 'statistics_ejemplo1/'")
 
 
 def example_2_animation():
@@ -201,12 +203,20 @@ def example_5_custom_scenario():
         if (i + 1) % 20 == 0:
             print(f"  Paso {i + 1}/80 completado")
     
-    # Visualizar
+    # Imprimir reporte de estadísticas
+    sim.print_traffic_report()
+    
+    # Guardar estadísticas detalladas
+    print("\n📊 Generando estadísticas detalladas...")
+    saved_files = sim.plot_statistics(output_dir='statistics_custom', show=False)
+    print(f"✓ {len(saved_files)} gráficos guardados en 'statistics_custom/'")
+    
+    # Visualizar resumen
     fig, axes = plt.subplots(1, 2, figsize=(16, 6))
     
-    sim.plot_state(ax=axes[0])
+    sim.plot_state(ax=axes[0], show=False)
     
-    # Estadísticas
+    # Estadísticas básicas
     axes[1].plot(sim.avg_velocities, linewidth=2)
     axes[1].set_xlabel('Paso de tiempo')
     axes[1].set_ylabel('Velocidad promedio')
@@ -218,8 +228,8 @@ def example_5_custom_scenario():
     
     plt.tight_layout()
     plt.savefig('custom_scenario.png', dpi=150, bbox_inches='tight')
-    print("\nEscenario personalizado guardado en 'custom_scenario.png'")
-    plt.show()
+    print("✓ Escenario personalizado guardado en 'custom_scenario.png'")
+    plt.close()
 
 
 def main():

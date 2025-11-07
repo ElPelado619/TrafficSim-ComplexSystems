@@ -382,9 +382,15 @@ def main() -> None:
                 f"Paso {step:4d} | vehículos en red = {len(sim.vehicles):4d} | "
                 f"velocidad promedio = {avg_velocity:.2f}"
             )
+    
+    # Imprimir reporte detallado de estadísticas
+    print("\n" + "="*70)
+    print("REPORTE FINAL DE ESTADÍSTICAS")
+    print("="*70)
+    sim.print_traffic_report()
 
     if args.animation_gif:
-        print("Generando animación del tráfico...")
+        print("\nGenerando animación del tráfico...")
         render_animation(
             sim.graph,
             frames,
@@ -395,22 +401,24 @@ def main() -> None:
         )
 
     if args.save_prefix:
-        print("Guardando visualizaciones...")
+        print("\n📊 Guardando visualizaciones y estadísticas...")
+        prefix_path = Path(args.save_prefix)
+        prefix_path.parent.mkdir(parents=True, exist_ok=True)
+        
+        # Estado final
         ax = sim.plot_state(show=False)
-        state_path = Path(f"{args.save_prefix}_state.png")
+        state_path = prefix_path.with_name(f"{prefix_path.name}_state.png")
         ax.figure.savefig(state_path, dpi=150, bbox_inches="tight")
         plt.close(ax.figure)
+        print(f"✓ Estado final: {state_path}")
 
-        fig, _ = sim.plot_statistics(show=False)
-        stats_path = Path(f"{args.save_prefix}_stats.png")
-        fig.savefig(stats_path, dpi=150, bbox_inches="tight")
-        plt.close(fig)
-
-        print(f" - Estado final: {state_path}")
-        print(f" - Estadísticas: {stats_path}")
+        # Estadísticas en archivos separados
+        stats_dir = prefix_path.parent / f"{prefix_path.name}_statistics"
+        saved_files = sim.plot_statistics(output_dir=str(stats_dir), show=False)
+        print(f"✓ Estadísticas: {len(saved_files)} gráficos en {stats_dir}/")
 
     if args.attraction_map:
-        print("Generando mapa de atracción zonal...")
+        print("\nGenerando mapa de atracción zonal...")
         render_zone_attraction_map(
             sim.graph,
             zones,
@@ -421,8 +429,11 @@ def main() -> None:
         )
 
     if not args.no_show:
+        print("\nMostrando visualizaciones...")
         sim.plot_state()
-        sim.plot_statistics()
+        # No mostrar estadísticas ya que están guardadas en archivos separados
+        
+    print("\n✓ Simulación completada exitosamente")
 
 
 if __name__ == "__main__":

@@ -247,44 +247,33 @@ def main():
                       f"Vehículos: {len(sim.vehicles)}, "
                       f"Velocidad promedio: {avg_v:.2f}")
     
-    # Visualización final
+    # Imprimir reporte detallado de estadísticas
     print("\n" + "=" * 70)
-    print("RESULTADOS")
+    print("RESULTADOS DETALLADOS")
     print("=" * 70)
     
-    if sim.vehicles:
-        final_avg_v = np.mean([v.velocity for v in sim.vehicles.values()])
-        overall_avg_v = np.mean(sim.avg_velocities)
-        print(f"  Velocidad promedio final: {final_avg_v:.2f}")
-        print(f"  Velocidad promedio global: {overall_avg_v:.2f}")
-        print(f"  Vehículos restantes: {len(sim.vehicles)}")
-    
-    if len(sim.traffic_lights) > 0:
-        print(f"  Semáforos activos: {len(sim.traffic_lights)}")
+    sim.print_traffic_report()
     
     # Guardar estadísticas
-    if args.save_prefix:
-        args.save_prefix.parent.mkdir(parents=True, exist_ok=True)
-        
-        # Guardar gráfico de estado final
-        state_file = args.save_prefix.with_name(f"{args.save_prefix.name}_final_state.png")
-        fig, ax = plt.subplots(figsize=(12, 12))
-        sim.plot_state(ax=ax, show=False)
-        plt.savefig(state_file, dpi=150, bbox_inches='tight')
-        plt.close()
-        print(f"\n  ✓ Estado final guardado: {state_file}")
-        
-        # Guardar estadísticas
-        stats_file = args.save_prefix.with_name(f"{args.save_prefix.name}_stats.png")
-        sim.plot_statistics(show=False)
-        plt.savefig(stats_file, dpi=150, bbox_inches='tight')
-        plt.close()
-        print(f"  ✓ Estadísticas guardadas: {stats_file}")
+    output_dir = args.save_prefix.parent if args.save_prefix else Path('results')
+    output_dir.mkdir(parents=True, exist_ok=True)
     
-    if not args.no_show:
-        print("\nMostrando visualizaciones...")
-        sim.plot_state(show=True)
-        sim.plot_statistics(show=True)
+    print(f"\n📊 Guardando estadísticas en '{output_dir}/'...")
+    
+    # Guardar gráficos de estadísticas en archivos separados
+    saved_files = sim.plot_statistics(output_dir=str(output_dir / 'statistics'), show=not args.no_show)
+    
+    # Guardar gráfico de estado final
+    state_file = output_dir / 'estado_final.png'
+    fig, ax = plt.subplots(figsize=(12, 12))
+    sim.plot_state(ax=ax, show=False)
+    plt.savefig(state_file, dpi=150, bbox_inches='tight')
+    plt.close()
+    print(f"✓ Estado final guardado: {state_file}")
+    
+    print(f"\n📂 Todos los resultados guardados en: {output_dir}/")
+    print(f"   - Gráficos de estadísticas: {len(saved_files)} archivos PNG")
+    print(f"   - Estado final: estado_final.png")
     
     print("\n✓ Simulación completada exitosamente")
     return 0
