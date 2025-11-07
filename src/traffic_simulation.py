@@ -41,6 +41,12 @@ class Vehicle:
         self.previous_edge = None  # Arista anterior para evitar retroceso
         self.node_history = []     # Historial de nodos visitados (últimos 3-5 nodos)
         self.color = self._generate_color()
+        
+        # Estadísticas del vehículo
+        self.stopped_time = 0      # Tiempo total parado (velocidad = 0)
+        self.total_time = 0        # Tiempo total en la simulación
+        self.velocity_history = [] # Historial de velocidades
+        self.distance_traveled = 0 # Distancia total recorrida
     
     def _generate_color(self):
         """Genera un color aleatorio para el vehículo."""
@@ -91,6 +97,10 @@ class TrafficSimulation:
         # Estadísticas
         self.time_step = 0
         self.avg_velocities = []
+        self.stopped_vehicles_count = []  # Número de vehículos parados por paso
+        self.edge_densities = []           # Densidad promedio por arista
+        self.congestion_points = []        # Puntos con alta densidad de vehículos
+        self.vehicle_stopped_ratio = []    # Porcentaje de vehículos parados
     
     def _discretize_edges(self):
         """Discretiza las aristas del grafo en celdas."""
@@ -337,8 +347,6 @@ class TrafficSimulation:
                 if self.graph.has_edge(reverse_edge[0], reverse_edge[1], reverse_edge[2]):
                     next_edges = [reverse_edge]
                 else:
-                    # No existe arista de retroceso - el vehículo desaparece y se genera uno nuevo
-                    print(f"    [INFO] Vehículo {vehicle.id} removido de callejón sin salida, generando nuevo vehículo")
                     
                     # Remover vehículo del mapa de ocupación
                     del self.edge_occupation[old_edge][old_position]
@@ -430,11 +438,32 @@ class TrafficSimulation:
         for vehicle in list(self.vehicles.values()):
             self._move_vehicle(vehicle)
         
-        # Actualizar estadísticas
+        # Actualizar estadísticas de vehículos
+        for vehicle in self.vehicles.values():
+            vehicle.total_time += 1
+            vehicle.velocity_history.append(vehicle.velocity)
+            vehicle.distance_traveled += vehicle.velocity
+            if vehicle.velocity == 0:
+                vehicle.stopped_time += 1
+        
+        # Actualizar estadísticas globales
         self.time_step += 1
         if self.vehicles:
             avg_v = np.mean([v.velocity for v in self.vehicles.values()])
             self.avg_velocities.append(avg_v)
+            
+            # Estadísticas de vehículos parados
+            stopped_stats = self.get_stopped_vehicles_stats()
+            self.stopped_vehicles_count.append(stopped_stats['stopped_vehicles'])
+            self.vehicle_stopped_ratio.append(stopped_stats['stopped_ratio'])
+            
+            # Densidad promedio de aristas
+            avg_density = self.get_avg_edge_density()
+            self.edge_densities.append(avg_density)
+            
+            # Puntos de congestión
+            congestion = self.get_congestion_points(density_threshold=0.5)
+            self.congestion_points.append(len(congestion))
     
     def _filter_available_edges(self, vehicle, next_edges):
         """
@@ -522,10 +551,77 @@ class TrafficSimulation:
             new_vehicle_id = self.add_vehicle(edge=edge, position=position, velocity=velocity)
             
             if new_vehicle_id is not None:
-                print(f"    [INFO] Nuevo vehículo {new_vehicle_id} generado")
                 return new_vehicle_id
         
         return None
+    
+    def get_edge_density(self, edge):
+        """
+        Calcula la densidad de vehículos en una arista específica.
+        
+        Args:
+            edge: Tupla (u, v, key) de la arista
+            
+        Returns:
+            Densidad (vehículos por celda) en la arista
+        """
+        num_cells = self.graph[edge[0]][edge[1]][edge[2]]['num_cells']
+        num_vehicles = len(self.edge_occupation[edge])
+        return num_vehicles / num_cells if num_cells > 0 else 0
+    
+    def get_congestion_points(self, density_threshold=0.5):
+        """
+        Identifica aristas con alta densidad de vehículos (congestión).
+        
+        Args:
+            density_threshold: Umbral de densidad para considerar congestión
+            
+        Returns:
+            Lista de tuplas (edge, density, num_vehicles) para aristas congestionadas
+        """
+        congested = []
+        
+        for edge in self.graph.edges(keys=True):
+            density = self.get_edge_density(edge)
+            if density >= density_threshold:
+                num_vehicles = len(self.edge_occupation[edge])
+                congested.append((edge, density, num_vehicles))
+        
+        # Ordenar por densidad (mayor primero)
+        congested.sort(key=lambda x: x[1], reverse=True)
+        return congested
+    
+    def get_avg_edge_density(self):
+        """
+        Calcula la densidad promedio de todas las aristas con vehículos.
+        
+        Returns:
+            Densidad promedio del sistema
+        """
+        densities = []
+        for edge in self.edge_occupation.keys():
+            if self.edge_occupation[edge]:  # Solo si hay vehículos
+                densities.append(self.get_edge_density(edge))
+        
+        return np.mean(densities) if densities else 0.0
+    
+    def get_stopped_vehicles_stats(self):
+        """
+        Obtiene estadísticas sobre vehículos parados.
+        
+        Returns:
+            Diccionario con estadísticas de vehículos parados
+        """
+        total = len(self.vehicles)
+        stopped = sum(1 for v in self.vehicles.values() if v.velocity == 0)
+        
+        return {
+            'total_vehicles': total,
+            'stopped_vehicles': stopped,
+            'stopped_ratio': stopped / total if total > 0 else 0,
+            'moving_vehicles': total - stopped
+        }
+
     
     def get_vehicle_positions(self):
         """
@@ -720,29 +816,223 @@ class TrafficSimulation:
         
         return anim
     
-    def plot_statistics(self, show=True):
-        """Visualiza estadísticas de la simulación."""
-        fig, axes = plt.subplots(2, 1, figsize=(10, 8))
+    def plot_statistics(self, output_dir='statistics', show=False):
+        """
+        Visualiza y guarda estadísticas de la simulación en archivos separados.
         
-        # Velocidad promedio a lo largo del tiempo
-        axes[0].plot(self.avg_velocities)
-        axes[0].set_xlabel('Paso de tiempo')
-        axes[0].set_ylabel('Velocidad promedio')
-        axes[0].set_title('Evolución de la velocidad promedio')
-        axes[0].grid(True, alpha=0.3)
-        axes[0].axhline(y=self.v_max, color='r', linestyle='--', label='v_max')
-        axes[0].legend()
+        Args:
+            output_dir: Directorio donde guardar los gráficos (default: 'statistics')
+            show: Si True, muestra los gráficos en pantalla (default: False)
         
-        # Distribución de velocidades en el último paso
+        Returns:
+            Lista de rutas a los archivos guardados
+        """
+        from pathlib import Path
+        
+        # Crear directorio si no existe
+        output_path = Path(output_dir)
+        output_path.mkdir(parents=True, exist_ok=True)
+        
+        saved_files = []
+        
+        # 1. Velocidad promedio a lo largo del tiempo
+        if self.avg_velocities:
+            fig, ax = plt.subplots(figsize=(10, 6))
+            ax.plot(self.avg_velocities, color='blue', linewidth=1.5)
+            ax.set_xlabel('Paso de tiempo', fontsize=12)
+            ax.set_ylabel('Velocidad promedio', fontsize=12)
+            ax.set_title('Evolución de la velocidad promedio', fontsize=14, fontweight='bold')
+            ax.grid(True, alpha=0.3)
+            ax.axhline(y=self.v_max, color='r', linestyle='--', label='v_max', alpha=0.7)
+            ax.legend(fontsize=10)
+            plt.tight_layout()
+            
+            filepath = output_path / '01_velocidad_promedio.png'
+            fig.savefig(filepath, dpi=150, bbox_inches='tight')
+            saved_files.append(filepath)
+            print(f"✓ Guardado: {filepath}")
+            
+            if show:
+                plt.show()
+            else:
+                plt.close(fig)
+        
+        # 2. Distribución de velocidades en el último paso
+        if self.vehicles:
+            fig, ax = plt.subplots(figsize=(10, 6))
+            velocities = [v.velocity for v in self.vehicles.values()]
+            ax.hist(velocities, bins=range(self.v_max + 2), edgecolor='black', alpha=0.7, color='green')
+            ax.set_xlabel('Velocidad', fontsize=12)
+            ax.set_ylabel('Número de vehículos', fontsize=12)
+            ax.set_title(f'Distribución de velocidades (paso {self.time_step})', fontsize=14, fontweight='bold')
+            ax.grid(True, alpha=0.3, axis='y')
+            plt.tight_layout()
+            
+            filepath = output_path / '02_distribucion_velocidades.png'
+            fig.savefig(filepath, dpi=150, bbox_inches='tight')
+            saved_files.append(filepath)
+            print(f"✓ Guardado: {filepath}")
+            
+            if show:
+                plt.show()
+            else:
+                plt.close(fig)
+        
+        # 3. Vehículos parados a lo largo del tiempo
+        if self.stopped_vehicles_count:
+            fig, ax = plt.subplots(figsize=(10, 6))
+            ax.plot(self.stopped_vehicles_count, color='red', linewidth=1.5)
+            ax.set_xlabel('Paso de tiempo', fontsize=12)
+            ax.set_ylabel('Vehículos parados', fontsize=12)
+            ax.set_title('Número de vehículos parados (velocidad = 0)', fontsize=14, fontweight='bold')
+            ax.grid(True, alpha=0.3)
+            plt.tight_layout()
+            
+            filepath = output_path / '03_vehiculos_parados.png'
+            fig.savefig(filepath, dpi=150, bbox_inches='tight')
+            saved_files.append(filepath)
+            print(f"✓ Guardado: {filepath}")
+            
+            if show:
+                plt.show()
+            else:
+                plt.close(fig)
+        
+        # 4. Porcentaje de vehículos parados
+        if self.vehicle_stopped_ratio:
+            fig, ax = plt.subplots(figsize=(10, 6))
+            ax.plot(self.vehicle_stopped_ratio, color='orange', linewidth=1.5)
+            ax.set_xlabel('Paso de tiempo', fontsize=12)
+            ax.set_ylabel('Proporción parados', fontsize=12)
+            ax.set_title('Proporción de vehículos parados', fontsize=14, fontweight='bold')
+            ax.set_ylim([0, 1])
+            ax.grid(True, alpha=0.3)
+            ax.axhline(y=0.5, color='r', linestyle='--', alpha=0.5, label='50%')
+            ax.legend(fontsize=10)
+            plt.tight_layout()
+            
+            filepath = output_path / '04_proporcion_parados.png'
+            fig.savefig(filepath, dpi=150, bbox_inches='tight')
+            saved_files.append(filepath)
+            print(f"✓ Guardado: {filepath}")
+            
+            if show:
+                plt.show()
+            else:
+                plt.close(fig)
+        
+        # 5. Densidad promedio de aristas
+        if self.edge_densities:
+            fig, ax = plt.subplots(figsize=(10, 6))
+            ax.plot(self.edge_densities, color='purple', linewidth=1.5)
+            ax.set_xlabel('Paso de tiempo', fontsize=12)
+            ax.set_ylabel('Densidad promedio', fontsize=12)
+            ax.set_title('Densidad promedio de aristas con vehículos', fontsize=14, fontweight='bold')
+            ax.grid(True, alpha=0.3)
+            plt.tight_layout()
+            
+            filepath = output_path / '05_densidad_aristas.png'
+            fig.savefig(filepath, dpi=150, bbox_inches='tight')
+            saved_files.append(filepath)
+            print(f"✓ Guardado: {filepath}")
+            
+            if show:
+                plt.show()
+            else:
+                plt.close(fig)
+        
+        # 6. Puntos de congestión
+        if self.congestion_points:
+            fig, ax = plt.subplots(figsize=(10, 6))
+            ax.plot(self.congestion_points, color='darkred', linewidth=1.5)
+            ax.set_xlabel('Paso de tiempo', fontsize=12)
+            ax.set_ylabel('Número de aristas congestionadas', fontsize=12)
+            ax.set_title('Aristas con alta densidad (> 50%)', fontsize=14, fontweight='bold')
+            ax.grid(True, alpha=0.3)
+            plt.tight_layout()
+            
+            filepath = output_path / '06_puntos_congestion.png'
+            fig.savefig(filepath, dpi=150, bbox_inches='tight')
+            saved_files.append(filepath)
+            print(f"✓ Guardado: {filepath}")
+            
+            if show:
+                plt.show()
+            else:
+                plt.close(fig)
+        
+        print(f"\n📊 Total de gráficos guardados: {len(saved_files)} en '{output_path}/'")
+        
+        return saved_files
+    
+    def print_traffic_report(self):
+        """
+        Imprime un reporte detallado de las estadísticas de tráfico.
+        """
+        print("\n" + "="*60)
+        print("REPORTE DE ESTADÍSTICAS DE TRÁFICO")
+        print("="*60)
+        
+        # Información general
+        print(f"\n📊 INFORMACIÓN GENERAL")
+        print(f"   Paso de tiempo actual: {self.time_step}")
+        print(f"   Total de vehículos: {len(self.vehicles)}")
+        
+        if not self.vehicles:
+            print("   ⚠️  No hay vehículos en la simulación")
+            return
+        
+        # Estadísticas de velocidad
         velocities = [v.velocity for v in self.vehicles.values()]
-        axes[1].hist(velocities, bins=range(self.v_max + 2), edgecolor='black', alpha=0.7)
-        axes[1].set_xlabel('Velocidad')
-        axes[1].set_ylabel('Número de vehículos')
-        axes[1].set_title(f'Distribución de velocidades (paso {self.time_step})')
-        axes[1].grid(True, alpha=0.3)
+        avg_current_velocity = np.mean(velocities)
+        print(f"\n🚗 VELOCIDAD")
+        print(f"   Velocidad actual promedio: {avg_current_velocity:.2f} celdas/paso")
+        print(f"   Velocidad máxima permitida: {self.v_max} celdas/paso")
+        print(f"   Eficiencia de flujo: {(avg_current_velocity/self.v_max)*100:.1f}%")
         
-        plt.tight_layout()
-        if show:
-            plt.show()
+        if self.avg_velocities:
+            print(f"   Velocidad promedio histórica: {np.mean(self.avg_velocities):.2f}")
         
-        return fig, axes
+        # Estadísticas de vehículos parados
+        stopped_stats = self.get_stopped_vehicles_stats()
+        print(f"\n🛑 VEHÍCULOS PARADOS")
+        print(f"   Vehículos parados actualmente: {stopped_stats['stopped_vehicles']} "
+              f"({stopped_stats['stopped_ratio']*100:.1f}%)")
+        print(f"   Vehículos en movimiento: {stopped_stats['moving_vehicles']}")
+        
+        # Tiempo de parada promedio
+        total_stopped_time = sum(v.stopped_time for v in self.vehicles.values())
+        total_vehicle_time = sum(v.total_time for v in self.vehicles.values())
+        if total_vehicle_time > 0:
+            avg_stopped_ratio = total_stopped_time / total_vehicle_time
+            print(f"   Tiempo promedio parado: {avg_stopped_ratio*100:.1f}% del tiempo total")
+        
+        # Estadísticas de congestión
+        avg_density = self.get_avg_edge_density()
+        congestion = self.get_congestion_points(density_threshold=0.5)
+        
+        print(f"\n🚦 CONGESTIÓN")
+        print(f"   Densidad promedio de aristas: {avg_density:.2%}")
+        print(f"   Aristas congestionadas (>50% densidad): {len(congestion)}")
+        
+        if congestion:
+            print(f"\n   Top 5 aristas más congestionadas:")
+            for i, (edge, density, num_veh) in enumerate(congestion[:5], 1):
+                print(f"   {i}. Arista {edge[0]}→{edge[1]}: {density:.1%} "
+                      f"({num_veh} vehículos)")
+        
+        # Distancia recorrida
+        if any(v.total_time > 0 for v in self.vehicles.values()):
+            avg_distance = np.mean([v.distance_traveled for v in self.vehicles.values()])
+            print(f"\n📏 DISTANCIA")
+            print(f"   Distancia promedio recorrida: {avg_distance:.1f} celdas")
+        
+        # Resumen de tendencias
+        if len(self.avg_velocities) > 10:
+            recent_avg = np.mean(self.avg_velocities[-10:])
+            overall_avg = np.mean(self.avg_velocities)
+            trend = "↑ mejorando" if recent_avg > overall_avg else "↓ empeorando"
+            print(f"\n📈 TENDENCIAS")
+            print(f"   Velocidad promedio últimos 10 pasos: {recent_avg:.2f} ({trend})")
+        
+        print("\n" + "="*60 + "\n")
