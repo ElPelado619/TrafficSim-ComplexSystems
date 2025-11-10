@@ -88,6 +88,8 @@ def _prepare_simulation_config(params: Mapping[str, Any]) -> Dict[str, Any]:
     config.setdefault("warmup_steps", 0)
     config.setdefault("collect_time_series", False)
     config.setdefault("verbose", False)
+    config.setdefault("save_statistics", False)
+    config.setdefault("statistics_output_dir", "data/runs")
     return config
 
 
@@ -113,6 +115,8 @@ def run_simulation_with_params(params: Mapping[str, Any]) -> Dict[str, Any]:
         - ``collect_time_series``: include per-step series in the result (bool)
         - ``verbose``: propagate stdout from the simulation helpers (bool)
         - ``label``: arbitrary tag copied to the result for easier identification
+        - ``save_statistics``: generate and save statistics plots (bool)
+        - ``statistics_output_dir``: base directory for saving statistics plots
 
     Returns
     -------
@@ -207,11 +211,30 @@ def run_simulation_with_params(params: Mapping[str, Any]) -> Dict[str, Any]:
             "od_zones_file": str(config.get("od_zones_file")) if config.get("od_zones_file") else None,
             "od_matrix_file": str(config.get("od_matrix_file")) if config.get("od_matrix_file") else None,
             "od_scale": float(config.get("od_scale", 1.0)) if config.get("od_matrix_file") else None,
+            "save_statistics": bool(config.get("save_statistics", False)),
+            "statistics_output_dir": str(config.get("statistics_output_dir", "data/runs")),
         }
 
     except Exception as exc:  # pylint: disable=broad-except
         result["status"] = "error"
         result["error"] = f"{type(exc).__name__}: {exc}"
+
+    # Save statistics plots if requested
+    if result["status"] == "ok" and config.get("save_statistics", False):
+        try:
+            output_dir_base = Path(config.get("statistics_output_dir", "data/runs"))
+            output_dir_base.mkdir(parents=True, exist_ok=True)
+            
+            # Create unique subdirectory for this scenario
+            label = config.get("label", "unnamed")
+            scenario_dir = output_dir_base / f"stats_{label.replace('/', '_').replace(' ', '_')}"
+            scenario_dir.mkdir(parents=True, exist_ok=True)
+            
+            # Generate and save statistics plots
+            saved_files = simulation.plot_statistics(output_dir=str(scenario_dir), show=False)
+            result["statistics_files"] = [str(f) for f in saved_files]
+        except Exception as plot_exc:  # pylint: disable=broad-except
+            result["statistics_error"] = f"{type(plot_exc).__name__}: {plot_exc}"
 
     return result
 

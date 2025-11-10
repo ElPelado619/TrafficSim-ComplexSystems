@@ -30,6 +30,8 @@ def _build_scenarios() -> list[dict]:
         "traffic_lights_file": str(traffic_lights_path) if traffic_lights_path.exists() else None,
         "steps": 60,
         "warmup_steps": 15,
+        "save_statistics": True,  # Generar gráficos de estadísticas
+        "statistics_output_dir": "data/runs/parallel_stats",  # Directorio base para guardar
     }
 
     densities = [0.10, 0.20, 0.30]
@@ -57,15 +59,28 @@ def main() -> None:
     for item in results:
         label = item.get("label", "<unnamed>")
         if item.get("status") != "ok":
-            print(f"[{label}] ERROR -> {item.get('error')}")
+            print(f"❌ [{label}] ERROR -> {item.get('error')}")
             continue
         metrics = item["metrics"]
         print(
-            f"[{label}] final_avg_velocity={metrics['final_avg_velocity']:.3f} "
+            f"📊 [{label}] final_avg_velocity={metrics['final_avg_velocity']:.3f} "
             f"mean_avg_velocity={metrics['mean_avg_velocity']:.3f} "
             f"final_stopped_ratio={metrics['final_stopped_ratio']:.3f} "
             f"vehicles_final={metrics['vehicles_final']}"
         )
+        
+        # Mostrar archivos de estadísticas si se generaron
+        if "statistics_files" in item:
+            stats_files = item["statistics_files"]
+            print(f"   📈 Estadísticas guardadas: {len(stats_files)} archivos")
+            for f in stats_files[:3]:  # Mostrar primeros 3
+                print(f"      - {f}")
+            if len(stats_files) > 3:
+                print(f"      ... y {len(stats_files) - 3} más")
+        elif "statistics_error" in item:
+            print(f"   ⚠️  Error al guardar estadísticas: {item['statistics_error']}")
+        else:
+            print("   📈 Estadísticas no guardadas (save_statistics=False)")
 
     print("\nDone.")
 
