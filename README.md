@@ -82,6 +82,16 @@ Incluye análisis avanzados:
 - **Tiempo de relajación**: Convergencia al estado estacionario
 - **Diagrama espacio-temporal**: Trayectorias de vehículos
 
+### Simulaciones en paralelo
+
+```bash
+python examples/run_parallel_simulations.py
+```
+
+Lanza un barrido de parámetros en paralelo utilizando ``multiprocessing.Pool``.
+Internamente invoca ``src.parallel_simulation.run_simulation_with_params`` y
+resume las métricas de cada ejecución.
+
 ### Uso programático:
 
 ```python
@@ -108,6 +118,21 @@ sim.plot_statistics()
 
 # Crear animación
 sim.animate(steps=100, interval=100, save_as='traffic.gif')
+```
+
+Para estudios masivos de parámetros puedes utilizar las utilidades paralelas:
+
+```python
+from src.parallel_simulation import run_simulation_with_params, run_simulations_in_parallel
+
+scenarios = [
+    {"label": "d0.15_p0.2", "graph_file": "data/map_reduced.osm", "density": 0.15, "p_slow": 0.2, "steps": 80},
+    {"label": "d0.30_p0.4", "graph_file": "data/map_reduced.osm", "density": 0.30, "p_slow": 0.4, "steps": 80},
+]
+
+results = run_simulations_in_parallel(scenarios)
+for result in results:
+    print(result["label"], result["metrics"]["final_avg_velocity"])
 ```
 
 ### Optimización de semáforos con editor interactivo:
