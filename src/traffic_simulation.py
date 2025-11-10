@@ -697,14 +697,14 @@ class TrafficSimulation:
             
             if show_velocity:
                 velocities = [p[3] for p in positions]
-                scatter = ax.scatter(lons, lats, c=velocities, cmap='RdYlGn', 
-                                   s=20, zorder=5, vmin=0, vmax=self.v_max,
-                                   edgecolors='black', linewidths=0.5)
+                scatter = ax.scatter(lons, lats, c=velocities, cmap='gist_rainbow_r', 
+                                   s=15, zorder=5, vmin=0, vmax=self.v_max,
+                                   edgecolors='black', linewidths=0.5, marker='^')
                 plt.colorbar(scatter, ax=ax, label='Velocidad')
             else:
                 colors = [p[2] for p in positions]
-                ax.scatter(lons, lats, c=colors, s=20, zorder=5,
-                          edgecolors='black', linewidths=0.5)
+                ax.scatter(lons, lats, c=colors, s=15, zorder=5,
+                          edgecolors='black', linewidths=0.5, marker='^')
         
         ax.set_title(f'Simulación de Tráfico - Paso {self.time_step}\n'
                     f'Vehículos: {len(self.vehicles)}, '
@@ -732,7 +732,7 @@ class TrafficSimulation:
         ox.plot_graph(self.graph, ax=ax, show=False, close=False,
                       node_size=0, edge_linewidth=0.5, edge_color='gray')
         
-        scatter = ax.scatter([], [], s=20, zorder=5, edgecolors='black', linewidths=0.5)
+        scatter = ax.scatter([], [], s=15, zorder=5, edgecolors='black', linewidths=0.5, marker='^')
         title = ax.set_title('')
         
         # Preparar círculos para semáforos
@@ -787,7 +787,7 @@ class TrafficSimulation:
                 offsets = np.column_stack([lons, lats])
                 scatter.set_offsets(offsets)
                 scatter.set_array(np.array(velocities))
-                scatter.set_cmap('RdYlGn')
+                scatter.set_cmap('gist_rainbow_r')
                 scatter.set_clim(0, self.v_max)
             
             avg_v = np.mean([v.velocity for v in self.vehicles.values()]) if self.vehicles else 0
