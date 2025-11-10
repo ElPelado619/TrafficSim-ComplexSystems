@@ -32,6 +32,7 @@ def _build_scenarios() -> list[dict]:
         "warmup_steps": 15,
         "save_statistics": True,  # Generar gráficos de estadísticas
         "statistics_output_dir": "data/runs/parallel_stats",  # Directorio base para guardar
+        "save_time_series_csv": True,  # Guardar series temporales en CSV
     }
 
     densities = [0.10, 0.20, 0.30]
@@ -81,6 +82,15 @@ def main() -> None:
             print(f"   ⚠️  Error al guardar estadísticas: {item['statistics_error']}")
         else:
             print("   📈 Estadísticas no guardadas (save_statistics=False)")
+            
+        # Mostrar archivo CSV de series temporales si se generó
+        if "time_series_csv" in item:
+            csv_file = item["time_series_csv"]
+            print(f"   📊 CSV de series temporales: {csv_file}")
+        elif "time_series_csv_error" in item:
+            print(f"   ⚠️  Error al guardar CSV: {item['time_series_csv_error']}")
+        else:
+            print("   📊 CSV no guardado (save_time_series_csv=False)")
 
     print("\nDone.")
 

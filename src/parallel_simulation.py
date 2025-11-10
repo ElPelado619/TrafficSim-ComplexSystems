@@ -11,6 +11,7 @@ creates the pool and gathers the results.
 from __future__ import annotations
 
 import contextlib
+import csv
 import io
 import json
 import multiprocessing as mp
@@ -76,6 +77,78 @@ def _maybe_spawn_from_od(
     )
 
 
+def _save_time_series_csv(
+    simulation: TrafficSimulation,
+    output_path: Path,
+    label: str = "",
+) -> str:
+    """Save time series data from simulation to a CSV file.
+
+    Parameters
+    ----------
+    simulation : TrafficSimulation
+        The simulation object containing the time series data
+    output_path : Path
+        Directory where to save the CSV file
+    label : str
+        Label for the scenario (used in filename)
+
+    Returns
+    -------
+    str
+        Path to the saved CSV file
+    """
+    output_path = Path(output_path)
+    output_path.mkdir(parents=True, exist_ok=True)
+
+    # Create filename
+    safe_label = label.replace("/", "_").replace(" ", "_") if label else "unnamed"
+    csv_file = output_path / f"time_series_{safe_label}.csv"
+
+    # Prepare data
+    max_length = max(
+        len(simulation.avg_velocities),
+        len(simulation.vehicle_stopped_ratio),
+        len(simulation.stopped_vehicles_count),
+        len(simulation.edge_densities),
+        len(simulation.congestion_points),
+    )
+
+    # Pad shorter lists with None
+    def pad_list(lst, length):
+        return lst + [None] * (length - len(lst))
+
+    avg_velocities = pad_list(simulation.avg_velocities, max_length)
+    stopped_ratios = pad_list(simulation.vehicle_stopped_ratio, max_length)
+    stopped_counts = pad_list(simulation.stopped_vehicles_count, max_length)
+    edge_densities = pad_list(simulation.edge_densities, max_length)
+    congestion_points = pad_list(simulation.congestion_points, max_length)
+
+    # Write CSV
+    with csv_file.open("w", newline="", encoding="utf-8") as f:
+        writer = csv.writer(f)
+        writer.writerow([
+            "time_step",
+            "avg_velocity",
+            "stopped_ratio",
+            "stopped_vehicles_count",
+            "edge_density",
+            "congestion_points"
+        ])
+
+        for i in range(max_length):
+            writer.writerow([
+                i + 1,  # time_step (1-based)
+                avg_velocities[i],
+                stopped_ratios[i],
+                stopped_counts[i],
+                edge_densities[i],
+                congestion_points[i],
+            ])
+
+    return str(csv_file)
+
+
 def _prepare_simulation_config(params: Mapping[str, Any]) -> Dict[str, Any]:
     """Normalise raw parameters coming from the caller."""
     config: Dict[str, Any] = dict(params)
@@ -90,6 +163,7 @@ def _prepare_simulation_config(params: Mapping[str, Any]) -> Dict[str, Any]:
     config.setdefault("verbose", False)
     config.setdefault("save_statistics", False)
     config.setdefault("statistics_output_dir", "data/runs")
+    config.setdefault("save_time_series_csv", False)
     return config
 
 
@@ -117,6 +191,7 @@ def run_simulation_with_params(params: Mapping[str, Any]) -> Dict[str, Any]:
         - ``label``: arbitrary tag copied to the result for easier identification
         - ``save_statistics``: generate and save statistics plots (bool)
         - ``statistics_output_dir``: base directory for saving statistics plots
+        - ``save_time_series_csv``: save time series data to CSV file (bool)
 
     Returns
     -------
@@ -213,6 +288,7 @@ def run_simulation_with_params(params: Mapping[str, Any]) -> Dict[str, Any]:
             "od_scale": float(config.get("od_scale", 1.0)) if config.get("od_matrix_file") else None,
             "save_statistics": bool(config.get("save_statistics", False)),
             "statistics_output_dir": str(config.get("statistics_output_dir", "data/runs")),
+            "save_time_series_csv": bool(config.get("save_time_series_csv", False)),
         }
 
     except Exception as exc:  # pylint: disable=broad-except
@@ -235,6 +311,23 @@ def run_simulation_with_params(params: Mapping[str, Any]) -> Dict[str, Any]:
             result["statistics_files"] = [str(f) for f in saved_files]
         except Exception as plot_exc:  # pylint: disable=broad-except
             result["statistics_error"] = f"{type(plot_exc).__name__}: {plot_exc}"
+
+    # Save time series CSV if requested
+    if result["status"] == "ok" and config.get("save_time_series_csv", False):
+        try:
+            output_dir_base = Path(config.get("statistics_output_dir", "data/runs"))
+            output_dir_base.mkdir(parents=True, exist_ok=True)
+            
+            # Create unique subdirectory for this scenario
+            label = config.get("label", "unnamed")
+            scenario_dir = output_dir_base / f"stats_{label.replace('/', '_').replace(' ', '_')}"
+            scenario_dir.mkdir(parents=True, exist_ok=True)
+            
+            # Save time series to CSV
+            csv_file = _save_time_series_csv(simulation, scenario_dir, label)
+            result["time_series_csv"] = csv_file
+        except Exception as csv_exc:  # pylint: disable=broad-except
+            result["time_series_csv_error"] = f"{type(csv_exc).__name__}: {csv_exc}"
 
     return result
 
