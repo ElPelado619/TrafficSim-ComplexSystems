@@ -152,7 +152,7 @@ def _save_time_series_csv(
 def _prepare_simulation_config(params: Mapping[str, Any]) -> Dict[str, Any]:
     """Normalise raw parameters coming from the caller."""
     config: Dict[str, Any] = dict(params)
-    config.setdefault("graph_file", "data/map_reduced.osm")
+    config.setdefault("graph_file", "data/microcentro.graphml")
     config.setdefault("cell_length", 7.5)
     config.setdefault("v_max", 5)
     config.setdefault("p_slow", 0.3)

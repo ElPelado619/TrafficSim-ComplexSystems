@@ -20,7 +20,7 @@ from src.parallel_simulation import run_simulations_in_parallel
 
 def _build_scenarios() -> list[dict]:
     """Generate a modest parameter grid for demonstration purposes."""
-    graph_path = Path("data/map_reduced.osm")
+    graph_path = Path("data/microcentro.graphml")
     if not graph_path.exists():
         raise FileNotFoundError(f"Graph file not found: {graph_path}")
 
@@ -77,7 +77,7 @@ def main() -> None:
             for f in stats_files[:3]:  # Mostrar primeros 3
                 print(f"      - {f}")
             if len(stats_files) > 3:
-                print(f"      ... y {len(stats_files) - 3} más")
+                print(f"      ... y {len(stats_files) - 3} más (incluyendo mapa de congestión)")
         elif "statistics_error" in item:
             print(f"   ⚠️  Error al guardar estadísticas: {item['statistics_error']}")
         else:

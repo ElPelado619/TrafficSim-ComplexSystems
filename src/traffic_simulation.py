@@ -101,6 +101,7 @@ class TrafficSimulation:
         self.edge_densities = []           # Densidad promedio por arista
         self.congestion_points = []        # Puntos con alta densidad de vehículos
         self.vehicle_stopped_ratio = []    # Porcentaje de vehículos parados
+        self.traffic_light_states = []     # Estados de semáforos por paso de tiempo
     
     def _discretize_edges(self):
         """Discretiza las aristas del grafo en celdas."""
@@ -464,6 +465,14 @@ class TrafficSimulation:
             # Puntos de congestión
             congestion = self.get_congestion_points(density_threshold=0.5)
             self.congestion_points.append(len(congestion))
+        
+        # Guardar estados de semáforos
+        traffic_light_state = {
+            'time_step': self.time_step,
+            'states': {node_id: {'is_red': light.is_red, 'timer': light.timer} 
+                       for node_id, light in self.traffic_lights.lights.items()}
+        }
+        self.traffic_light_states.append(traffic_light_state)
     
     def _filter_available_edges(self, vehicle, next_edges):
         """
@@ -840,7 +849,7 @@ class TrafficSimulation:
             fig, ax = plt.subplots(figsize=(10, 6))
             ax.plot(self.avg_velocities, color='blue', linewidth=1.5)
             ax.set_xlabel('Paso de tiempo', fontsize=12)
-            ax.set_ylabel('Velocidad promedio', fontsize=12)
+            ax.set_ylabel('Velocidad promedio (celdas/paso de tiempo)', fontsize=12)
             ax.set_title('Evolución de la velocidad promedio', fontsize=14, fontweight='bold')
             ax.grid(True, alpha=0.3)
             ax.axhline(y=self.v_max, color='r', linestyle='--', label='v_max', alpha=0.7)
@@ -862,7 +871,7 @@ class TrafficSimulation:
             fig, ax = plt.subplots(figsize=(10, 6))
             velocities = [v.velocity for v in self.vehicles.values()]
             ax.hist(velocities, bins=range(self.v_max + 2), edgecolor='black', alpha=0.7, color='green')
-            ax.set_xlabel('Velocidad', fontsize=12)
+            ax.set_xlabel('Velocidad (celdas/paso de tiempo)', fontsize=12)
             ax.set_ylabel('Número de vehículos', fontsize=12)
             ax.set_title(f'Distribución de velocidades (paso {self.time_step})', fontsize=14, fontweight='bold')
             ax.grid(True, alpha=0.3, axis='y')
@@ -952,6 +961,78 @@ class TrafficSimulation:
             plt.tight_layout()
             
             filepath = output_path / '06_puntos_congestion.png'
+            fig.savefig(filepath, dpi=150, bbox_inches='tight')
+            saved_files.append(filepath)
+            print(f"✓ Guardado: {filepath}")
+            
+            if show:
+                plt.show()
+            else:
+                plt.close(fig)
+        
+        # 7. Mapa de congestión
+        if self.graph is not None:
+            fig, ax = plt.subplots(figsize=(12, 10))
+            
+            # Dibujar el grafo base
+            ox.plot_graph(self.graph, ax=ax, show=False, close=False, 
+                         node_size=0, edge_linewidth=0.5, edge_color="lightgray",
+                         bgcolor='white')
+            
+            # Obtener puntos de congestión
+            congested_edges = self.get_congestion_points(density_threshold=0.5)
+            
+            if congested_edges:
+                # Preparar datos para colorear aristas congestionadas
+                edge_colors = []
+                edge_linewidths = []
+                
+                for edge in self.graph.edges(keys=True):
+                    # Buscar si esta arista está congestionada
+                    congestion_info = next((info for info in congested_edges if info[0] == edge), None)
+                    
+                    if congestion_info:
+                        # Arista congestionada - color rojo, grosor mayor
+                        density = congestion_info[1]
+                        # Color más intenso según la densidad
+                        intensity = min(1.0, density)  # Normalizar entre 0-1
+                        edge_colors.append(plt.cm.Reds(intensity))
+                        edge_linewidths.append(3 + intensity * 3)  # Grosor entre 3-6
+                    else:
+                        # Arista normal - transparente
+                        edge_colors.append((0.8, 0.8, 0.8, 0.3))  # Gris claro transparente
+                        edge_linewidths.append(0.5)
+                
+                # Redibujar con colores de congestión
+                for i, edge in enumerate(self.graph.edges(keys=True, data=True)):
+                    u, v, k, data = edge
+                    # Obtener coordenadas
+                    u_coords = self.graph.nodes[u]
+                    v_coords = self.graph.nodes[v]
+                    
+                    ax.plot([u_coords['x'], v_coords['x']], [u_coords['y'], v_coords['y']], 
+                           color=edge_colors[i], linewidth=edge_linewidths[i], solid_capstyle='round')
+            
+            # Agregar información de congestión
+            total_congested = len(congested_edges)
+            ax.set_title(f'Mapa de congestión - {total_congested} aristas congestionadas (>50% densidad)', 
+                        fontsize=14, fontweight='bold')
+            ax.set_xlabel('Longitud', fontsize=12)
+            ax.set_ylabel('Latitud', fontsize=12)
+            
+            # Agregar leyenda
+            if congested_edges:
+                # Crear elementos de leyenda
+                legend_elements = [
+                    plt.Line2D([0], [0], color='red', linewidth=4, label='Alta congestión (>80%)'),
+                    plt.Line2D([0], [0], color='orange', linewidth=3, label='Media congestión (50-80%)'),
+                    plt.Line2D([0], [0], color='lightgray', linewidth=1, alpha=0.3, label='Flujo normal')
+                ]
+                ax.legend(handles=legend_elements, loc='upper right', fontsize=10)
+            
+            plt.tight_layout()
+            
+            filepath = output_path / '07_mapa_congestion.png'
             fig.savefig(filepath, dpi=150, bbox_inches='tight')
             saved_files.append(filepath)
             print(f"✓ Guardado: {filepath}")
