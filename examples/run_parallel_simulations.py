@@ -28,8 +28,8 @@ def _build_scenarios() -> list[dict]:
     base_kwargs = {
         "graph_file": str(graph_path),
         "traffic_lights_file": str(traffic_lights_path) if traffic_lights_path.exists() else None,
-        "steps": 60,
-        "warmup_steps": 15,
+        "steps": 21600,
+        "warmup_steps": 50,
         "save_statistics": True,  # Generar gráficos de estadísticas
         "statistics_output_dir": "data/runs/parallel_stats",  # Directorio base para guardar
         "save_time_series_csv": True,  # Guardar series temporales en CSV

@@ -33,13 +33,13 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--zones",
         type=Path,
-        default=Path("data/microcentro_zones.json"),
+        default=Path("data/O-D-maps/microcentro_zones.json"),
         help="Archivo JSON con la definición de zonas",
     )
     parser.add_argument(
         "--od",
         type=Path,
-        default=Path("data/microcentro_od_matrix.json"),
+        default=Path("data/O-D-maps/microcentro_zones_matrix.json"),
         help="Archivo JSON con la matriz O-D generada",
     )
     parser.add_argument(
